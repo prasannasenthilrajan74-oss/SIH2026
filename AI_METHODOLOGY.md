@@ -57,3 +57,28 @@ $$P_{dup} = 0.45 \cdot S_{text} + 0.25 \cdot S_{geo} + 0.20 \cdot S_{cost} + 0.1
 
 ## 4. Explainable Risk Scores
 Instead of opaque AI scores (e.g. "Fraud Probability = 92%"), every flagged indicator records a clear natural language reasoning point, linking model inputs to outcomes. Contributing factors explain precisely why the score is high (e.g. cost outliers, progress mismatches, or proximity to similar projects).
+
+---
+
+## 5. Root-Cause Backtracking & Explainable Governance Architecture
+
+A core architectural principle of MPLADS Sentinel AI is **hybrid explainability**:
+
+1. **ML Signal Generation (Project Level)**:
+   - **Isolation Forest** isolates multi-dimensional numerical outliers.
+   - **Random Forest Regressor** predicts future project delay risk.
+   - **NLP & Spatial Models** detect semantic and physical duplicates.
+   
+2. **Statistical Root-Cause Backtracking (Group Level)**:
+   - The backtracking engine calculates statistical ratio aggregations (e.g., agency/district anomaly rates vs. regional/national peer averages).
+   - **Why Statistical & Ratio-Based?** Root-cause tracing is deliberately statistical rather than a black-box model to preserve 100% auditability, transparency, and legal defensibility when presenting evidence to auditors, investigators, or judicial authorities ("here are the exact two numbers being compared" vs. "the model said so").
+
+### Component Architecture Matrix
+
+| Component | Methodology | Primary Responsibility |
+|---|---|---|
+| **Project Anomaly Detection** | Isolation Forest (ML) | Flags *what* individual projects exhibit multi-dimensional anomalous patterns |
+| **Delay Prediction** | Random Forest Regressor (ML) | Forecasts future overdue risk on ongoing projects |
+| **Duplicate Detection** | NLP (TF-IDF) + Haversine (ML/GIS) | Identifies duplicate or overlapping project proposals |
+| **Root-Cause Backtracking** | Statistical Group-Average Ratios | Explains *where* flagged anomalies concentrate (agency or district level) |
+
