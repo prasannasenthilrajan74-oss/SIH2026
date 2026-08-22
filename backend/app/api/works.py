@@ -196,3 +196,11 @@ def get_work_similar_duplicates(id: str, db: Session = Depends(get_db), current_
         raise HTTPException(status_code=404, detail="Project not found")
     duplicates = find_duplicate_works(db, work, threshold=0.6)
     return duplicates
+
+@router.get("/{id}/controlled-backtrack")
+def get_work_controlled_backtrack(id: str, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    from backend.app.services.backtracking import backtrack_work_root_cause
+    res = backtrack_work_root_cause(db, id)
+    if "error" in res:
+        raise HTTPException(status_code=404, detail=res["error"])
+    return res

@@ -19,3 +19,11 @@ def get_agency_risk_profile(id: int, db: Session = Depends(get_db), current_user
     if not agency:
         raise HTTPException(status_code=404, detail="Implementing Agency not found")
     return agency
+
+@router.get("/{id}/controlled-backtrack")
+def get_agency_controlled_backtrack(id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    from backend.app.services.backtracking import perform_agency_controlled_backtrack
+    res = perform_agency_controlled_backtrack(db, id)
+    if "error" in res:
+        raise HTTPException(status_code=404, detail=res["error"])
+    return res

@@ -242,5 +242,21 @@ export const api = {
     a.click();
     a.remove();
     window.URL.revokeObjectURL(url);
+  },
+
+  async getAgencyControlledBacktrack(id: number) {
+    const res = await fetch(`${API_BASE}/agencies/${id}/controlled-backtrack`, {
+      headers: getHeaders()
+    });
+    if (!res.ok) throw new Error("Failed to fetch agency backtracking analysis");
+    return res.json();
+  },
+
+  async getWorkControlledBacktrack(id: string) {
+    const res = await fetch(`${API_BASE}/works/${id}/controlled-backtrack`, {
+      headers: getHeaders()
+    });
+    if (!res.ok) throw new Error("Failed to fetch work root cause analysis");
+    return res.json();
   }
 };
