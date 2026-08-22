@@ -870,7 +870,8 @@ function Project360Page({ workId, onClose, onNavigateProject }: { workId: string
   const [payments, setPayments] = useState<any[]>([]);
   const [documents, setDocuments] = useState<any[]>([]);
   const [duplicates, setDuplicates] = useState<any[]>([]);
-  const [activeTab, setActiveTab] = useState<'risk' | 'payments' | 'documents' | 'duplicates' | 'investigation'>('risk');
+  const [backtrackData, setBacktrackData] = useState<any>(null);
+  const [activeTab, setActiveTab] = useState<'risk' | 'backtrack' | 'payments' | 'documents' | 'duplicates' | 'investigation'>('risk');
   const [loading, setLoading] = useState(true);
   
   // Case management states
@@ -906,6 +907,9 @@ function Project360Page({ workId, onClose, onNavigateProject }: { workId: string
 
       const dupList = await api.getWorkSimilar(workId);
       setDuplicates(dupList);
+
+      const bData = await api.getWorkControlledBacktrack(workId).catch(() => null);
+      setBacktrackData(bData);
 
       // Fetch case investigation status
       const cases = await api.getInvestigations();
@@ -1087,6 +1091,9 @@ function Project360Page({ workId, onClose, onNavigateProject }: { workId: string
             <button className={`btn ${activeTab === 'risk' ? 'btn-primary' : 'btn-secondary'}`} style={{ padding: '8px 16px', fontSize: '12px' }} onClick={() => setActiveTab('risk')}>
               Risk Analysis & AI Explanations
             </button>
+            <button className={`btn ${activeTab === 'backtrack' ? 'btn-primary' : 'btn-secondary'}`} style={{ padding: '8px 16px', fontSize: '12px' }} onClick={() => setActiveTab('backtrack')}>
+              Controlled Root-Cause ({backtrackData?.primary_attribution === 'AGENCY_CONCENTRATION' ? 'Agency Risk' : (backtrackData?.primary_attribution === 'DISTRICT_CONCENTRATION' ? 'District Risk' : 'Isolated')})
+            </button>
             <button className={`btn ${activeTab === 'payments' ? 'btn-primary' : 'btn-secondary'}`} style={{ padding: '8px 16px', fontSize: '12px' }} onClick={() => setActiveTab('payments')}>
               Payment Audits ({payments.length})
             </button>
@@ -1103,6 +1110,67 @@ function Project360Page({ workId, onClose, onNavigateProject }: { workId: string
 
           <div className="card">
             <div className="card-body">
+              {/* Tab: Controlled Root Cause Backtracking */}
+              {activeTab === 'backtrack' && (
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+                    <h3 style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--primary-color)' }}>CONTROLLED VARIABLE ROOT-CAUSE ATTRIBUTION</h3>
+                    {backtrackData && (
+                      <span className={`badge ${backtrackData.primary_attribution === 'AGENCY_CONCENTRATION' ? 'red' : (backtrackData.primary_attribution === 'DISTRICT_CONCENTRATION' ? 'orange' : 'gray')}`} style={{ fontSize: '11px', fontWeight: 'bold' }}>
+                        {backtrackData.primary_attribution}
+                      </span>
+                    )}
+                  </div>
+
+                  {!backtrackData ? (
+                    <div style={{ padding: '20px', textAlign: 'center', color: 'var(--text-secondary)' }}><RefreshCw className="animate-spin" /> Evaluating controlled peer comparisons...</div>
+                  ) : (
+                    <div>
+                      <div style={{ padding: '16px', backgroundColor: backtrackData.primary_attribution === 'AGENCY_CONCENTRATION' ? 'var(--danger-light)' : '#f8fafc', borderLeft: `4px solid ${backtrackData.primary_attribution === 'AGENCY_CONCENTRATION' ? 'var(--danger-color)' : 'var(--secondary-color)'}`, borderRadius: 'var(--border-radius-sm)', marginBottom: '20px' }}>
+                        <div style={{ fontWeight: '700', fontSize: '13px', marginBottom: '6px' }}>{backtrackData.summary}</div>
+                        <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                          This attribution is derived by isolating variables — holding District, Category, and Time Period equal across comparable project peer groups to eliminate environmental confounds.
+                        </div>
+                      </div>
+
+                      {backtrackData.agency_controlled_analysis && (
+                        <div className="card" style={{ marginBottom: '16px', border: '1px solid var(--border-color)' }}>
+                          <div className="card-header" style={{ padding: '10px 16px', backgroundColor: '#f1f5f9' }}>
+                            <span className="card-title" style={{ fontSize: '12px' }}>Agency Level Controlled Peer Comparison ({backtrackData.agency_controlled_analysis.agency_name})</span>
+                          </div>
+                          <div className="card-body" style={{ padding: '16px' }}>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '14px' }}>
+                              <div style={{ backgroundColor: '#ffffff', padding: '12px', borderRadius: '6px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
+                                <div style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>This Agency Rate</div>
+                                <div style={{ fontSize: '18px', fontWeight: '800', color: 'var(--danger-color)' }}>{backtrackData.agency_controlled_analysis.controlled_comparison?.agency_anomaly_rate}%</div>
+                                <div style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>({backtrackData.agency_controlled_analysis.controlled_comparison?.agency_flagged_count}/{backtrackData.agency_controlled_analysis.controlled_comparison?.agency_total_projects} projects)</div>
+                              </div>
+                              <div style={{ backgroundColor: '#ffffff', padding: '12px', borderRadius: '6px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
+                                <div style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>Peer Baseline Rate</div>
+                                <div style={{ fontSize: '18px', fontWeight: '800', color: 'var(--primary-color)' }}>{backtrackData.agency_controlled_analysis.controlled_comparison?.peer_baseline_rate}%</div>
+                                <div style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>(sample: {backtrackData.agency_controlled_analysis.controlled_comparison?.peer_sample_size} peer projects)</div>
+                              </div>
+                              <div style={{ backgroundColor: '#ffffff', padding: '12px', borderRadius: '6px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
+                                <div style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>Controlled Multiplier</div>
+                                <div style={{ fontSize: '18px', fontWeight: '800', color: backtrackData.agency_controlled_analysis.controlled_comparison?.multiplier_ratio >= 2.0 ? 'var(--danger-color)' : 'var(--warning-color)' }}>
+                                  {backtrackData.agency_controlled_analysis.controlled_comparison?.multiplier_ratio}x
+                                </div>
+                                <div style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>vs Controlled Peers</div>
+                              </div>
+                            </div>
+                            <div style={{ fontSize: '12px', color: 'var(--text-primary)', marginBottom: '8px' }}>
+                              <strong>Attribution Reasoning:</strong> {backtrackData.agency_controlled_analysis.attribution_summary}
+                            </div>
+                            <div style={{ fontSize: '12px', color: 'var(--secondary-color)', fontWeight: '600' }}>
+                              <strong>Recommendation:</strong> {backtrackData.agency_controlled_analysis.recommendation}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
               {/* Tab 1: Risk Explanations */}
               {activeTab === 'risk' && (
                 <div>
