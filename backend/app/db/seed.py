@@ -1,3 +1,5 @@
+import os
+import csv
 import random
 import datetime
 from sqlalchemy.orm import Session
@@ -6,6 +8,87 @@ from backend.app.models.models import (
 )
 from backend.app.core.security import get_password_hash
 from backend.app.db.session import engine
+
+STATE_CODES = {
+    'Andaman And Nicobar Islands': 'AN', 'Andhra Pradesh': 'AP', 'Arunachal Pradesh': 'AR',
+    'Assam': 'AS', 'Bihar': 'BR', 'Chandigarh': 'CH_UT', 'Chhattisgarh': 'CG',
+    'Dadra And Nagar Haveli And Daman And Diu': 'DN', 'Delhi': 'DL', 'Goa': 'GA',
+    'Gujarat': 'GJ', 'Haryana': 'HR', 'Himachal Pradesh': 'HP', 'Jammu And Kashmir': 'JK',
+    'Jharkhand': 'JH', 'Karnataka': 'KA', 'Kerala': 'KL', 'Ladakh': 'LA',
+    'Lakshadweep': 'LD', 'Madhya Pradesh': 'MP', 'Maharashtra': 'MH', 'Manipur': 'MN',
+    'Meghalaya': 'ML', 'Mizoram': 'MZ', 'Nagaland': 'NL', 'Odisha': 'OD',
+    'Puducherry': 'PY', 'Punjab': 'PB', 'Rajasthan': 'RJ', 'Sikkim': 'SK',
+    'Tamil Nadu': 'TN', 'Telangana': 'TS', 'Tripura': 'TR', 'Uttar Pradesh': 'UP',
+    'Uttarakhand': 'UK', 'West Bengal': 'WB'
+}
+
+STATE_GPS = {
+    'AN': (11.62, 92.72), 'AP': (15.91, 79.74), 'AR': (28.21, 94.72), 'AS': (26.20, 92.93),
+    'BR': (25.09, 85.31), 'CH_UT': (30.73, 76.77), 'CG': (21.27, 81.86), 'DN': (20.18, 73.01),
+    'DL': (28.61, 77.20), 'GA': (15.29, 74.12), 'GJ': (22.25, 71.19), 'HP': (31.10, 77.17),
+    'HR': (29.05, 76.08), 'JK': (33.77, 76.57), 'JH': (23.61, 85.27), 'KA': (15.31, 75.71),
+    'KL': (10.85, 76.27), 'LA': (34.15, 77.57), 'LD': (10.56, 72.64), 'MP': (22.97, 78.65),
+    'MH': (19.75, 75.71), 'MN': (24.66, 93.90), 'ML': (25.57, 91.89), 'MZ': (23.16, 92.83),
+    'NL': (26.15, 94.56), 'OD': (20.95, 85.09), 'PY': (11.94, 79.80), 'PB': (31.14, 75.34),
+    'RJ': (27.02, 74.21), 'SK': (27.53, 88.51), 'TN': (11.12, 78.65), 'TS': (18.11, 79.01),
+    'TR': (23.94, 91.98), 'UP': (26.84, 80.94), 'UK': (30.06, 79.01), 'WB': (22.98, 87.85)
+}
+
+def load_real_mp_dataset():
+    mps = []
+    base_dir = os.getcwd()
+    doc1 = os.path.join(base_dir, 'documents', 'Allocated Limit for Honble MPs (2).csv')
+    doc2 = os.path.join(base_dir, 'documents', 'Allocated Limit for Honble MPs (3).csv')
+
+    if os.path.exists(doc1):
+        with open(doc1, mode='r', encoding='utf-8-sig', errors='ignore') as f:
+            r = list(csv.reader(f))
+            for row in r[3:]:
+                if len(row) >= 5 and row[0].strip().isdigit():
+                    state, name, const, amt = row[1].strip(), row[2].strip(), row[3].strip(), row[4].strip()
+                    try:
+                        amt_val = float(amt)
+                    except:
+                        amt_val = 147000000.0
+                    st_code = STATE_CODES.get(state, state[:2].upper())
+                    mps.append({
+                        'name': name.title(),
+                        'constituency': const.title(),
+                        'state_name': state,
+                        'state_code': st_code,
+                        'allocated_amount': amt_val,
+                        'type': 'Lok Sabha'
+                    })
+
+    if os.path.exists(doc2):
+        with open(doc2, mode='r', encoding='utf-8-sig', errors='ignore') as f:
+            r = list(csv.reader(f))
+            for row in r[2:]:
+                if len(row) >= 5 and row[0].strip().isdigit():
+                    state, name, mp_type, amt = row[1].strip(), row[2].strip(), row[3].strip(), row[4].strip()
+                    try:
+                        amt_val = float(amt)
+                    except:
+                        amt_val = 147000000.0
+                    st_code = STATE_CODES.get(state, state[:2].upper())
+                    mps.append({
+                        'name': name.title(),
+                        'constituency': f'{state} ({mp_type})',
+                        'state_name': state,
+                        'state_code': st_code,
+                        'allocated_amount': amt_val,
+                        'type': mp_type
+                    })
+
+    # Fallback default if files not found
+    if not mps:
+        mps = [
+            {'name': 'Shri Narendra Modi', 'constituency': 'Varanasi', 'state_name': 'Uttar Pradesh', 'state_code': 'UP', 'allocated_amount': 147000000.0, 'type': 'Lok Sabha'},
+            {'name': 'Dr. S. Jaishankar', 'constituency': 'Gujarat Rajya Sabha', 'state_name': 'Gujarat', 'state_code': 'GJ', 'allocated_amount': 147000000.0, 'type': 'Rajya Sabha'},
+            {'name': 'Smt. Nirmala Sitharaman', 'constituency': 'Karnataka Rajya Sabha', 'state_name': 'Karnataka', 'state_code': 'KA', 'allocated_amount': 147000000.0, 'type': 'Rajya Sabha'},
+            {'name': 'Shri Amit Shah', 'constituency': 'Gandhinagar', 'state_name': 'Gujarat', 'state_code': 'GJ', 'allocated_amount': 147000000.0, 'type': 'Lok Sabha'}
+        ]
+    return mps
 
 def seed_db(db: Session):
     # Create tables if not exist
@@ -50,46 +133,69 @@ def seed_db(db: Session):
             db.add(user)
     db.commit()
 
-    # 3. Seed States & Districts
-    states_data = [
-        {"code": "DL", "name": "Delhi", "districts": [{"code": "CD", "name": "Central Delhi"}, {"code": "ND", "name": "New Delhi"}]},
-        {"code": "TN", "name": "Tamil Nadu", "districts": [{"code": "CH", "name": "Chennai"}, {"code": "CO", "name": "Coimbatore"}]},
-        {"code": "MH", "name": "Maharashtra", "districts": [{"code": "MU", "name": "Mumbai"}, {"code": "PU", "name": "Pune"}]},
-        {"code": "KA", "name": "Karnataka", "districts": [{"code": "BU", "name": "Bangalore Urban"}, {"code": "MY", "name": "Mysore"}]},
-    ]
+    # Load official MP dataset
+    real_mps = load_real_mp_dataset()
 
-    for s_data in states_data:
-        state = db.query(State).filter(State.code == s_data["code"]).first()
-        if not state:
-            state = State(code=s_data["code"], name=s_data["name"])
-            db.add(state)
-        
-        for d_data in s_data["districts"]:
-            district = db.query(District).filter(District.code == d_data["code"]).first()
-            if not district:
-                district = District(code=d_data["code"], name=d_data["name"], state_code=state.code)
-                db.add(district)
+    # 3. Seed States & Districts dynamically from real MP dataset
+    states_dict = {}
+    for m in real_mps:
+        st_code = m['state_code']
+        st_name = m['state_name']
+        if st_code not in states_dict:
+            states_dict[st_code] = {'name': st_name, 'constituencies': set()}
+        states_dict[st_code]['constituencies'].add(m['constituency'])
+
+    # Always ensure fallback legacy district codes exist for default demo accounts
+    states_dict.setdefault("TN", {"name": "Tamil Nadu", "constituencies": set()})["constituencies"].add("Chennai")
+    states_dict.setdefault("DL", {"name": "Delhi", "constituencies": set()})["constituencies"].add("Central Delhi")
+    states_dict.setdefault("MH", {"name": "Maharashtra", "constituencies": set()})["constituencies"].add("Mumbai")
+    states_dict.setdefault("KA", {"name": "Karnataka", "constituencies": set()})["constituencies"].add("Bangalore Urban")
+
+    all_districts = []
+    for st_code, st_info in states_dict.items():
+        state_obj = db.query(State).filter(State.code == st_code).first()
+        if not state_obj:
+            state_obj = State(code=st_code, name=st_info['name'])
+            db.add(state_obj)
+            db.commit()
+
+        for idx, const_name in enumerate(sorted(list(st_info['constituencies']))):
+            d_code = f"{st_code}_{idx+1}"
+            if const_name == "Chennai": d_code = "CH"
+            elif const_name == "Central Delhi": d_code = "CD"
+            elif const_name == "Mumbai": d_code = "MU"
+            elif const_name == "Bangalore Urban": d_code = "BU"
+            elif const_name == "Coimbatore": d_code = "CO"
+            elif const_name == "Pune": d_code = "PU"
+            elif const_name == "Mysore": d_code = "MY"
+            elif const_name == "New Delhi": d_code = "ND"
+
+            dist_obj = db.query(District).filter(District.code == d_code).first()
+            if not dist_obj:
+                dist_obj = District(code=d_code, name=const_name, state_code=st_code)
+                db.add(dist_obj)
+            all_districts.append(dist_obj)
     db.commit()
 
-    # 4. Seed Agencies
-    agencies_names = [
-        ("Public Works Department (PWD)", "CH"),
-        ("National Buildings Construction Corporation (NBCC)", "CH"),
-        ("Central Public Works Department (CPWD)", "CD"),
-        ("District Rural Development Agency (DRDA)", "CO"),
-        ("Maharashtra State PWD", "MU"),
-        ("Pune Municipal Corporation", "PU"),
-        ("Bruhat Bengaluru Mahanagara Palike (BBMP)", "BU"),
-        ("Mysore Urban Development Authority", "MY")
+    # 4. Seed Agencies across districts
+    agencies_templates = [
+        "Public Works Department (PWD)",
+        "District Rural Development Agency (DRDA)",
+        "Central Public Works Department (CPWD)",
+        "Municipal Infrastructure Corporation",
+        "State Water Supply & Sanitation Board",
+        "National Buildings Construction Corporation (NBCC)"
     ]
 
     db_agencies = []
-    for name, dist_code in agencies_names:
-        agency = db.query(Agency).filter(Agency.name == name).first()
+    all_dists_in_db = db.query(District).all()
+    for d in all_dists_in_db[:20]: # Distribute agencies across top districts
+        agency_name = f"{d.name} {random.choice(agencies_templates)}"
+        agency = db.query(Agency).filter(Agency.name == agency_name).first()
         if not agency:
             agency = Agency(
-                name=name,
-                district_code=dist_code,
+                name=agency_name,
+                district_code=d.code,
                 completion_rate=random.uniform(0.75, 0.95),
                 average_delay_days=random.uniform(30, 120),
                 average_cost_deviation=random.uniform(-0.05, 0.15),
@@ -100,8 +206,6 @@ def seed_db(db: Session):
         else:
             db_agencies.append(agency)
     db.commit()
-
-    # Refresh agencies from database to get their IDs
     db_agencies = db.query(Agency).all()
 
     # 5. Seed Rules
@@ -129,7 +233,7 @@ def seed_db(db: Session):
             existing_rule.threshold = r["threshold"]
     db.commit()
 
-    # 6. Seed System Settings (Risk weights)
+    # 6. Seed System Settings (Risk weights & MP allocations)
     weights_setting = db.query(SystemSetting).filter(SystemSetting.key == "risk_weights").first()
     if not weights_setting:
         weights = SystemSetting(
@@ -146,15 +250,24 @@ def seed_db(db: Session):
             }
         )
         db.add(weights)
+
+    mp_alloc_setting = db.query(SystemSetting).filter(SystemSetting.key == "mp_allocations").first()
+    if not mp_alloc_setting:
+        mp_alloc_data = {m['name']: m for m in real_mps}
+        mp_alloc_setting = SystemSetting(
+            key="mp_allocations",
+            value=mp_alloc_data
+        )
+        db.add(mp_alloc_setting)
     db.commit()
 
-    # 7. Seed 1000 Works (with deliberate anomalies)
+    # 7. Seed 1000 Works (with real MP attributes & deliberate anomalies)
     existing_works_count = db.query(Work).count()
     if existing_works_count >= 1000:
         print("Database already seeded with works.")
         return
 
-    print("Seeding works and payments... This might take a few moments.")
+    print(f"Seeding 1,000+ works using official dataset of {len(real_mps)} Members of Parliament...")
     categories = [
         "Drinking Water", "Education", "Health & Family Welfare", 
         "Roads, Pathways and Bridges", "Sanitation & Public Health", 
@@ -198,60 +311,41 @@ def seed_db(db: Session):
         ]
     }
 
-    mps = [
-        ("Shri Narendra Modi", "Varanasi", "DL", "CD"),
-        ("Dr. S. Jaishankar", "Gujarat Rajya Sabha", "TN", "CH"),
-        ("Smt. Nirmala Sitharaman", "Karnataka Rajya Sabha", "KA", "BU"),
-        ("Shri Amit Shah", "Gandhinagar", "MH", "MU")
-    ]
-
-    base_lat_long = {
-        "CD": (28.64, 77.22),
-        "ND": (28.61, 77.20),
-        "CH": (13.08, 80.27),
-        "CO": (11.01, 76.95),
-        "MU": (18.97, 72.82),
-        "PU": (18.52, 73.85),
-        "BU": (12.97, 77.59),
-        "MY": (12.29, 76.63)
-    }
-
-    districts_in_db = db.query(District).all()
-    district_list = [d.code for d in districts_in_db]
-
     today = datetime.date.today()
-
     works_to_add = []
     payments_to_add = []
-    risk_scores_to_add = []
 
-    # Generate 1010 works to be safe
     for i in range(1, 1011):
         work_id = f"MPLADS-{2026:04d}-{i:04d}"
         category = random.choice(categories)
         
-        # Pick state/district
-        d_code = random.choice(district_list)
-        district_obj = db.query(District).filter(District.code == d_code).first()
-        state_code = district_obj.state_code
+        # Pick real MP
+        real_mp = random.choice(real_mps)
+        mp_name = real_mp['name']
+        constituency = real_mp['constituency']
+        state_code = real_mp['state_code']
 
-        # Names
+        # Find matching district for state
+        state_dists = db.query(District).filter(District.state_code == state_code).all()
+        if state_dists:
+            district_obj = random.choice(state_dists)
+            d_code = district_obj.code
+        else:
+            d_code = "CH"
+
         block = f"Block-{random.randint(1, 5)}"
         village = f"Village-{random.randint(1, 20)}"
         
         desc_tmpl = random.choice(work_templates[category])
         description = desc_tmpl.format(village=village, block=block)
 
-        # MP & Constituency
-        mp_name, constituency, _, _ = random.choice(mps)
-        
-        # Coordinates
-        base_lat, base_lon = base_lat_long.get(d_code, (13.0, 80.0))
-        lat = base_lat + random.uniform(-0.08, 0.08)
-        lon = base_lon + random.uniform(-0.08, 0.08)
+        # GPS Coordinates centered around state
+        base_lat, base_lon = STATE_GPS.get(state_code, (13.08, 80.27))
+        lat = base_lat + random.uniform(-0.4, 0.4)
+        lon = base_lon + random.uniform(-0.4, 0.4)
 
         # Amounts
-        estimated_cost = random.uniform(500000, 5000000) # 5L to 50L
+        estimated_cost = random.uniform(500000, 4500000) # 5L to 45L
         sanctioned_amount = estimated_cost * random.uniform(0.95, 1.05)
 
         # Dates
@@ -265,7 +359,6 @@ def seed_db(db: Session):
         status_pool = ["Sanctioned", "Ongoing", "Completed"]
         status = random.choices(status_pool, weights=[15, 55, 30], k=1)[0]
         
-        # Adjust ongoing works that are overdue to be ongoing or completed
         actual_comp_date = None
         if status == "Completed":
             actual_comp_date = exp_completion_date + datetime.timedelta(days=random.randint(-30, 180))
@@ -284,43 +377,37 @@ def seed_db(db: Session):
             financial_progress = 0.0
             expenditure = 0.0
 
-        agency = random.choice(db_agencies)
-        agency_id = agency.id
+        agency = random.choice(db_agencies) if db_agencies else None
+        agency_id = agency.id if agency else None
 
-        # Flag fields for anomaly injection
+        # Inject anomalies into approximately 15% of records
         is_anomaly = False
         anomaly_type = None
 
-        # Inject anomalies into approximately 15% of records
         if i % 7 == 0:
             is_anomaly = True
             r_val = random.randint(1, 7)
             if r_val == 1:
-                # 1. Physical vs Financial Progress Mismatch
                 status = "Ongoing"
                 financial_progress = random.uniform(85.0, 95.0)
                 physical_progress = random.uniform(20.0, 45.0)
                 expenditure = sanctioned_amount * (financial_progress / 100.0)
                 anomaly_type = "mismatch"
             elif r_val == 2:
-                # 2. Cost Overrun
                 status = "Completed"
                 expenditure = sanctioned_amount * random.uniform(1.15, 1.45)
                 physical_progress = 100.0
                 financial_progress = 100.0
                 anomaly_type = "cost_overrun"
             elif r_val == 3:
-                # 3. Excessive Project Delay
                 status = "Ongoing"
                 sanc_date = today - datetime.timedelta(days=500)
-                exp_completion_date = sanc_date + datetime.timedelta(days=180) # 180 days expected duration
-                # Overdue by almost a year
+                exp_completion_date = sanc_date + datetime.timedelta(days=180)
                 physical_progress = random.uniform(15.0, 40.0)
                 financial_progress = physical_progress * random.uniform(0.9, 1.1)
                 expenditure = sanctioned_amount * (financial_progress / 100.0)
                 anomaly_type = "delay"
             elif r_val == 4:
-                # 4. Low Utilization
                 status = "Ongoing"
                 sanc_date = today - datetime.timedelta(days=250)
                 exp_completion_date = sanc_date + datetime.timedelta(days=365)
@@ -329,13 +416,11 @@ def seed_db(db: Session):
                 expenditure = sanctioned_amount * (financial_progress / 100.0)
                 anomaly_type = "low_utilization"
             elif r_val == 5:
-                # 5. Missing Critical Info
                 lat = None
                 lon = None
                 anomaly_type = "missing_info"
             elif r_val == 6:
-                # 6. Cost Anomaly (Comparable outliers - e.g. 10x normal cost)
-                estimated_cost = random.uniform(8000000, 15000000) # 80L to 1.5Cr (Normal median is ~24L)
+                estimated_cost = random.uniform(8000000, 15000000)
                 sanctioned_amount = estimated_cost
                 if status == "Completed":
                     expenditure = sanctioned_amount
@@ -343,7 +428,6 @@ def seed_db(db: Session):
                     expenditure = sanctioned_amount * (financial_progress / 100.0)
                 anomaly_type = "cost_anomaly"
             elif r_val == 7:
-                # 7. Document mismatch
                 anomaly_type = "doc_mismatch"
 
         work = Work(
@@ -376,9 +460,7 @@ def seed_db(db: Session):
         # Generate Payments for works
         if expenditure > 0:
             num_payments = random.randint(1, 4)
-            # Inject suspicious payment burst: multiple payments in 5 days
             if anomaly_type == "mismatch" or (is_anomaly and random.random() < 0.3):
-                # Suspicious: 3 payments of large amounts in a few days
                 p_date = sanc_date + datetime.timedelta(days=random.randint(10, 30))
                 for p_idx in range(3):
                     payment = Payment(
@@ -390,7 +472,6 @@ def seed_db(db: Session):
                     )
                     payments_to_add.append(payment)
             else:
-                # Normal payment distribution
                 remaining_exp = expenditure
                 for p_idx in range(num_payments):
                     p_amt = remaining_exp / (num_payments - p_idx)
@@ -416,15 +497,15 @@ def seed_db(db: Session):
 
         # Generate Document Metadata
         if sanc_date is not None:
-            # Match or mismatch PDF amount
             pdf_amount = sanctioned_amount
             consistency_score = 100.0
+            doc_agency_name = agency.name if agency else "PWD"
             doc_data = {
                 "work_id": work_id,
                 "project_name": description,
                 "sanctioned_amount": sanctioned_amount,
                 "sanction_date": sanc_date.strftime("%Y-%m-%d"),
-                "agency": agency.name
+                "agency": doc_agency_name
             }
             if anomaly_type == "doc_mismatch":
                 pdf_amount = sanctioned_amount * random.choice([1.2, 0.8, 1.5])
@@ -439,32 +520,27 @@ def seed_db(db: Session):
                 file_path=f"documents/{work_id}_sanction.pdf",
                 ocr_text=f"Government of India. Sanction Order for Work ID: {work_id}. "
                          f"Project Name: {description}. Sanctioned Amount: Rs.{pdf_amount:,.2f}. "
-                         f"Sanction Date: {doc_data['sanction_date']}. Implementing Agency: {agency.name}.",
+                         f"Sanction Date: {doc_data['sanction_date']}. Implementing Agency: {doc_agency_name}.",
                 extracted_data=doc_data,
                 consistency_score=consistency_score
             )
             db.add(doc)
 
-    # Ingest Works in batch
     db.add_all(works_to_add)
     db.commit()
 
-    # Ingest Payments in batch
     db.add_all(payments_to_add)
     db.commit()
 
     # Inject Duplicate works explicitly
-    # We will inject 5 duplicate work groups (10 works total)
     duplicate_indices = [25, 120, 245, 450, 680]
     for d_idx in duplicate_indices:
         base_work = works_to_add[d_idx]
         dup_work_id = f"MPLADS-2026-DUP{d_idx}"
         
-        # Similar description (93% similarity)
         dup_description = base_work.description.replace("Installation of", "Construction and setting up of")
         dup_description = dup_description.replace("Construction of", "Setting up and construction of")
         
-        # Geographic coordinates close (1.2 km distance is roughly 0.01 degrees)
         lat = base_work.latitude + 0.008 if base_work.latitude else 13.08
         lon = base_work.longitude + 0.008 if base_work.longitude else 80.27
 
@@ -495,7 +571,6 @@ def seed_db(db: Session):
         db.add(dup_work)
         db.commit()
 
-        # Add duplicate warning alert
         alert = Alert(
             work_id=dup_work_id,
             alert_type="DUP_WORK",
@@ -507,4 +582,4 @@ def seed_db(db: Session):
         db.add(alert)
         db.commit()
 
-    print("Synthesized works & payments successfully populated in the DB.")
+    print(f"Synthesized 1,000+ works using {len(real_mps)} official MP dataset entries successfully populated in the DB.")
