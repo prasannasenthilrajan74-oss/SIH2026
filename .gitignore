@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.eslintcache
+
+# Database / Local files
+mplads_sentinel.db
+.env
+
+# OS
+.DS_Store
+Thumbs.db
