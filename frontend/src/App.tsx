@@ -308,26 +308,38 @@ export default function App() {
 
         <div className="sidebar-nav">
           <div className={`nav-item ${activeTab === 'Overview' ? 'active' : ''}`} onClick={() => { setActiveTab('Overview'); setSelectedWorkId(null); }}>
-            <Activity size={16} /> Overview Dashboard
+            <Activity size={16} /> {currentUser?.role_name === 'MP / Constituency Viewer' ? 'Constituency Overview' : currentUser?.role_name === 'Investigation Officer' ? 'Priority Queue' : currentUser?.role_name === 'District Authority' ? 'Action Dashboard' : 'Overview Dashboard'}
           </div>
           <div className={`nav-item ${activeTab === 'Risk Monitor' ? 'active' : ''}`} onClick={() => { setActiveTab('Risk Monitor'); setSelectedWorkId(null); }}>
             <ShieldAlert size={16} /> Risk Monitor
           </div>
-          <div className={`nav-item ${activeTab === 'Root-Cause Backtracking' ? 'active' : ''}`} onClick={() => { setActiveTab('Root-Cause Backtracking'); setSelectedWorkId(null); }}>
-            <Layers size={16} /> Root-Cause Backtracking
-          </div>
-          <div className={`nav-item ${activeTab === 'Agency Intelligence' ? 'active' : ''}`} onClick={() => { setActiveTab('Agency Intelligence'); setSelectedWorkId(null); }}>
-            <Building2 size={16} /> Agency Intelligence
-          </div>
+          
+          {/* Hide Backtracking & Agency Intelligence for MP / Constituency Viewer */}
+          {currentUser?.role_name !== 'MP / Constituency Viewer' && (
+            <>
+              <div className={`nav-item ${activeTab === 'Root-Cause Backtracking' ? 'active' : ''}`} onClick={() => { setActiveTab('Root-Cause Backtracking'); setSelectedWorkId(null); }}>
+                <Layers size={16} /> Root-Cause Backtracking
+              </div>
+              <div className={`nav-item ${activeTab === 'Agency Intelligence' ? 'active' : ''}`} onClick={() => { setActiveTab('Agency Intelligence'); setSelectedWorkId(null); }}>
+                <Building2 size={16} /> Agency Intelligence
+              </div>
+            </>
+          )}
+
           <div className={`nav-item ${activeTab === 'Documents' ? 'active' : ''}`} onClick={() => { setActiveTab('Documents'); setSelectedWorkId(null); }}>
             <FileText size={16} /> Documents & OCR
           </div>
           <div className={`nav-item ${activeTab === 'Investigations' ? 'active' : ''}`} onClick={() => { setActiveTab('Investigations'); setSelectedWorkId(null); }}>
             <UserCheck size={16} /> Case Investigations
           </div>
-          <div className={`nav-item ${activeTab === 'Rules Config' ? 'active' : ''}`} onClick={() => { setActiveTab('Rules Config'); setSelectedWorkId(null); }}>
-            <Settings size={16} /> Detection Rules
-          </div>
+
+          {/* Hide Detection Rules for MP / Constituency Viewer */}
+          {currentUser?.role_name !== 'MP / Constituency Viewer' && (
+            <div className={`nav-item ${activeTab === 'Rules Config' ? 'active' : ''}`} onClick={() => { setActiveTab('Rules Config'); setSelectedWorkId(null); }}>
+              <Settings size={16} /> Detection Rules {currentUser?.role_name !== 'Ministry Administrator' ? '(View Only)' : ''}
+            </div>
+          )}
+
           <div className={`nav-item ${activeTab === 'AI Assistant' ? 'active' : ''}`} onClick={() => { setActiveTab('AI Assistant'); setSelectedWorkId(null); }}>
             <Bot size={16} /> AI Assistant
           </div>
@@ -434,6 +446,7 @@ export default function App() {
               category={selectedCategory} 
               status={selectedStatus} 
               onSelectProject={setSelectedWorkId} 
+              currentUser={currentUser}
             />
           ) : activeTab === 'Risk Monitor' ? (
             <RiskMonitorTab 
@@ -601,8 +614,8 @@ function OverviewTab({ state, district, category, status, onSelectProject }: any
     return <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '300px' }}><RefreshCw className="animate-spin" /> Fetching platform analytics...</div>;
   }
 
-  // Formatting lakhs/crores
   const formatCost = (val: number) => {
+    if (!val) return '₹0';
     if (val >= 10000000) return `₹${(val / 10000000).toFixed(2)} Cr`;
     return `₹${(val / 100000).toFixed(1)} Lakh`;
   };
@@ -611,25 +624,72 @@ function OverviewTab({ state, district, category, status, onSelectProject }: any
 
   return (
     <div>
+      {/* District Authority: Action Required Widget */}
+      {currentUser?.role_name === 'District Authority' && metrics && (
+        <div style={{ marginBottom: '20px', padding: '16px 20px', background: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)', borderRadius: 'var(--border-radius-lg)', border: '1px solid #fca5a5' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+            <span style={{ fontSize: '15px', fontWeight: '800', color: '#b91c1c', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <ShieldAlert size={18} /> Action Required Today ({metrics.critical_alerts || 0} Critical Alerts in {currentUser?.district || 'District'})
+            </span>
+            <span style={{ fontSize: '12px', fontWeight: '600', color: '#991b1b' }}>Operational Review Queue</span>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }}>
+            <div style={{ backgroundColor: '#ffffff', padding: '10px 14px', borderRadius: 'var(--border-radius-md)', border: '1px solid #fecaca' }}>
+              <div style={{ fontSize: '11px', color: '#991b1b', fontWeight: 'bold' }}>CRITICAL WORKS</div>
+              <div style={{ fontSize: '20px', fontWeight: '800', color: '#dc2626' }}>{metrics.critical_alerts || 0}</div>
+            </div>
+            <div style={{ backgroundColor: '#ffffff', padding: '10px 14px', borderRadius: 'var(--border-radius-md)', border: '1px solid #fed7aa' }}>
+              <div style={{ fontSize: '11px', color: '#9a3412', fontWeight: 'bold' }}>COST ANOMALIES</div>
+              <div style={{ fontSize: '20px', fontWeight: '800', color: '#ea580c' }}>{metrics.cost_alerts || 0}</div>
+            </div>
+            <div style={{ backgroundColor: '#ffffff', padding: '10px 14px', borderRadius: 'var(--border-radius-md)', border: '1px solid #fef08a' }}>
+              <div style={{ fontSize: '11px', color: '#854d0e', fontWeight: 'bold' }}>DELAYED PROJECTS</div>
+              <div style={{ fontSize: '20px', fontWeight: '800', color: '#d97706' }}>{metrics.delayed_works || 0}</div>
+            </div>
+            <div style={{ backgroundColor: '#ffffff', padding: '10px 14px', borderRadius: 'var(--border-radius-md)', border: '1px solid #fed7aa' }}>
+              <div style={{ fontSize: '11px', color: '#9a3412', fontWeight: 'bold' }}>DUPLICATE CANDIDATES</div>
+              <div style={{ fontSize: '20px', fontWeight: '800', color: '#c2410c' }}>{metrics.duplicate_alerts || 0}</div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MP / Constituency Viewer: Outcomes Header */}
+      {currentUser?.role_name === 'MP / Constituency Viewer' && (
+        <div style={{ marginBottom: '20px', padding: '16px 20px', background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)', borderRadius: 'var(--border-radius-lg)', border: '1px solid #86efac' }}>
+          <div style={{ fontSize: '15px', fontWeight: '800', color: '#166534', marginBottom: '4px' }}>
+            Constituency Progress & Outcomes ({currentUser?.constituency || 'MP Constituency'})
+          </div>
+          <div style={{ fontSize: '12.5px', color: '#15803d' }}>
+            High-level summary of MPLADS infrastructure recommendations, sanctions, and completion status.
+          </div>
+        </div>
+      )}
+
       {/* Overview header with refresh button */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-        <h2 style={{ fontSize: '16px', fontWeight: '800', color: 'var(--primary-color)' }}>Platform Intelligence Overview</h2>
-        <button 
-          className="btn btn-secondary" 
-          style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px' }}
-          onClick={async () => {
-            try {
-              const res = await api.refreshRiskScores();
-              alert(res.message || 'Risk scores refreshed!');
-              fetchMetrics();
-            } catch (e: any) {
-              alert(e.message || 'Refresh failed — check role permissions.');
-            }
-          }}
-        >
-          <RefreshCw size={14} /> Refresh AI Scores
-        </button>
+        <h2 style={{ fontSize: '16px', fontWeight: '800', color: 'var(--primary-color)' }}>
+          {currentUser?.role_name === 'MP / Constituency Viewer' ? 'Constituency Summary' : currentUser?.role_name === 'District Authority' ? 'District Action Center' : 'Platform Intelligence Overview'}
+        </h2>
+        {currentUser?.role_name === 'Ministry Administrator' && (
+          <button 
+            className="btn btn-secondary" 
+            style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px' }}
+            onClick={async () => {
+              try {
+                const res = await api.refreshRiskScores();
+                alert(res.message || 'Risk scores refreshed!');
+                fetchMetrics();
+              } catch (e: any) {
+                alert(e.message || 'Refresh failed — check role permissions.');
+              }
+            }}
+          >
+            <RefreshCw size={14} /> Refresh AI Scores
+          </button>
+        )}
       </div>
+
       <div className="stats-grid">
         <div className="stat-card">
           <span className="stat-card-title">Total Allocated Works</span>
@@ -2639,8 +2699,16 @@ function InvestigationsTab({ onSelectProject, currentUser }: { onSelectProject: 
     return "gray";
   };
 
+  const isInvestigator = currentUser?.role_name === "Investigation Officer";
+
   return (
     <div className="card">
+      {isInvestigator && (
+        <div style={{ padding: '12px 16px', backgroundColor: '#f0fdf4', borderBottom: '1px solid #bbf7d0', color: '#166534', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <UserCheck size={16} />
+          <span><strong>Investigator Priority Queue:</strong> Welcome, Officer {currentUser?.username}. Below are active cases assigned for evidence gathering, cross-validation, and resolution.</span>
+        </div>
+      )}
       <div className="card-header">
         <span className="card-title"><UserCheck size={16} /> Open Case Files & Audits</span>
         <select className="filter-select" value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
@@ -2761,19 +2829,29 @@ function RulesTab({ currentUser }: { currentUser: any }) {
     }
   };
 
+  const isAdmin = currentUser?.role_name === "Ministry Administrator";
+
   return (
     <div className="card">
+      {!isAdmin && (
+        <div style={{ padding: '12px 16px', backgroundColor: '#eff6ff', borderBottom: '1px solid #bfdbfe', color: '#1e40af', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <ShieldAlert size={16} />
+          <span><strong>View-Only Mode:</strong> Rule configurations and risk weights are managed nationally by the Ministry Administrator to maintain uniform evaluation across all states.</span>
+        </div>
+      )}
       <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span className="card-title"><Settings size={16} /> Compliance Rules Configurations</span>
         <div style={{ display: 'flex', gap: '10px' }}>
-          {(currentUser?.role_name === "Ministry Administrator" || currentUser?.role_name === "State Nodal Authority") && (
+          {isAdmin && (
             <button className="btn btn-secondary" onClick={handleDownloadBackup} disabled={downloading}>
               {downloading ? 'Downloading...' : 'Export Database Backup'}
             </button>
           )}
-          <button className="btn btn-primary" onClick={handleRunEvaluation} disabled={evaluating}>
-            {evaluating ? 'Running Analysis...' : 'Evaluate Rules Engine'}
-          </button>
+          {isAdmin && (
+            <button className="btn btn-primary" onClick={handleRunEvaluation} disabled={evaluating}>
+              {evaluating ? 'Running Analysis...' : 'Evaluate Rules Engine'}
+            </button>
+          )}
         </div>
       </div>
 
@@ -2804,7 +2882,13 @@ function RulesTab({ currentUser }: { currentUser: any }) {
                     </td>
                     <td style={{ fontFamily: 'monospace', fontSize: '11px', backgroundColor: 'var(--bg-color)', padding: '6px' }}>{r.condition_expression}</td>
                     <td style={{ textAlign: 'center' }}>
-                      <input type="checkbox" checked={r.enabled} onChange={() => handleToggleRule(r.id, r.enabled)} style={{ cursor: 'pointer', width: '16px', height: '16px' }} />
+                      <input 
+                        type="checkbox" 
+                        checked={r.enabled} 
+                        disabled={!isAdmin} 
+                        onChange={() => isAdmin && handleToggleRule(r.id, r.enabled)} 
+                        style={{ cursor: isAdmin ? 'pointer' : 'not-allowed', width: '16px', height: '16px' }} 
+                      />
                     </td>
                   </tr>
                 ))}

@@ -84,11 +84,26 @@ def get_all_users(db: Session = Depends(get_db), current_user: User = Depends(ge
     ]
 
 def apply_role_filters(query, model, user: User):
-    if user.role.name == "State Nodal Authority":
-        return query.filter(model.state_code == user.state)
-    elif user.role.name == "District Authority":
-        return query.filter(model.district_code == user.district)
-    elif user.role.name == "MP / Constituency Viewer":
-        return query.filter(model.constituency == user.constituency)
+    if not user or not user.role:
+        return query
+    role = user.role.name
+    if role == "State Nodal Authority" and user.state:
+        if hasattr(model, "state_code"):
+            return query.filter(model.state_code == user.state)
+        elif hasattr(model, "work"):
+            from backend.app.models.models import Work
+            return query.join(model.work).filter(Work.state_code == user.state)
+    elif role == "District Authority" and user.district:
+        if hasattr(model, "district_code"):
+            return query.filter((model.district_code == user.district) | (model.district_code.like(f"%{user.district}%")))
+        elif hasattr(model, "work"):
+            from backend.app.models.models import Work
+            return query.join(model.work).filter((Work.district_code == user.district) | (Work.district_code.like(f"%{user.district}%")))
+    elif role == "MP / Constituency Viewer" and user.constituency:
+        if hasattr(model, "constituency"):
+            return query.filter((model.constituency == user.constituency) | (model.mp_name.like(f"%{user.constituency}%")))
+        elif hasattr(model, "work"):
+            from backend.app.models.models import Work
+            return query.join(model.work).filter((Work.constituency == user.constituency) | (Work.mp_name.like(f"%{user.constituency}%")))
     return query
 
