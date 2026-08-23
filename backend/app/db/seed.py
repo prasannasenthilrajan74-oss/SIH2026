@@ -483,3 +483,87 @@ def seed_db(db: Session):
                 db.commit()
 
         print(f"Dynamically populated DB with {len(works_to_add)} projects and {len(payments_to_add)} transactions from Dataset folder.")
+
+        # ── Seed Domain-Matched Documents (showcase CSV if available) ──────────
+        print("Seeding domain-matched official documents...")
+        docs_to_add = []
+        existing_doc_works = set(d[0] for d in db.query(Document.work_id).filter(Document.work_id.isnot(None)).all())
+
+        # Prefer showcase CSV (has mismatch flags & domain-matched amounts)
+        doc_csv = os.path.join(dataset_dir, "documents_showcase.csv")
+        if os.path.exists(doc_csv):
+            df_docs_showcase = pd.read_csv(doc_csv)
+            for _, rd in df_docs_showcase.iterrows():
+                p_id = str(rd["project_id"]).strip()
+                doc_type = str(rd["document_type"]).strip()
+                vendor   = str(rd["vendor_name"]).strip()
+                cat      = str(rd["category"]).strip()
+                ext_amt  = float(rd["extracted_amount_inr"]) if not pd.isna(rd["extracted_amount_inr"]) else 0.0
+                sanc_amt = float(rd["sanctioned_amount_inr"]) if not pd.isna(rd["sanctioned_amount_inr"]) else ext_amt
+                score    = float(rd["consistency_score"])    if not pd.isna(rd["consistency_score"])    else 95.0
+                mismatch = bool(rd["mismatch_flag"])         if not pd.isna(rd["mismatch_flag"])        else False
+                fname    = str(rd["file_name"]).strip()
+
+                # Domain-matched OCR text
+                if mismatch:
+                    ocr_text = (
+                        f"PURCHASE INVOICE (DOCUMENT) — Work ID: {p_id}.\n"
+                        f"Vendor: {vendor}.\n"
+                        f"INVOICE AMOUNT: Rs. {ext_amt:,.2f}.\n"
+                        f"[ALERT: Amount deviates from DB Sanctioned Amount of Rs. {sanc_amt:,.2f}]"
+                    )
+                else:
+                    ocr_text = (
+                        f"OFFICIAL PURCHASE INVOICE — Work ID: {p_id}.\n"
+                        f"Category: {cat}. Vendor: {vendor}.\n"
+                        f"Sanctioned Amount: Rs. {sanc_amt:,.2f}. Invoice Amount: Rs. {ext_amt:,.2f}."
+                    )
+
+                docs_to_add.append(Document(
+                    work_id=p_id,
+                    file_name=fname,
+                    document_type=doc_type,
+                    file_path=f"documents/{fname}",
+                    consistency_score=score,
+                    ocr_text=ocr_text,
+                    extracted_data={
+                        "work_id": p_id,
+                        "vendor": vendor,
+                        "sanctioned_amount": sanc_amt,
+                        "extracted_amount":  ext_amt,
+                        "category": cat,
+                        "mismatch": mismatch,
+                    }
+                ))
+        else:
+            # Fallback: auto-generate domain-matched docs for all works
+            all_works = db.query(Work).all()
+            for w in all_works:
+                if w.id in existing_doc_works:
+                    continue
+                cat = (w.category or "").upper()
+                VENDOR_MAP = {
+                    "WATER_SUPPLY": "AquaPure Water Systems & Drilling Corp",
+                    "SCHOOL_INFRASTRUCTURE": "TechLine IT & Lab Equipment Solutions Pvt Ltd",
+                    "HEALTHCARE": "MedTech Healthcare Infrastructure Ltd",
+                    "ROAD_CONSTRUCTION": "Apex Infracon & Highway Contractors",
+                    "SANITATION": "CleanWater Sanitation & Drainage Works",
+                    "SOLAR_ENERGY": "SunPower Renewable Energy Systems",
+                    "COMMUNITY_HALL": "National Civic Infrastructure Developers",
+                }
+                v_name = VENDOR_MAP.get(cat, "National Civic Infrastructure Developers")
+                docs_to_add.append(Document(
+                    work_id=w.id,
+                    file_name=f"Purchase_Bill_{w.id}.pdf",
+                    document_type="PURCHASE_BILL",
+                    file_path=f"documents/Purchase_Bill_{w.id}.pdf",
+                    consistency_score=round(random.uniform(88.0, 98.0), 1),
+                    ocr_text=f"OFFICIAL PURCHASE INVOICE — Work: {w.id}. Vendor: {v_name}. Amount: Rs. {w.sanctioned_amount:,.2f}.",
+                    extracted_data={"work_id": w.id, "vendor": v_name, "sanctioned_amount": w.sanctioned_amount, "category": w.category}
+                ))
+
+        for i in range(0, len(docs_to_add), batch_size):
+            db.add_all(docs_to_add[i:i+batch_size])
+            db.commit()
+
+        print(f"Seeded {len(docs_to_add)} domain-matched documents (mismatch-aware).")

@@ -1,229 +1,113 @@
-entity_id,entity_name,state_ut,district,entity_type,risk_score
-AGENCY_001,Maharashtra Public Works Department (PWD),Maharashtra,Maharashtra HQ,Implementing Agency,35.0
-AGENCY_002,Maharashtra Municipal Infrastructure Corporation,Maharashtra,Maharashtra HQ,Implementing Agency,82.0
-AGENCY_003,Maharashtra District Rural Development Agency (DRDA),Maharashtra,Maharashtra HQ,Implementing Agency,48.0
-AGENCY_004,Maharashtra State Water Supply & Sanitation Board,Maharashtra,Maharashtra HQ,Implementing Agency,48.0
-AGENCY_005,Maharashtra Central Public Works Department (CPWD),Maharashtra,Maharashtra HQ,Implementing Agency,22.5
-AGENCY_006,Maharashtra National Buildings Construction Corporation (NBCC),Maharashtra,Maharashtra HQ,Implementing Agency,22.5
-AGENCY_007,Jammu And Kashmir Public Works Department (PWD),Jammu And Kashmir,Jammu And Kashmir HQ,Implementing Agency,22.5
-AGENCY_008,Jammu And Kashmir Municipal Infrastructure Corporation,Jammu And Kashmir,Jammu And Kashmir HQ,Implementing Agency,65.0
-AGENCY_009,Jammu And Kashmir District Rural Development Agency (DRDA),Jammu And Kashmir,Jammu And Kashmir HQ,Implementing Agency,48.0
-AGENCY_010,Jammu And Kashmir State Water Supply & Sanitation Board,Jammu And Kashmir,Jammu And Kashmir HQ,Implementing Agency,48.0
-AGENCY_011,Jammu And Kashmir Central Public Works Department (CPWD),Jammu And Kashmir,Jammu And Kashmir HQ,Implementing Agency,22.5
-AGENCY_012,Jammu And Kashmir National Buildings Construction Corporation (NBCC),Jammu And Kashmir,Jammu And Kashmir HQ,Implementing Agency,82.0
-AGENCY_013,Bihar Public Works Department (PWD),Bihar,Bihar HQ,Implementing Agency,65.0
-AGENCY_014,Bihar Municipal Infrastructure Corporation,Bihar,Bihar HQ,Implementing Agency,35.0
-AGENCY_015,Bihar District Rural Development Agency (DRDA),Bihar,Bihar HQ,Implementing Agency,22.5
-AGENCY_016,Bihar State Water Supply & Sanitation Board,Bihar,Bihar HQ,Implementing Agency,22.5
-AGENCY_017,Bihar Central Public Works Department (CPWD),Bihar,Bihar HQ,Implementing Agency,35.0
-AGENCY_018,Bihar National Buildings Construction Corporation (NBCC),Bihar,Bihar HQ,Implementing Agency,48.0
-AGENCY_019,West Bengal Public Works Department (PWD),West Bengal,West Bengal HQ,Implementing Agency,35.0
-AGENCY_020,West Bengal Municipal Infrastructure Corporation,West Bengal,West Bengal HQ,Implementing Agency,35.0
-AGENCY_021,West Bengal District Rural Development Agency (DRDA),West Bengal,West Bengal HQ,Implementing Agency,48.0
-AGENCY_022,West Bengal State Water Supply & Sanitation Board,West Bengal,West Bengal HQ,Implementing Agency,22.5
-AGENCY_023,West Bengal Central Public Works Department (CPWD),West Bengal,West Bengal HQ,Implementing Agency,35.0
-AGENCY_024,West Bengal National Buildings Construction Corporation (NBCC),West Bengal,West Bengal HQ,Implementing Agency,35.0
-AGENCY_025,Uttar Pradesh Public Works Department (PWD),Uttar Pradesh,Uttar Pradesh HQ,Implementing Agency,35.0
-AGENCY_026,Uttar Pradesh Municipal Infrastructure Corporation,Uttar Pradesh,Uttar Pradesh HQ,Implementing Agency,48.0
-AGENCY_027,Uttar Pradesh District Rural Development Agency (DRDA),Uttar Pradesh,Uttar Pradesh HQ,Implementing Agency,22.5
-AGENCY_028,Uttar Pradesh State Water Supply & Sanitation Board,Uttar Pradesh,Uttar Pradesh HQ,Implementing Agency,48.0
-AGENCY_029,Uttar Pradesh Central Public Works Department (CPWD),Uttar Pradesh,Uttar Pradesh HQ,Implementing Agency,48.0
-AGENCY_030,Uttar Pradesh National Buildings Construction Corporation (NBCC),Uttar Pradesh,Uttar Pradesh HQ,Implementing Agency,22.5
-AGENCY_031,Kerala Public Works Department (PWD),Kerala,Kerala HQ,Implementing Agency,48.0
-AGENCY_032,Kerala Municipal Infrastructure Corporation,Kerala,Kerala HQ,Implementing Agency,22.5
-AGENCY_033,Kerala District Rural Development Agency (DRDA),Kerala,Kerala HQ,Implementing Agency,22.5
-AGENCY_034,Kerala State Water Supply & Sanitation Board,Kerala,Kerala HQ,Implementing Agency,65.0
-AGENCY_035,Kerala Central Public Works Department (CPWD),Kerala,Kerala HQ,Implementing Agency,82.0
-AGENCY_036,Kerala National Buildings Construction Corporation (NBCC),Kerala,Kerala HQ,Implementing Agency,65.0
-AGENCY_037,Uttarakhand Public Works Department (PWD),Uttarakhand,Uttarakhand HQ,Implementing Agency,35.0
-AGENCY_038,Uttarakhand Municipal Infrastructure Corporation,Uttarakhand,Uttarakhand HQ,Implementing Agency,22.5
-AGENCY_039,Uttarakhand District Rural Development Agency (DRDA),Uttarakhand,Uttarakhand HQ,Implementing Agency,48.0
-AGENCY_040,Uttarakhand State Water Supply & Sanitation Board,Uttarakhand,Uttarakhand HQ,Implementing Agency,35.0
-AGENCY_041,Uttarakhand Central Public Works Department (CPWD),Uttarakhand,Uttarakhand HQ,Implementing Agency,22.5
-AGENCY_042,Uttarakhand National Buildings Construction Corporation (NBCC),Uttarakhand,Uttarakhand HQ,Implementing Agency,35.0
-AGENCY_043,Manipur Public Works Department (PWD),Manipur,Manipur HQ,Implementing Agency,22.5
-AGENCY_044,Manipur Municipal Infrastructure Corporation,Manipur,Manipur HQ,Implementing Agency,65.0
-AGENCY_045,Manipur District Rural Development Agency (DRDA),Manipur,Manipur HQ,Implementing Agency,35.0
-AGENCY_046,Manipur State Water Supply & Sanitation Board,Manipur,Manipur HQ,Implementing Agency,48.0
-AGENCY_047,Manipur Central Public Works Department (CPWD),Manipur,Manipur HQ,Implementing Agency,35.0
-AGENCY_048,Manipur National Buildings Construction Corporation (NBCC),Manipur,Manipur HQ,Implementing Agency,48.0
-AGENCY_049,Madhya Pradesh Public Works Department (PWD),Madhya Pradesh,Madhya Pradesh HQ,Implementing Agency,48.0
-AGENCY_050,Madhya Pradesh Municipal Infrastructure Corporation,Madhya Pradesh,Madhya Pradesh HQ,Implementing Agency,22.5
-AGENCY_051,Madhya Pradesh District Rural Development Agency (DRDA),Madhya Pradesh,Madhya Pradesh HQ,Implementing Agency,82.0
-AGENCY_052,Madhya Pradesh State Water Supply & Sanitation Board,Madhya Pradesh,Madhya Pradesh HQ,Implementing Agency,48.0
-AGENCY_053,Madhya Pradesh Central Public Works Department (CPWD),Madhya Pradesh,Madhya Pradesh HQ,Implementing Agency,65.0
-AGENCY_054,Madhya Pradesh National Buildings Construction Corporation (NBCC),Madhya Pradesh,Madhya Pradesh HQ,Implementing Agency,65.0
-AGENCY_055,Assam Public Works Department (PWD),Assam,Assam HQ,Implementing Agency,48.0
-AGENCY_056,Assam Municipal Infrastructure Corporation,Assam,Assam HQ,Implementing Agency,65.0
-AGENCY_057,Assam District Rural Development Agency (DRDA),Assam,Assam HQ,Implementing Agency,22.5
-AGENCY_058,Assam State Water Supply & Sanitation Board,Assam,Assam HQ,Implementing Agency,22.5
-AGENCY_059,Assam Central Public Works Department (CPWD),Assam,Assam HQ,Implementing Agency,22.5
-AGENCY_060,Assam National Buildings Construction Corporation (NBCC),Assam,Assam HQ,Implementing Agency,35.0
-AGENCY_061,Andhra Pradesh Public Works Department (PWD),Andhra Pradesh,Andhra Pradesh HQ,Implementing Agency,35.0
-AGENCY_062,Andhra Pradesh Municipal Infrastructure Corporation,Andhra Pradesh,Andhra Pradesh HQ,Implementing Agency,35.0
-AGENCY_063,Andhra Pradesh District Rural Development Agency (DRDA),Andhra Pradesh,Andhra Pradesh HQ,Implementing Agency,65.0
-AGENCY_064,Andhra Pradesh State Water Supply & Sanitation Board,Andhra Pradesh,Andhra Pradesh HQ,Implementing Agency,35.0
-AGENCY_065,Andhra Pradesh Central Public Works Department (CPWD),Andhra Pradesh,Andhra Pradesh HQ,Implementing Agency,35.0
-AGENCY_066,Andhra Pradesh National Buildings Construction Corporation (NBCC),Andhra Pradesh,Andhra Pradesh HQ,Implementing Agency,48.0
-AGENCY_067,Rajasthan Public Works Department (PWD),Rajasthan,Rajasthan HQ,Implementing Agency,22.5
-AGENCY_068,Rajasthan Municipal Infrastructure Corporation,Rajasthan,Rajasthan HQ,Implementing Agency,65.0
-AGENCY_069,Rajasthan District Rural Development Agency (DRDA),Rajasthan,Rajasthan HQ,Implementing Agency,22.5
-AGENCY_070,Rajasthan State Water Supply & Sanitation Board,Rajasthan,Rajasthan HQ,Implementing Agency,82.0
-AGENCY_071,Rajasthan Central Public Works Department (CPWD),Rajasthan,Rajasthan HQ,Implementing Agency,48.0
-AGENCY_072,Rajasthan National Buildings Construction Corporation (NBCC),Rajasthan,Rajasthan HQ,Implementing Agency,22.5
-AGENCY_073,Punjab Public Works Department (PWD),Punjab,Punjab HQ,Implementing Agency,22.5
-AGENCY_074,Punjab Municipal Infrastructure Corporation,Punjab,Punjab HQ,Implementing Agency,65.0
-AGENCY_075,Punjab District Rural Development Agency (DRDA),Punjab,Punjab HQ,Implementing Agency,48.0
-AGENCY_076,Punjab State Water Supply & Sanitation Board,Punjab,Punjab HQ,Implementing Agency,48.0
-AGENCY_077,Punjab Central Public Works Department (CPWD),Punjab,Punjab HQ,Implementing Agency,48.0
-AGENCY_078,Punjab National Buildings Construction Corporation (NBCC),Punjab,Punjab HQ,Implementing Agency,22.5
-AGENCY_079,State Public Works Department (PWD),State,State HQ,Implementing Agency,35.0
-AGENCY_080,State Municipal Infrastructure Corporation,State,State HQ,Implementing Agency,22.5
-AGENCY_081,State District Rural Development Agency (DRDA),State,State HQ,Implementing Agency,65.0
-AGENCY_082,State State Water Supply & Sanitation Board,State,State HQ,Implementing Agency,48.0
-AGENCY_083,State Central Public Works Department (CPWD),State,State HQ,Implementing Agency,35.0
-AGENCY_084,State National Buildings Construction Corporation (NBCC),State,State HQ,Implementing Agency,22.5
-AGENCY_085,Odisha Public Works Department (PWD),Odisha,Odisha HQ,Implementing Agency,35.0
-AGENCY_086,Odisha Municipal Infrastructure Corporation,Odisha,Odisha HQ,Implementing Agency,35.0
-AGENCY_087,Odisha District Rural Development Agency (DRDA),Odisha,Odisha HQ,Implementing Agency,48.0
-AGENCY_088,Odisha State Water Supply & Sanitation Board,Odisha,Odisha HQ,Implementing Agency,48.0
-AGENCY_089,Odisha Central Public Works Department (CPWD),Odisha,Odisha HQ,Implementing Agency,65.0
-AGENCY_090,Odisha National Buildings Construction Corporation (NBCC),Odisha,Odisha HQ,Implementing Agency,35.0
-AGENCY_091,Tamil Nadu Public Works Department (PWD),Tamil Nadu,Tamil Nadu HQ,Implementing Agency,22.5
-AGENCY_092,Tamil Nadu Municipal Infrastructure Corporation,Tamil Nadu,Tamil Nadu HQ,Implementing Agency,48.0
-AGENCY_093,Tamil Nadu District Rural Development Agency (DRDA),Tamil Nadu,Tamil Nadu HQ,Implementing Agency,48.0
-AGENCY_094,Tamil Nadu State Water Supply & Sanitation Board,Tamil Nadu,Tamil Nadu HQ,Implementing Agency,48.0
-AGENCY_095,Tamil Nadu Central Public Works Department (CPWD),Tamil Nadu,Tamil Nadu HQ,Implementing Agency,48.0
-AGENCY_096,Tamil Nadu National Buildings Construction Corporation (NBCC),Tamil Nadu,Tamil Nadu HQ,Implementing Agency,35.0
-AGENCY_097,Meghalaya Public Works Department (PWD),Meghalaya,Meghalaya HQ,Implementing Agency,48.0
-AGENCY_098,Meghalaya Municipal Infrastructure Corporation,Meghalaya,Meghalaya HQ,Implementing Agency,35.0
-AGENCY_099,Meghalaya District Rural Development Agency (DRDA),Meghalaya,Meghalaya HQ,Implementing Agency,22.5
-AGENCY_100,Meghalaya State Water Supply & Sanitation Board,Meghalaya,Meghalaya HQ,Implementing Agency,22.5
-AGENCY_101,Meghalaya Central Public Works Department (CPWD),Meghalaya,Meghalaya HQ,Implementing Agency,22.5
-AGENCY_102,Meghalaya National Buildings Construction Corporation (NBCC),Meghalaya,Meghalaya HQ,Implementing Agency,48.0
-AGENCY_103,Jharkhand Public Works Department (PWD),Jharkhand,Jharkhand HQ,Implementing Agency,35.0
-AGENCY_104,Jharkhand Municipal Infrastructure Corporation,Jharkhand,Jharkhand HQ,Implementing Agency,48.0
-AGENCY_105,Jharkhand District Rural Development Agency (DRDA),Jharkhand,Jharkhand HQ,Implementing Agency,65.0
-AGENCY_106,Jharkhand State Water Supply & Sanitation Board,Jharkhand,Jharkhand HQ,Implementing Agency,35.0
-AGENCY_107,Jharkhand Central Public Works Department (CPWD),Jharkhand,Jharkhand HQ,Implementing Agency,35.0
-AGENCY_108,Jharkhand National Buildings Construction Corporation (NBCC),Jharkhand,Jharkhand HQ,Implementing Agency,48.0
-AGENCY_109,Himachal Pradesh Public Works Department (PWD),Himachal Pradesh,Himachal Pradesh HQ,Implementing Agency,35.0
-AGENCY_110,Himachal Pradesh Municipal Infrastructure Corporation,Himachal Pradesh,Himachal Pradesh HQ,Implementing Agency,22.5
-AGENCY_111,Himachal Pradesh District Rural Development Agency (DRDA),Himachal Pradesh,Himachal Pradesh HQ,Implementing Agency,35.0
-AGENCY_112,Himachal Pradesh State Water Supply & Sanitation Board,Himachal Pradesh,Himachal Pradesh HQ,Implementing Agency,22.5
-AGENCY_113,Himachal Pradesh Central Public Works Department (CPWD),Himachal Pradesh,Himachal Pradesh HQ,Implementing Agency,65.0
-AGENCY_114,Himachal Pradesh National Buildings Construction Corporation (NBCC),Himachal Pradesh,Himachal Pradesh HQ,Implementing Agency,65.0
-AGENCY_115,Telangana Public Works Department (PWD),Telangana,Telangana HQ,Implementing Agency,48.0
-AGENCY_116,Telangana Municipal Infrastructure Corporation,Telangana,Telangana HQ,Implementing Agency,65.0
-AGENCY_117,Telangana District Rural Development Agency (DRDA),Telangana,Telangana HQ,Implementing Agency,65.0
-AGENCY_118,Telangana State Water Supply & Sanitation Board,Telangana,Telangana HQ,Implementing Agency,22.5
-AGENCY_119,Telangana Central Public Works Department (CPWD),Telangana,Telangana HQ,Implementing Agency,65.0
-AGENCY_120,Telangana National Buildings Construction Corporation (NBCC),Telangana,Telangana HQ,Implementing Agency,48.0
-AGENCY_121,Delhi Public Works Department (PWD),Delhi,Delhi HQ,Implementing Agency,65.0
-AGENCY_122,Delhi Municipal Infrastructure Corporation,Delhi,Delhi HQ,Implementing Agency,65.0
-AGENCY_123,Delhi District Rural Development Agency (DRDA),Delhi,Delhi HQ,Implementing Agency,35.0
-AGENCY_124,Delhi State Water Supply & Sanitation Board,Delhi,Delhi HQ,Implementing Agency,22.5
-AGENCY_125,Delhi Central Public Works Department (CPWD),Delhi,Delhi HQ,Implementing Agency,35.0
-AGENCY_126,Delhi National Buildings Construction Corporation (NBCC),Delhi,Delhi HQ,Implementing Agency,35.0
-AGENCY_127,Karnataka Public Works Department (PWD),Karnataka,Karnataka HQ,Implementing Agency,65.0
-AGENCY_128,Karnataka Municipal Infrastructure Corporation,Karnataka,Karnataka HQ,Implementing Agency,65.0
-AGENCY_129,Karnataka District Rural Development Agency (DRDA),Karnataka,Karnataka HQ,Implementing Agency,22.5
-AGENCY_130,Karnataka State Water Supply & Sanitation Board,Karnataka,Karnataka HQ,Implementing Agency,48.0
-AGENCY_131,Karnataka Central Public Works Department (CPWD),Karnataka,Karnataka HQ,Implementing Agency,35.0
-AGENCY_132,Karnataka National Buildings Construction Corporation (NBCC),Karnataka,Karnataka HQ,Implementing Agency,35.0
-AGENCY_133,Gujarat Public Works Department (PWD),Gujarat,Gujarat HQ,Implementing Agency,22.5
-AGENCY_134,Gujarat Municipal Infrastructure Corporation,Gujarat,Gujarat HQ,Implementing Agency,35.0
-AGENCY_135,Gujarat District Rural Development Agency (DRDA),Gujarat,Gujarat HQ,Implementing Agency,65.0
-AGENCY_136,Gujarat State Water Supply & Sanitation Board,Gujarat,Gujarat HQ,Implementing Agency,35.0
-AGENCY_137,Gujarat Central Public Works Department (CPWD),Gujarat,Gujarat HQ,Implementing Agency,48.0
-AGENCY_138,Gujarat National Buildings Construction Corporation (NBCC),Gujarat,Gujarat HQ,Implementing Agency,48.0
-AGENCY_139,Chhattisgarh Public Works Department (PWD),Chhattisgarh,Chhattisgarh HQ,Implementing Agency,35.0
-AGENCY_140,Chhattisgarh Municipal Infrastructure Corporation,Chhattisgarh,Chhattisgarh HQ,Implementing Agency,82.0
-AGENCY_141,Chhattisgarh District Rural Development Agency (DRDA),Chhattisgarh,Chhattisgarh HQ,Implementing Agency,82.0
-AGENCY_142,Chhattisgarh State Water Supply & Sanitation Board,Chhattisgarh,Chhattisgarh HQ,Implementing Agency,35.0
-AGENCY_143,Chhattisgarh Central Public Works Department (CPWD),Chhattisgarh,Chhattisgarh HQ,Implementing Agency,35.0
-AGENCY_144,Chhattisgarh National Buildings Construction Corporation (NBCC),Chhattisgarh,Chhattisgarh HQ,Implementing Agency,35.0
-AGENCY_145,Tripura Public Works Department (PWD),Tripura,Tripura HQ,Implementing Agency,35.0
-AGENCY_146,Tripura Municipal Infrastructure Corporation,Tripura,Tripura HQ,Implementing Agency,22.5
-AGENCY_147,Tripura District Rural Development Agency (DRDA),Tripura,Tripura HQ,Implementing Agency,48.0
-AGENCY_148,Tripura State Water Supply & Sanitation Board,Tripura,Tripura HQ,Implementing Agency,48.0
-AGENCY_149,Tripura Central Public Works Department (CPWD),Tripura,Tripura HQ,Implementing Agency,22.5
-AGENCY_150,Tripura National Buildings Construction Corporation (NBCC),Tripura,Tripura HQ,Implementing Agency,35.0
-AGENCY_151,Andaman And Nicobar Islands Public Works Department (PWD),Andaman And Nicobar Islands,Andaman And Nicobar Islands HQ,Implementing Agency,65.0
-AGENCY_152,Andaman And Nicobar Islands Municipal Infrastructure Corporation,Andaman And Nicobar Islands,Andaman And Nicobar Islands HQ,Implementing Agency,35.0
-AGENCY_153,Andaman And Nicobar Islands District Rural Development Agency (DRDA),Andaman And Nicobar Islands,Andaman And Nicobar Islands HQ,Implementing Agency,22.5
-AGENCY_154,Andaman And Nicobar Islands State Water Supply & Sanitation Board,Andaman And Nicobar Islands,Andaman And Nicobar Islands HQ,Implementing Agency,35.0
-AGENCY_155,Andaman And Nicobar Islands Central Public Works Department (CPWD),Andaman And Nicobar Islands,Andaman And Nicobar Islands HQ,Implementing Agency,82.0
-AGENCY_156,Andaman And Nicobar Islands National Buildings Construction Corporation (NBCC),Andaman And Nicobar Islands,Andaman And Nicobar Islands HQ,Implementing Agency,35.0
-AGENCY_157,Goa Public Works Department (PWD),Goa,Goa HQ,Implementing Agency,48.0
-AGENCY_158,Goa Municipal Infrastructure Corporation,Goa,Goa HQ,Implementing Agency,48.0
-AGENCY_159,Goa District Rural Development Agency (DRDA),Goa,Goa HQ,Implementing Agency,35.0
-AGENCY_160,Goa State Water Supply & Sanitation Board,Goa,Goa HQ,Implementing Agency,48.0
-AGENCY_161,Goa Central Public Works Department (CPWD),Goa,Goa HQ,Implementing Agency,35.0
-AGENCY_162,Goa National Buildings Construction Corporation (NBCC),Goa,Goa HQ,Implementing Agency,48.0
-AGENCY_163,Haryana Public Works Department (PWD),Haryana,Haryana HQ,Implementing Agency,48.0
-AGENCY_164,Haryana Municipal Infrastructure Corporation,Haryana,Haryana HQ,Implementing Agency,48.0
-AGENCY_165,Haryana District Rural Development Agency (DRDA),Haryana,Haryana HQ,Implementing Agency,22.5
-AGENCY_166,Haryana State Water Supply & Sanitation Board,Haryana,Haryana HQ,Implementing Agency,65.0
-AGENCY_167,Haryana Central Public Works Department (CPWD),Haryana,Haryana HQ,Implementing Agency,35.0
-AGENCY_168,Haryana National Buildings Construction Corporation (NBCC),Haryana,Haryana HQ,Implementing Agency,22.5
-AGENCY_169,Sikkim Public Works Department (PWD),Sikkim,Sikkim HQ,Implementing Agency,22.5
-AGENCY_170,Sikkim Municipal Infrastructure Corporation,Sikkim,Sikkim HQ,Implementing Agency,48.0
-AGENCY_171,Sikkim District Rural Development Agency (DRDA),Sikkim,Sikkim HQ,Implementing Agency,48.0
-AGENCY_172,Sikkim State Water Supply & Sanitation Board,Sikkim,Sikkim HQ,Implementing Agency,22.5
-AGENCY_173,Sikkim Central Public Works Department (CPWD),Sikkim,Sikkim HQ,Implementing Agency,48.0
-AGENCY_174,Sikkim National Buildings Construction Corporation (NBCC),Sikkim,Sikkim HQ,Implementing Agency,35.0
-AGENCY_175,The Dadra And Nagar Haveli And Public Works Department (PWD),The Dadra And Nagar Haveli And,The Dadra And Nagar Haveli And HQ,Implementing Agency,48.0
-AGENCY_176,The Dadra And Nagar Haveli And Municipal Infrastructure Corporation,The Dadra And Nagar Haveli And,The Dadra And Nagar Haveli And HQ,Implementing Agency,22.5
-AGENCY_177,The Dadra And Nagar Haveli And District Rural Development Agency (DRDA),The Dadra And Nagar Haveli And,The Dadra And Nagar Haveli And HQ,Implementing Agency,48.0
-AGENCY_178,The Dadra And Nagar Haveli And State Water Supply & Sanitation Board,The Dadra And Nagar Haveli And,The Dadra And Nagar Haveli And HQ,Implementing Agency,35.0
-AGENCY_179,The Dadra And Nagar Haveli And Central Public Works Department (CPWD),The Dadra And Nagar Haveli And,The Dadra And Nagar Haveli And HQ,Implementing Agency,65.0
-AGENCY_180,The Dadra And Nagar Haveli And National Buildings Construction Corporation (NBCC),The Dadra And Nagar Haveli And,The Dadra And Nagar Haveli And HQ,Implementing Agency,22.5
-AGENCY_181,Daman And Diu Public Works Department (PWD),Daman And Diu,Daman And Diu HQ,Implementing Agency,35.0
-AGENCY_182,Daman And Diu Municipal Infrastructure Corporation,Daman And Diu,Daman And Diu HQ,Implementing Agency,22.5
-AGENCY_183,Daman And Diu District Rural Development Agency (DRDA),Daman And Diu,Daman And Diu HQ,Implementing Agency,65.0
-AGENCY_184,Daman And Diu State Water Supply & Sanitation Board,Daman And Diu,Daman And Diu HQ,Implementing Agency,65.0
-AGENCY_185,Daman And Diu Central Public Works Department (CPWD),Daman And Diu,Daman And Diu HQ,Implementing Agency,35.0
-AGENCY_186,Daman And Diu National Buildings Construction Corporation (NBCC),Daman And Diu,Daman And Diu HQ,Implementing Agency,48.0
-AGENCY_187,Arunachal Pradesh Public Works Department (PWD),Arunachal Pradesh,Arunachal Pradesh HQ,Implementing Agency,65.0
-AGENCY_188,Arunachal Pradesh Municipal Infrastructure Corporation,Arunachal Pradesh,Arunachal Pradesh HQ,Implementing Agency,48.0
-AGENCY_189,Arunachal Pradesh District Rural Development Agency (DRDA),Arunachal Pradesh,Arunachal Pradesh HQ,Implementing Agency,48.0
-AGENCY_190,Arunachal Pradesh State Water Supply & Sanitation Board,Arunachal Pradesh,Arunachal Pradesh HQ,Implementing Agency,35.0
-AGENCY_191,Arunachal Pradesh Central Public Works Department (CPWD),Arunachal Pradesh,Arunachal Pradesh HQ,Implementing Agency,22.5
-AGENCY_192,Arunachal Pradesh National Buildings Construction Corporation (NBCC),Arunachal Pradesh,Arunachal Pradesh HQ,Implementing Agency,65.0
-AGENCY_193,Chandigarh Public Works Department (PWD),Chandigarh,Chandigarh HQ,Implementing Agency,65.0
-AGENCY_194,Chandigarh Municipal Infrastructure Corporation,Chandigarh,Chandigarh HQ,Implementing Agency,48.0
-AGENCY_195,Chandigarh District Rural Development Agency (DRDA),Chandigarh,Chandigarh HQ,Implementing Agency,35.0
-AGENCY_196,Chandigarh State Water Supply & Sanitation Board,Chandigarh,Chandigarh HQ,Implementing Agency,35.0
-AGENCY_197,Chandigarh Central Public Works Department (CPWD),Chandigarh,Chandigarh HQ,Implementing Agency,48.0
-AGENCY_198,Chandigarh National Buildings Construction Corporation (NBCC),Chandigarh,Chandigarh HQ,Implementing Agency,65.0
-AGENCY_199,Ladakh Public Works Department (PWD),Ladakh,Ladakh HQ,Implementing Agency,65.0
-AGENCY_200,Ladakh Municipal Infrastructure Corporation,Ladakh,Ladakh HQ,Implementing Agency,48.0
-AGENCY_201,Ladakh District Rural Development Agency (DRDA),Ladakh,Ladakh HQ,Implementing Agency,48.0
-AGENCY_202,Ladakh State Water Supply & Sanitation Board,Ladakh,Ladakh HQ,Implementing Agency,22.5
-AGENCY_203,Ladakh Central Public Works Department (CPWD),Ladakh,Ladakh HQ,Implementing Agency,22.5
-AGENCY_204,Ladakh National Buildings Construction Corporation (NBCC),Ladakh,Ladakh HQ,Implementing Agency,65.0
-AGENCY_205,Lakshadweep Public Works Department (PWD),Lakshadweep,Lakshadweep HQ,Implementing Agency,48.0
-AGENCY_206,Lakshadweep Municipal Infrastructure Corporation,Lakshadweep,Lakshadweep HQ,Implementing Agency,22.5
-AGENCY_207,Lakshadweep District Rural Development Agency (DRDA),Lakshadweep,Lakshadweep HQ,Implementing Agency,22.5
-AGENCY_208,Lakshadweep State Water Supply & Sanitation Board,Lakshadweep,Lakshadweep HQ,Implementing Agency,48.0
-AGENCY_209,Lakshadweep Central Public Works Department (CPWD),Lakshadweep,Lakshadweep HQ,Implementing Agency,22.5
-AGENCY_210,Lakshadweep National Buildings Construction Corporation (NBCC),Lakshadweep,Lakshadweep HQ,Implementing Agency,22.5
-AGENCY_211,Mizoram Public Works Department (PWD),Mizoram,Mizoram HQ,Implementing Agency,48.0
-AGENCY_212,Mizoram Municipal Infrastructure Corporation,Mizoram,Mizoram HQ,Implementing Agency,48.0
-AGENCY_213,Mizoram District Rural Development Agency (DRDA),Mizoram,Mizoram HQ,Implementing Agency,48.0
-AGENCY_214,Mizoram State Water Supply & Sanitation Board,Mizoram,Mizoram HQ,Implementing Agency,35.0
-AGENCY_215,Mizoram Central Public Works Department (CPWD),Mizoram,Mizoram HQ,Implementing Agency,48.0
-AGENCY_216,Mizoram National Buildings Construction Corporation (NBCC),Mizoram,Mizoram HQ,Implementing Agency,35.0
-AGENCY_217,Nagaland Public Works Department (PWD),Nagaland,Nagaland HQ,Implementing Agency,35.0
-AGENCY_218,Nagaland Municipal Infrastructure Corporation,Nagaland,Nagaland HQ,Implementing Agency,48.0
-AGENCY_219,Nagaland District Rural Development Agency (DRDA),Nagaland,Nagaland HQ,Implementing Agency,48.0
-AGENCY_220,Nagaland State Water Supply & Sanitation Board,Nagaland,Nagaland HQ,Implementing Agency,65.0
-AGENCY_221,Nagaland Central Public Works Department (CPWD),Nagaland,Nagaland HQ,Implementing Agency,48.0
-AGENCY_222,Nagaland National Buildings Construction Corporation (NBCC),Nagaland,Nagaland HQ,Implementing Agency,48.0
-AGENCY_223,Puducherry Public Works Department (PWD),Puducherry,Puducherry HQ,Implementing Agency,22.5
-AGENCY_224,Puducherry Municipal Infrastructure Corporation,Puducherry,Puducherry HQ,Implementing Agency,35.0
-AGENCY_225,Puducherry District Rural Development Agency (DRDA),Puducherry,Puducherry HQ,Implementing Agency,35.0
-AGENCY_226,Puducherry State Water Supply & Sanitation Board,Puducherry,Puducherry HQ,Implementing Agency,35.0
-AGENCY_227,Puducherry Central Public Works Department (CPWD),Puducherry,Puducherry HQ,Implementing Agency,82.0
-AGENCY_228,Puducherry National Buildings Construction Corporation (NBCC),Puducherry,Puducherry HQ,Implementing Agency,35.0
+entity_id,entity_name,state_code,state_ut,district,entity_type,risk_profile
+AGENCY_0001,Thane Public Works Department (PWD),MH,Maharashtra,Thane,Implementing Agency,mixed
+AGENCY_0002,Thane District Rural Development Agency (DRDA),MH,Maharashtra,Thane,Implementing Agency,high
+AGENCY_0003,Mumbai Municipal Corporation Infrastructure Cell,MH,Maharashtra,Mumbai,Implementing Agency,medium
+AGENCY_0004,Aurangabad State Water Supply & Sanitation Board (WSSB),MH,Maharashtra,Aurangabad,Implementing Agency,low
+AGENCY_0005,Madurai Public Works Department (PWD),TN,Tamil Nadu,Madurai,Implementing Agency,mixed
+AGENCY_0006,Madurai District Rural Development Agency (DRDA),TN,Tamil Nadu,Madurai,Implementing Agency,high
+AGENCY_0007,Tiruchirappalli Municipal Corporation Infrastructure Cell,TN,Tamil Nadu,Tiruchirappalli,Implementing Agency,medium
+AGENCY_0008,Chennai State Water Supply & Sanitation Board (WSSB),TN,Tamil Nadu,Chennai,Implementing Agency,low
+AGENCY_0009,Varanasi Public Works Department (PWD),UP,Uttar Pradesh,Varanasi,Implementing Agency,mixed
+AGENCY_0010,Varanasi District Rural Development Agency (DRDA),UP,Uttar Pradesh,Varanasi,Implementing Agency,high
+AGENCY_0011,Kanpur Municipal Corporation Infrastructure Cell,UP,Uttar Pradesh,Kanpur,Implementing Agency,medium
+AGENCY_0012,Varanasi State Water Supply & Sanitation Board (WSSB),UP,Uttar Pradesh,Varanasi,Implementing Agency,low
+AGENCY_0013,Darjeeling Public Works Department (PWD),WB,West Bengal,Darjeeling,Implementing Agency,mixed
+AGENCY_0014,Kolkata District Rural Development Agency (DRDA),WB,West Bengal,Kolkata,Implementing Agency,high
+AGENCY_0015,Kolkata Municipal Corporation Infrastructure Cell,WB,West Bengal,Kolkata,Implementing Agency,medium
+AGENCY_0016,Siliguri State Water Supply & Sanitation Board (WSSB),WB,West Bengal,Siliguri,Implementing Agency,low
+AGENCY_0017,Bhagalpur Public Works Department (PWD),BR,Bihar,Bhagalpur,Implementing Agency,mixed
+AGENCY_0018,Muzaffarpur District Rural Development Agency (DRDA),BR,Bihar,Muzaffarpur,Implementing Agency,high
+AGENCY_0019,Patna Municipal Corporation Infrastructure Cell,BR,Bihar,Patna,Implementing Agency,medium
+AGENCY_0020,Patna State Water Supply & Sanitation Board (WSSB),BR,Bihar,Patna,Implementing Agency,low
+AGENCY_0021,Bengaluru Public Works Department (PWD),KA,Karnataka,Bengaluru,Implementing Agency,mixed
+AGENCY_0022,Mysuru District Rural Development Agency (DRDA),KA,Karnataka,Mysuru,Implementing Agency,high
+AGENCY_0023,Bengaluru Municipal Corporation Infrastructure Cell,KA,Karnataka,Bengaluru,Implementing Agency,medium
+AGENCY_0024,Hubballi State Water Supply & Sanitation Board (WSSB),KA,Karnataka,Hubballi,Implementing Agency,low
+AGENCY_0025,Ahmedabad Public Works Department (PWD),GJ,Gujarat,Ahmedabad,Implementing Agency,mixed
+AGENCY_0026,Ahmedabad District Rural Development Agency (DRDA),GJ,Gujarat,Ahmedabad,Implementing Agency,high
+AGENCY_0027,Bhavnagar Municipal Corporation Infrastructure Cell,GJ,Gujarat,Bhavnagar,Implementing Agency,medium
+AGENCY_0028,Gandhinagar State Water Supply & Sanitation Board (WSSB),GJ,Gujarat,Gandhinagar,Implementing Agency,low
+AGENCY_0029,Bikaner Public Works Department (PWD),RJ,Rajasthan,Bikaner,Implementing Agency,mixed
+AGENCY_0030,Udaipur District Rural Development Agency (DRDA),RJ,Rajasthan,Udaipur,Implementing Agency,high
+AGENCY_0031,Udaipur Municipal Corporation Infrastructure Cell,RJ,Rajasthan,Udaipur,Implementing Agency,medium
+AGENCY_0032,Kota State Water Supply & Sanitation Board (WSSB),RJ,Rajasthan,Kota,Implementing Agency,low
+AGENCY_0033,Kollam Public Works Department (PWD),KL,Kerala,Kollam,Implementing Agency,mixed
+AGENCY_0034,Alappuzha District Rural Development Agency (DRDA),KL,Kerala,Alappuzha,Implementing Agency,high
+AGENCY_0035,Alappuzha Municipal Corporation Infrastructure Cell,KL,Kerala,Alappuzha,Implementing Agency,medium
+AGENCY_0036,Alappuzha State Water Supply & Sanitation Board (WSSB),KL,Kerala,Alappuzha,Implementing Agency,low
+AGENCY_0037,Jalandhar Public Works Department (PWD),PB,Punjab,Jalandhar,Implementing Agency,mixed
+AGENCY_0038,Amritsar District Rural Development Agency (DRDA),PB,Punjab,Amritsar,Implementing Agency,high
+AGENCY_0039,Patiala Municipal Corporation Infrastructure Cell,PB,Punjab,Patiala,Implementing Agency,medium
+AGENCY_0040,Chandigarh State Water Supply & Sanitation Board (WSSB),PB,Punjab,Chandigarh,Implementing Agency,low
+AGENCY_0041,Hisar Public Works Department (PWD),HR,Haryana,Hisar,Implementing Agency,mixed
+AGENCY_0042,Faridabad District Rural Development Agency (DRDA),HR,Haryana,Faridabad,Implementing Agency,high
+AGENCY_0043,Hisar Municipal Corporation Infrastructure Cell,HR,Haryana,Hisar,Implementing Agency,medium
+AGENCY_0044,Ambala State Water Supply & Sanitation Board (WSSB),HR,Haryana,Ambala,Implementing Agency,low
+AGENCY_0045,East Delhi Public Works Department (PWD),DL,Delhi,East Delhi,Implementing Agency,mixed
+AGENCY_0046,Central Delhi District Rural Development Agency (DRDA),DL,Delhi,Central Delhi,Implementing Agency,high
+AGENCY_0047,New Delhi Municipal Corporation Infrastructure Cell,DL,Delhi,New Delhi,Implementing Agency,medium
+AGENCY_0048,Central Delhi State Water Supply & Sanitation Board (WSSB),DL,Delhi,Central Delhi,Implementing Agency,low
+AGENCY_0049,Gwalior Public Works Department (PWD),MP,Madhya Pradesh,Gwalior,Implementing Agency,mixed
+AGENCY_0050,Ujjain District Rural Development Agency (DRDA),MP,Madhya Pradesh,Ujjain,Implementing Agency,high
+AGENCY_0051,Sagar Municipal Corporation Infrastructure Cell,MP,Madhya Pradesh,Sagar,Implementing Agency,medium
+AGENCY_0052,Gwalior State Water Supply & Sanitation Board (WSSB),MP,Madhya Pradesh,Gwalior,Implementing Agency,low
+AGENCY_0053,Tirupati Public Works Department (PWD),AP,Andhra Pradesh,Tirupati,Implementing Agency,mixed
+AGENCY_0054,Guntur District Rural Development Agency (DRDA),AP,Andhra Pradesh,Guntur,Implementing Agency,high
+AGENCY_0055,Guntur Municipal Corporation Infrastructure Cell,AP,Andhra Pradesh,Guntur,Implementing Agency,medium
+AGENCY_0056,Visakhapatnam State Water Supply & Sanitation Board (WSSB),AP,Andhra Pradesh,Visakhapatnam,Implementing Agency,low
+AGENCY_0057,Ramagundam Public Works Department (PWD),TS,Telangana,Ramagundam,Implementing Agency,mixed
+AGENCY_0058,Ramagundam District Rural Development Agency (DRDA),TS,Telangana,Ramagundam,Implementing Agency,high
+AGENCY_0059,Khammam Municipal Corporation Infrastructure Cell,TS,Telangana,Khammam,Implementing Agency,medium
+AGENCY_0060,Hyderabad State Water Supply & Sanitation Board (WSSB),TS,Telangana,Hyderabad,Implementing Agency,low
+AGENCY_0061,Puri Public Works Department (PWD),OD,Odisha,Puri,Implementing Agency,mixed
+AGENCY_0062,Berhampur District Rural Development Agency (DRDA),OD,Odisha,Berhampur,Implementing Agency,high
+AGENCY_0063,Puri Municipal Corporation Infrastructure Cell,OD,Odisha,Puri,Implementing Agency,medium
+AGENCY_0064,Puri State Water Supply & Sanitation Board (WSSB),OD,Odisha,Puri,Implementing Agency,low
+AGENCY_0065,Tezpur Public Works Department (PWD),AS,Assam,Tezpur,Implementing Agency,mixed
+AGENCY_0066,Guwahati District Rural Development Agency (DRDA),AS,Assam,Guwahati,Implementing Agency,high
+AGENCY_0067,Silchar Municipal Corporation Infrastructure Cell,AS,Assam,Silchar,Implementing Agency,medium
+AGENCY_0068,Jorhat State Water Supply & Sanitation Board (WSSB),AS,Assam,Jorhat,Implementing Agency,low
+AGENCY_0069,Leh Public Works Department (PWD),JK,Jammu & Kashmir,Leh,Implementing Agency,mixed
+AGENCY_0070,Sopore District Rural Development Agency (DRDA),JK,Jammu & Kashmir,Sopore,Implementing Agency,high
+AGENCY_0071,Srinagar Municipal Corporation Infrastructure Cell,JK,Jammu & Kashmir,Srinagar,Implementing Agency,medium
+AGENCY_0072,Sopore State Water Supply & Sanitation Board (WSSB),JK,Jammu & Kashmir,Sopore,Implementing Agency,low
+AGENCY_0073,Dhanbad Public Works Department (PWD),JH,Jharkhand,Dhanbad,Implementing Agency,mixed
+AGENCY_0074,Jamshedpur District Rural Development Agency (DRDA),JH,Jharkhand,Jamshedpur,Implementing Agency,high
+AGENCY_0075,Hazaribagh Municipal Corporation Infrastructure Cell,JH,Jharkhand,Hazaribagh,Implementing Agency,medium
+AGENCY_0076,Ranchi State Water Supply & Sanitation Board (WSSB),JH,Jharkhand,Ranchi,Implementing Agency,low
+AGENCY_0077,Rajnandgaon Public Works Department (PWD),CG,Chhattisgarh,Rajnandgaon,Implementing Agency,mixed
+AGENCY_0078,Raipur District Rural Development Agency (DRDA),CG,Chhattisgarh,Raipur,Implementing Agency,high
+AGENCY_0079,Bhilai Municipal Corporation Infrastructure Cell,CG,Chhattisgarh,Bhilai,Implementing Agency,medium
+AGENCY_0080,Durg State Water Supply & Sanitation Board (WSSB),CG,Chhattisgarh,Durg,Implementing Agency,low
+AGENCY_0081,Dehradun Public Works Department (PWD),UK,Uttarakhand,Dehradun,Implementing Agency,mixed
+AGENCY_0082,Dehradun District Rural Development Agency (DRDA),UK,Uttarakhand,Dehradun,Implementing Agency,high
+AGENCY_0083,Dehradun Municipal Corporation Infrastructure Cell,UK,Uttarakhand,Dehradun,Implementing Agency,medium
+AGENCY_0084,Haridwar State Water Supply & Sanitation Board (WSSB),UK,Uttarakhand,Haridwar,Implementing Agency,low
+AGENCY_0085,Kullu Public Works Department (PWD),HP,Himachal Pradesh,Kullu,Implementing Agency,mixed
+AGENCY_0086,Mandi District Rural Development Agency (DRDA),HP,Himachal Pradesh,Mandi,Implementing Agency,high
+AGENCY_0087,Kullu Municipal Corporation Infrastructure Cell,HP,Himachal Pradesh,Kullu,Implementing Agency,medium
+AGENCY_0088,Manali State Water Supply & Sanitation Board (WSSB),HP,Himachal Pradesh,Manali,Implementing Agency,low
+AGENCY_0089,Calangute Public Works Department (PWD),GA,Goa,Calangute,Implementing Agency,mixed
+AGENCY_0090,Vasco District Rural Development Agency (DRDA),GA,Goa,Vasco,Implementing Agency,high
+AGENCY_0091,Panaji Municipal Corporation Infrastructure Cell,GA,Goa,Panaji,Implementing Agency,medium
+AGENCY_0092,Mapusa State Water Supply & Sanitation Board (WSSB),GA,Goa,Mapusa,Implementing Agency,low
+AGENCY_0093,Senapati Public Works Department (PWD),MN,Manipur,Senapati,Implementing Agency,mixed
+AGENCY_0094,Churachandpur District Rural Development Agency (DRDA),MN,Manipur,Churachandpur,Implementing Agency,high
+AGENCY_0095,Thoubal Municipal Corporation Infrastructure Cell,MN,Manipur,Thoubal,Implementing Agency,medium
+AGENCY_0096,Bishnupur State Water Supply & Sanitation Board (WSSB),MN,Manipur,Bishnupur,Implementing Agency,low
+AGENCY_0097,Serchhip Public Works Department (PWD),MZ,Mizoram,Serchhip,Implementing Agency,mixed
+AGENCY_0098,Serchhip District Rural Development Agency (DRDA),MZ,Mizoram,Serchhip,Implementing Agency,high
+AGENCY_0099,Lunglei Municipal Corporation Infrastructure Cell,MZ,Mizoram,Lunglei,Implementing Agency,medium
+AGENCY_0100,Serchhip State Water Supply & Sanitation Board (WSSB),MZ,Mizoram,Serchhip,Implementing Agency,low
+AGENCY_0101,Rangpo Public Works Department (PWD),SK,Sikkim,Rangpo,Implementing Agency,mixed
+AGENCY_0102,Namchi District Rural Development Agency (DRDA),SK,Sikkim,Namchi,Implementing Agency,high
+AGENCY_0103,Namchi Municipal Corporation Infrastructure Cell,SK,Sikkim,Namchi,Implementing Agency,medium
+AGENCY_0104,Namchi State Water Supply & Sanitation Board (WSSB),SK,Sikkim,Namchi,Implementing Agency,low
+AGENCY_0105,Zunheboto Public Works Department (PWD),NL,Nagaland,Zunheboto,Implementing Agency,mixed
+AGENCY_0106,Kohima District Rural Development Agency (DRDA),NL,Nagaland,Kohima,Implementing Agency,high
+AGENCY_0107,Phek Municipal Corporation Infrastructure Cell,NL,Nagaland,Phek,Implementing Agency,medium
+AGENCY_0108,Phek State Water Supply & Sanitation Board (WSSB),NL,Nagaland,Phek,Implementing Agency,low
+AGENCY_0109,Belonia Public Works Department (PWD),TR,Tripura,Belonia,Implementing Agency,mixed
+AGENCY_0110,Khowai District Rural Development Agency (DRDA),TR,Tripura,Khowai,Implementing Agency,high
+AGENCY_0111,Belonia Municipal Corporation Infrastructure Cell,TR,Tripura,Belonia,Implementing Agency,medium
+AGENCY_0112,Sabroom State Water Supply & Sanitation Board (WSSB),TR,Tripura,Sabroom,Implementing Agency,low
