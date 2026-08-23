@@ -501,7 +501,7 @@ export default function App() {
 }
 
 // --- OVERVIEW TAB COMPONENT ---
-function OverviewTab({ state, district, category, status, onSelectProject }: any) {
+function OverviewTab({ state, district, category, status, onSelectProject, currentUser }: any) {
   const [metrics, setMetrics] = useState<any>(null);
   const [heatmapData, setHeatmapData] = useState<any[]>([]);
   const mapRef = useRef<HTMLDivElement>(null);
