@@ -1,0 +1,1046 @@
+state_ut,district,block_or_urban,is_urban
+Uttar Pradesh,Lucknow,Malihabad,1
+Uttar Pradesh,Lucknow,Mohanlalganj,1
+Uttar Pradesh,Lucknow,Bakshi Ka Talab,1
+Uttar Pradesh,Lucknow,Sarojini Nagar,1
+Uttar Pradesh,Lucknow,Lucknow Municipal Corporation,1
+Uttar Pradesh,Kanpur Nagar,Bilhaur,1
+Uttar Pradesh,Kanpur Nagar,Ghatampur,1
+Uttar Pradesh,Kanpur Nagar,Kalyanpur,1
+Uttar Pradesh,Kanpur Nagar,Narwal,1
+Uttar Pradesh,Kanpur Nagar,Kanpur Nagar Municipal Corporation,1
+Uttar Pradesh,Varanasi,Pindra,1
+Uttar Pradesh,Varanasi,Sevapuri,1
+Uttar Pradesh,Varanasi,Cholapur,1
+Uttar Pradesh,Varanasi,Arajiline,1
+Uttar Pradesh,Varanasi,Varanasi Municipal Corporation,1
+Uttar Pradesh,Prayagraj,Phulpur,1
+Uttar Pradesh,Prayagraj,Soraon,1
+Uttar Pradesh,Prayagraj,Karchhana,1
+Uttar Pradesh,Prayagraj,Bara,1
+Uttar Pradesh,Prayagraj,Prayagraj Municipal Corporation,1
+Uttar Pradesh,Agra,Agra-I,1
+Uttar Pradesh,Agra,Agra-II,1
+Uttar Pradesh,Agra,Agra-III,1
+Uttar Pradesh,Agra,Agra Municipal Corporation,1
+Uttar Pradesh,Meerut,Meerut-I,1
+Uttar Pradesh,Meerut,Meerut-II,1
+Uttar Pradesh,Meerut,Meerut-III,1
+Uttar Pradesh,Meerut,Meerut Municipal Corporation,1
+Uttar Pradesh,Gorakhpur,Gorakhpur-I,0
+Uttar Pradesh,Gorakhpur,Gorakhpur-II,0
+Uttar Pradesh,Gorakhpur,Gorakhpur-III,0
+Uttar Pradesh,Gorakhpur,Gorakhpur Nagar Panchayat,1
+Uttar Pradesh,Bareilly,Bareilly-I,0
+Uttar Pradesh,Bareilly,Bareilly-II,0
+Uttar Pradesh,Bareilly,Bareilly-III,0
+Uttar Pradesh,Bareilly,Bareilly Nagar Panchayat,1
+Uttar Pradesh,Aligarh,Aligarh-I,0
+Uttar Pradesh,Aligarh,Aligarh-II,0
+Uttar Pradesh,Aligarh,Aligarh-III,0
+Uttar Pradesh,Aligarh,Aligarh Nagar Panchayat,1
+Uttar Pradesh,Moradabad,Moradabad-I,0
+Uttar Pradesh,Moradabad,Moradabad-II,0
+Uttar Pradesh,Moradabad,Moradabad-III,0
+Uttar Pradesh,Moradabad,Moradabad Nagar Panchayat,1
+Uttar Pradesh,Jhansi,Jhansi-I,0
+Uttar Pradesh,Jhansi,Jhansi-II,0
+Uttar Pradesh,Jhansi,Jhansi-III,0
+Uttar Pradesh,Jhansi,Jhansi Nagar Panchayat,1
+Uttar Pradesh,Ayodhya,Ayodhya-I,0
+Uttar Pradesh,Ayodhya,Ayodhya-II,0
+Uttar Pradesh,Ayodhya,Ayodhya-III,0
+Uttar Pradesh,Ayodhya,Ayodhya Nagar Panchayat,1
+Uttar Pradesh,Azamgarh,Azamgarh-I,0
+Uttar Pradesh,Azamgarh,Azamgarh-II,0
+Uttar Pradesh,Azamgarh,Azamgarh-III,0
+Uttar Pradesh,Azamgarh,Azamgarh Nagar Panchayat,1
+Uttar Pradesh,Ghaziabad,Ghaziabad-I,1
+Uttar Pradesh,Ghaziabad,Ghaziabad-II,1
+Uttar Pradesh,Ghaziabad,Ghaziabad-III,1
+Uttar Pradesh,Ghaziabad,Ghaziabad Municipal Corporation,1
+Uttar Pradesh,Mathura,Mathura-I,0
+Uttar Pradesh,Mathura,Mathura-II,0
+Uttar Pradesh,Mathura,Mathura-III,0
+Uttar Pradesh,Mathura,Mathura Nagar Panchayat,1
+Maharashtra,Mumbai Suburban,Andheri,1
+Maharashtra,Mumbai Suburban,Borivali,1
+Maharashtra,Mumbai Suburban,Kurla,1
+Maharashtra,Mumbai Suburban,Bandra,1
+Maharashtra,Mumbai Suburban,Mumbai Suburban Municipal Corporation,1
+Maharashtra,Pune,Haveli,1
+Maharashtra,Pune,Baramati,1
+Maharashtra,Pune,Shirur,1
+Maharashtra,Pune,Junnar,1
+Maharashtra,Pune,Pune Municipal Corporation,1
+Maharashtra,Nagpur,Kamptee,1
+Maharashtra,Nagpur,Hingna,1
+Maharashtra,Nagpur,Katol,1
+Maharashtra,Nagpur,Umred,1
+Maharashtra,Nagpur,Nagpur Municipal Corporation,1
+Maharashtra,Nashik,Sinnar,1
+Maharashtra,Nashik,Igatpuri,1
+Maharashtra,Nashik,Dindori,1
+Maharashtra,Nashik,Niphad,1
+Maharashtra,Nashik,Nashik Municipal Corporation,1
+Maharashtra,Hingoli,Basmath,0
+Maharashtra,Hingoli,Kalamnuri,0
+Maharashtra,Hingoli,Sengaon,0
+Maharashtra,Hingoli,Aundha Nagnath,0
+Maharashtra,Hingoli,Hingoli Nagar Panchayat,1
+Maharashtra,Thane,Thane-I,1
+Maharashtra,Thane,Thane-II,1
+Maharashtra,Thane,Thane-III,1
+Maharashtra,Thane,Thane Municipal Corporation,1
+Maharashtra,Aurangabad,Aurangabad-I,1
+Maharashtra,Aurangabad,Aurangabad-II,1
+Maharashtra,Aurangabad,Aurangabad-III,1
+Maharashtra,Aurangabad,Aurangabad Municipal Corporation,1
+Maharashtra,Solapur,Solapur-I,0
+Maharashtra,Solapur,Solapur-II,0
+Maharashtra,Solapur,Solapur-III,0
+Maharashtra,Solapur,Solapur Nagar Panchayat,1
+Maharashtra,Kolhapur,Kolhapur-I,0
+Maharashtra,Kolhapur,Kolhapur-II,0
+Maharashtra,Kolhapur,Kolhapur-III,0
+Maharashtra,Kolhapur,Kolhapur Nagar Panchayat,1
+Maharashtra,Amravati,Amravati-I,0
+Maharashtra,Amravati,Amravati-II,0
+Maharashtra,Amravati,Amravati-III,0
+Maharashtra,Amravati,Amravati Nagar Panchayat,1
+Maharashtra,Satara,Satara-I,0
+Maharashtra,Satara,Satara-II,0
+Maharashtra,Satara,Satara-III,0
+Maharashtra,Satara,Satara Nagar Panchayat,1
+Maharashtra,Latur,Latur-I,0
+Maharashtra,Latur,Latur-II,0
+Maharashtra,Latur,Latur-III,0
+Maharashtra,Latur,Latur Nagar Panchayat,1
+Tamil Nadu,Chennai,Egmore,1
+Tamil Nadu,Chennai,Mylapore,1
+Tamil Nadu,Chennai,Ambattur,1
+Tamil Nadu,Chennai,Perambur,1
+Tamil Nadu,Chennai,Chennai Municipal Corporation,1
+Tamil Nadu,Coimbatore,Pollachi,1
+Tamil Nadu,Coimbatore,Mettupalayam,1
+Tamil Nadu,Coimbatore,Sulur,1
+Tamil Nadu,Coimbatore,Annur,1
+Tamil Nadu,Coimbatore,Coimbatore Municipal Corporation,1
+Tamil Nadu,Madurai,Melur,1
+Tamil Nadu,Madurai,Vadipatti,1
+Tamil Nadu,Madurai,Thirumangalam,1
+Tamil Nadu,Madurai,Usilampatti,1
+Tamil Nadu,Madurai,Madurai Municipal Corporation,1
+Tamil Nadu,Salem,Attur,1
+Tamil Nadu,Salem,Mettur,1
+Tamil Nadu,Salem,Omalur,1
+Tamil Nadu,Salem,Sankagiri,1
+Tamil Nadu,Salem,Salem Municipal Corporation,1
+Tamil Nadu,Tiruchirappalli,Lalgudi,1
+Tamil Nadu,Tiruchirappalli,Musiri,1
+Tamil Nadu,Tiruchirappalli,Manapparai,1
+Tamil Nadu,Tiruchirappalli,Thuraiyur,1
+Tamil Nadu,Tiruchirappalli,Tiruchirappalli Municipal Corporation,1
+Tamil Nadu,Tirunelveli,Ambasamudram,0
+Tamil Nadu,Tirunelveli,Nanguneri,0
+Tamil Nadu,Tirunelveli,Radhapuram,0
+Tamil Nadu,Tirunelveli,Cheranmahadevi,0
+Tamil Nadu,Tirunelveli,Tirunelveli Nagar Panchayat,1
+Tamil Nadu,Vellore,Vellore-I,0
+Tamil Nadu,Vellore,Vellore-II,0
+Tamil Nadu,Vellore,Vellore-III,0
+Tamil Nadu,Vellore,Vellore Nagar Panchayat,1
+Tamil Nadu,Erode,Erode-I,0
+Tamil Nadu,Erode,Erode-II,0
+Tamil Nadu,Erode,Erode-III,0
+Tamil Nadu,Erode,Erode Nagar Panchayat,1
+Tamil Nadu,Thanjavur,Thanjavur-I,0
+Tamil Nadu,Thanjavur,Thanjavur-II,0
+Tamil Nadu,Thanjavur,Thanjavur-III,0
+Tamil Nadu,Thanjavur,Thanjavur Nagar Panchayat,1
+Tamil Nadu,Kanchipuram,Kanchipuram-I,0
+Tamil Nadu,Kanchipuram,Kanchipuram-II,0
+Tamil Nadu,Kanchipuram,Kanchipuram-III,0
+Tamil Nadu,Kanchipuram,Kanchipuram Nagar Panchayat,1
+Tamil Nadu,Dindigul,Dindigul-I,0
+Tamil Nadu,Dindigul,Dindigul-II,0
+Tamil Nadu,Dindigul,Dindigul-III,0
+Tamil Nadu,Dindigul,Dindigul Nagar Panchayat,1
+Tamil Nadu,Cuddalore,Cuddalore-I,0
+Tamil Nadu,Cuddalore,Cuddalore-II,0
+Tamil Nadu,Cuddalore,Cuddalore-III,0
+Tamil Nadu,Cuddalore,Cuddalore Nagar Panchayat,1
+Bihar,Patna,Danapur,1
+Bihar,Patna,Fatuha,1
+Bihar,Patna,Barh,1
+Bihar,Patna,Masaurhi,1
+Bihar,Patna,Patna Municipal Corporation,1
+Bihar,Gaya,Bodh Gaya,0
+Bihar,Gaya,Tekari,0
+Bihar,Gaya,Sherghati,0
+Bihar,Gaya,Belaganj,0
+Bihar,Gaya,Gaya Nagar Panchayat,1
+Bihar,Muzaffarpur,Kanti,0
+Bihar,Muzaffarpur,Motipur,0
+Bihar,Muzaffarpur,Sakra,0
+Bihar,Muzaffarpur,Saraiya,0
+Bihar,Muzaffarpur,Muzaffarpur Nagar Panchayat,1
+Bihar,Bhagalpur,Nathnagar,0
+Bihar,Bhagalpur,Kahalgaon,0
+Bihar,Bhagalpur,Sultanganj,0
+Bihar,Bhagalpur,Goradih,0
+Bihar,Bhagalpur,Bhagalpur Nagar Panchayat,1
+Bihar,Darbhanga,Darbhanga-I,0
+Bihar,Darbhanga,Darbhanga-II,0
+Bihar,Darbhanga,Darbhanga-III,0
+Bihar,Darbhanga,Darbhanga Nagar Panchayat,1
+Bihar,Purnia,Purnia-I,0
+Bihar,Purnia,Purnia-II,0
+Bihar,Purnia,Purnia-III,0
+Bihar,Purnia,Purnia Nagar Panchayat,1
+Bihar,Saran,Saran-I,0
+Bihar,Saran,Saran-II,0
+Bihar,Saran,Saran-III,0
+Bihar,Saran,Saran Nagar Panchayat,1
+Bihar,Begusarai,Begusarai-I,0
+Bihar,Begusarai,Begusarai-II,0
+Bihar,Begusarai,Begusarai-III,0
+Bihar,Begusarai,Begusarai Nagar Panchayat,1
+Bihar,Nalanda,Nalanda-I,0
+Bihar,Nalanda,Nalanda-II,0
+Bihar,Nalanda,Nalanda-III,0
+Bihar,Nalanda,Nalanda Nagar Panchayat,1
+Bihar,Rohtas,Rohtas-I,0
+Bihar,Rohtas,Rohtas-II,0
+Bihar,Rohtas,Rohtas-III,0
+Bihar,Rohtas,Rohtas Nagar Panchayat,1
+West Bengal,Kolkata,Ballygunge,1
+West Bengal,Kolkata,Behala,1
+West Bengal,Kolkata,Tollygunge,1
+West Bengal,Kolkata,Jadavpur,1
+West Bengal,Kolkata,Kolkata Municipal Corporation,1
+West Bengal,Howrah,Bally,1
+West Bengal,Howrah,Domjur,1
+West Bengal,Howrah,Sankrail,1
+West Bengal,Howrah,Panchla,1
+West Bengal,Howrah,Howrah Municipal Corporation,1
+West Bengal,Darjeeling,Kurseong,0
+West Bengal,Darjeeling,Mirik,0
+West Bengal,Darjeeling,Sukhiapokhri,0
+West Bengal,Darjeeling,Jorebunglow,0
+West Bengal,Darjeeling,Darjeeling Nagar Panchayat,1
+West Bengal,North 24 Parganas,Barasat,1
+West Bengal,North 24 Parganas,Barrackpore,1
+West Bengal,North 24 Parganas,Bongaon,1
+West Bengal,North 24 Parganas,Deganga,1
+West Bengal,North 24 Parganas,North 24 Parganas Municipal Corporation,1
+West Bengal,South 24 Parganas,South 24 Parganas-I,0
+West Bengal,South 24 Parganas,South 24 Parganas-II,0
+West Bengal,South 24 Parganas,South 24 Parganas-III,0
+West Bengal,South 24 Parganas,South 24 Parganas Nagar Panchayat,1
+West Bengal,Hooghly,Hooghly-I,0
+West Bengal,Hooghly,Hooghly-II,0
+West Bengal,Hooghly,Hooghly-III,0
+West Bengal,Hooghly,Hooghly Nagar Panchayat,1
+West Bengal,Nadia,Nadia-I,0
+West Bengal,Nadia,Nadia-II,0
+West Bengal,Nadia,Nadia-III,0
+West Bengal,Nadia,Nadia Nagar Panchayat,1
+West Bengal,Purba Medinipur,Purba Medinipur-I,0
+West Bengal,Purba Medinipur,Purba Medinipur-II,0
+West Bengal,Purba Medinipur,Purba Medinipur-III,0
+West Bengal,Purba Medinipur,Purba Medinipur Nagar Panchayat,1
+West Bengal,Bardhaman,Bardhaman-I,0
+West Bengal,Bardhaman,Bardhaman-II,0
+West Bengal,Bardhaman,Bardhaman-III,0
+West Bengal,Bardhaman,Bardhaman Nagar Panchayat,1
+West Bengal,Murshidabad,Murshidabad-I,0
+West Bengal,Murshidabad,Murshidabad-II,0
+West Bengal,Murshidabad,Murshidabad-III,0
+West Bengal,Murshidabad,Murshidabad Nagar Panchayat,1
+Karnataka,Bengaluru Urban,Anekal,1
+Karnataka,Bengaluru Urban,Yelahanka,1
+Karnataka,Bengaluru Urban,Bommanahalli,1
+Karnataka,Bengaluru Urban,Dasarahalli,1
+Karnataka,Bengaluru Urban,Bengaluru Urban Municipal Corporation,1
+Karnataka,Mysuru,Nanjangud,1
+Karnataka,Mysuru,Hunsur,1
+Karnataka,Mysuru,T. Narasipura,1
+Karnataka,Mysuru,Periyapatna,1
+Karnataka,Mysuru,Mysuru Municipal Corporation,1
+Karnataka,Belagavi,Chikodi,0
+Karnataka,Belagavi,Gokak,0
+Karnataka,Belagavi,Bailhongal,0
+Karnataka,Belagavi,Athani,0
+Karnataka,Belagavi,Belagavi Nagar Panchayat,1
+Karnataka,Mangaluru,Bantwal,1
+Karnataka,Mangaluru,Puttur,1
+Karnataka,Mangaluru,Belthangady,1
+Karnataka,Mangaluru,Sullia,1
+Karnataka,Mangaluru,Mangaluru Municipal Corporation,1
+Karnataka,Dharwad,Dharwad-I,0
+Karnataka,Dharwad,Dharwad-II,0
+Karnataka,Dharwad,Dharwad-III,0
+Karnataka,Dharwad,Dharwad Nagar Panchayat,1
+Karnataka,Kalaburagi,Kalaburagi-I,0
+Karnataka,Kalaburagi,Kalaburagi-II,0
+Karnataka,Kalaburagi,Kalaburagi-III,0
+Karnataka,Kalaburagi,Kalaburagi Nagar Panchayat,1
+Karnataka,Tumakuru,Tumakuru-I,0
+Karnataka,Tumakuru,Tumakuru-II,0
+Karnataka,Tumakuru,Tumakuru-III,0
+Karnataka,Tumakuru,Tumakuru Nagar Panchayat,1
+Karnataka,Shivamogga,Shivamogga-I,0
+Karnataka,Shivamogga,Shivamogga-II,0
+Karnataka,Shivamogga,Shivamogga-III,0
+Karnataka,Shivamogga,Shivamogga Nagar Panchayat,1
+Karnataka,Ballari,Ballari-I,0
+Karnataka,Ballari,Ballari-II,0
+Karnataka,Ballari,Ballari-III,0
+Karnataka,Ballari,Ballari Nagar Panchayat,1
+Karnataka,Bengaluru Rural,Bengaluru Rural-I,0
+Karnataka,Bengaluru Rural,Bengaluru Rural-II,0
+Karnataka,Bengaluru Rural,Bengaluru Rural-III,0
+Karnataka,Bengaluru Rural,Bengaluru Rural Nagar Panchayat,1
+Karnataka,Mandya,Mandya-I,0
+Karnataka,Mandya,Mandya-II,0
+Karnataka,Mandya,Mandya-III,0
+Karnataka,Mandya,Mandya Nagar Panchayat,1
+Karnataka,Hassan,Hassan-I,0
+Karnataka,Hassan,Hassan-II,0
+Karnataka,Hassan,Hassan-III,0
+Karnataka,Hassan,Hassan Nagar Panchayat,1
+Madhya Pradesh,Bhopal,Berasia,1
+Madhya Pradesh,Bhopal,Phanda,1
+Madhya Pradesh,Bhopal,Huzur,1
+Madhya Pradesh,Bhopal,Kolar,1
+Madhya Pradesh,Bhopal,Bhopal Municipal Corporation,1
+Madhya Pradesh,Indore,Depalpur,1
+Madhya Pradesh,Indore,Sanwer,1
+Madhya Pradesh,Indore,Mhow,1
+Madhya Pradesh,Indore,Hatod,1
+Madhya Pradesh,Indore,Indore Municipal Corporation,1
+Madhya Pradesh,Jabalpur,Sihora,1
+Madhya Pradesh,Jabalpur,Patan,1
+Madhya Pradesh,Jabalpur,Panagar,1
+Madhya Pradesh,Jabalpur,Kundam,1
+Madhya Pradesh,Jabalpur,Jabalpur Municipal Corporation,1
+Madhya Pradesh,Gwalior,Dabra,1
+Madhya Pradesh,Gwalior,Bhitarwar,1
+Madhya Pradesh,Gwalior,Morar,1
+Madhya Pradesh,Gwalior,Ghatigaon,1
+Madhya Pradesh,Gwalior,Gwalior Municipal Corporation,1
+Madhya Pradesh,Ujjain,Ujjain-I,0
+Madhya Pradesh,Ujjain,Ujjain-II,0
+Madhya Pradesh,Ujjain,Ujjain-III,0
+Madhya Pradesh,Ujjain,Ujjain Nagar Panchayat,1
+Madhya Pradesh,Sagar,Sagar-I,0
+Madhya Pradesh,Sagar,Sagar-II,0
+Madhya Pradesh,Sagar,Sagar-III,0
+Madhya Pradesh,Sagar,Sagar Nagar Panchayat,1
+Madhya Pradesh,Rewa,Rewa-I,0
+Madhya Pradesh,Rewa,Rewa-II,0
+Madhya Pradesh,Rewa,Rewa-III,0
+Madhya Pradesh,Rewa,Rewa Nagar Panchayat,1
+Madhya Pradesh,Satna,Satna-I,0
+Madhya Pradesh,Satna,Satna-II,0
+Madhya Pradesh,Satna,Satna-III,0
+Madhya Pradesh,Satna,Satna Nagar Panchayat,1
+Madhya Pradesh,Chhindwara,Chhindwara-I,0
+Madhya Pradesh,Chhindwara,Chhindwara-II,0
+Madhya Pradesh,Chhindwara,Chhindwara-III,0
+Madhya Pradesh,Chhindwara,Chhindwara Nagar Panchayat,1
+Madhya Pradesh,Dewas,Dewas-I,0
+Madhya Pradesh,Dewas,Dewas-II,0
+Madhya Pradesh,Dewas,Dewas-III,0
+Madhya Pradesh,Dewas,Dewas Nagar Panchayat,1
+Andhra Pradesh,Guntur,Tenali,1
+Andhra Pradesh,Guntur,Bapatla,1
+Andhra Pradesh,Guntur,Narasaraopet,1
+Andhra Pradesh,Guntur,Sattenapalle,1
+Andhra Pradesh,Guntur,Guntur Municipal Corporation,1
+Andhra Pradesh,Krishna,Machilipatnam,0
+Andhra Pradesh,Krishna,Gudivada,0
+Andhra Pradesh,Krishna,Nuzvid,0
+Andhra Pradesh,Krishna,Pedana,0
+Andhra Pradesh,Krishna,Krishna Nagar Panchayat,1
+Andhra Pradesh,Visakhapatnam,Bheemunipatnam,1
+Andhra Pradesh,Visakhapatnam,Anakapalle,1
+Andhra Pradesh,Visakhapatnam,Paderu,1
+Andhra Pradesh,Visakhapatnam,Narsipatnam,1
+Andhra Pradesh,Visakhapatnam,Visakhapatnam Municipal Corporation,1
+Andhra Pradesh,Tirupati,Chandragiri,1
+Andhra Pradesh,Tirupati,Renigunta,1
+Andhra Pradesh,Tirupati,Srikalahasti,1
+Andhra Pradesh,Tirupati,Puttur,1
+Andhra Pradesh,Tirupati,Tirupati Municipal Corporation,1
+Andhra Pradesh,Kurnool,Kurnool-I,0
+Andhra Pradesh,Kurnool,Kurnool-II,0
+Andhra Pradesh,Kurnool,Kurnool-III,0
+Andhra Pradesh,Kurnool,Kurnool Nagar Panchayat,1
+Andhra Pradesh,Anantapur,Anantapur-I,0
+Andhra Pradesh,Anantapur,Anantapur-II,0
+Andhra Pradesh,Anantapur,Anantapur-III,0
+Andhra Pradesh,Anantapur,Anantapur Nagar Panchayat,1
+Andhra Pradesh,Nellore,Nellore-I,0
+Andhra Pradesh,Nellore,Nellore-II,0
+Andhra Pradesh,Nellore,Nellore-III,0
+Andhra Pradesh,Nellore,Nellore Nagar Panchayat,1
+Andhra Pradesh,East Godavari,East Godavari-I,0
+Andhra Pradesh,East Godavari,East Godavari-II,0
+Andhra Pradesh,East Godavari,East Godavari-III,0
+Andhra Pradesh,East Godavari,East Godavari Nagar Panchayat,1
+Andhra Pradesh,West Godavari,West Godavari-I,0
+Andhra Pradesh,West Godavari,West Godavari-II,0
+Andhra Pradesh,West Godavari,West Godavari-III,0
+Andhra Pradesh,West Godavari,West Godavari Nagar Panchayat,1
+Andhra Pradesh,Chittoor,Chittoor-I,0
+Andhra Pradesh,Chittoor,Chittoor-II,0
+Andhra Pradesh,Chittoor,Chittoor-III,0
+Andhra Pradesh,Chittoor,Chittoor Nagar Panchayat,1
+Rajasthan,Jaipur,Amber,1
+Rajasthan,Jaipur,Chomu,1
+Rajasthan,Jaipur,Sanganer,1
+Rajasthan,Jaipur,Bassi,1
+Rajasthan,Jaipur,Jaipur Municipal Corporation,1
+Rajasthan,Jodhpur,Phalodi,1
+Rajasthan,Jodhpur,Osian,1
+Rajasthan,Jodhpur,Bilara,1
+Rajasthan,Jodhpur,Shergarh,1
+Rajasthan,Jodhpur,Jodhpur Municipal Corporation,1
+Rajasthan,Udaipur,Girwa,1
+Rajasthan,Udaipur,Mavli,1
+Rajasthan,Udaipur,Salumbar,1
+Rajasthan,Udaipur,Kherwara,1
+Rajasthan,Udaipur,Udaipur Municipal Corporation,1
+Rajasthan,Kota,Ladpura,1
+Rajasthan,Kota,Ramganjmandi,1
+Rajasthan,Kota,Digod,1
+Rajasthan,Kota,Pipalda,1
+Rajasthan,Kota,Kota Municipal Corporation,1
+Rajasthan,Ajmer,Ajmer-I,0
+Rajasthan,Ajmer,Ajmer-II,0
+Rajasthan,Ajmer,Ajmer-III,0
+Rajasthan,Ajmer,Ajmer Nagar Panchayat,1
+Rajasthan,Bikaner,Bikaner-I,0
+Rajasthan,Bikaner,Bikaner-II,0
+Rajasthan,Bikaner,Bikaner-III,0
+Rajasthan,Bikaner,Bikaner Nagar Panchayat,1
+Rajasthan,Alwar,Alwar-I,0
+Rajasthan,Alwar,Alwar-II,0
+Rajasthan,Alwar,Alwar-III,0
+Rajasthan,Alwar,Alwar Nagar Panchayat,1
+Rajasthan,Bharatpur,Bharatpur-I,0
+Rajasthan,Bharatpur,Bharatpur-II,0
+Rajasthan,Bharatpur,Bharatpur-III,0
+Rajasthan,Bharatpur,Bharatpur Nagar Panchayat,1
+Rajasthan,Sikar,Sikar-I,0
+Rajasthan,Sikar,Sikar-II,0
+Rajasthan,Sikar,Sikar-III,0
+Rajasthan,Sikar,Sikar Nagar Panchayat,1
+Rajasthan,Pali,Pali-I,0
+Rajasthan,Pali,Pali-II,0
+Rajasthan,Pali,Pali-III,0
+Rajasthan,Pali,Pali Nagar Panchayat,1
+Gujarat,Ahmedabad,Daskroi,1
+Gujarat,Ahmedabad,Sanand,1
+Gujarat,Ahmedabad,Dhandhuka,1
+Gujarat,Ahmedabad,Viramgam,1
+Gujarat,Ahmedabad,Ahmedabad Municipal Corporation,1
+Gujarat,Surat,Choryasi,1
+Gujarat,Surat,Bardoli,1
+Gujarat,Surat,Olpad,1
+Gujarat,Surat,Mandvi,1
+Gujarat,Surat,Surat Municipal Corporation,1
+Gujarat,Vadodara,Padra,1
+Gujarat,Vadodara,Savli,1
+Gujarat,Vadodara,Karjan,1
+Gujarat,Vadodara,Dabhoi,1
+Gujarat,Vadodara,Vadodara Municipal Corporation,1
+Gujarat,Rajkot,Gondal,1
+Gujarat,Rajkot,Jetpur,1
+Gujarat,Rajkot,Dhoraji,1
+Gujarat,Rajkot,Jasdan,1
+Gujarat,Rajkot,Rajkot Municipal Corporation,1
+Gujarat,Bhavnagar,Bhavnagar-I,0
+Gujarat,Bhavnagar,Bhavnagar-II,0
+Gujarat,Bhavnagar,Bhavnagar-III,0
+Gujarat,Bhavnagar,Bhavnagar Nagar Panchayat,1
+Gujarat,Jamnagar,Jamnagar-I,0
+Gujarat,Jamnagar,Jamnagar-II,0
+Gujarat,Jamnagar,Jamnagar-III,0
+Gujarat,Jamnagar,Jamnagar Nagar Panchayat,1
+Gujarat,Junagadh,Junagadh-I,0
+Gujarat,Junagadh,Junagadh-II,0
+Gujarat,Junagadh,Junagadh-III,0
+Gujarat,Junagadh,Junagadh Nagar Panchayat,1
+Gujarat,Gandhinagar,Gandhinagar-I,1
+Gujarat,Gandhinagar,Gandhinagar-II,1
+Gujarat,Gandhinagar,Gandhinagar-III,1
+Gujarat,Gandhinagar,Gandhinagar Municipal Corporation,1
+Gujarat,Kutch,Kutch-I,0
+Gujarat,Kutch,Kutch-II,0
+Gujarat,Kutch,Kutch-III,0
+Gujarat,Kutch,Kutch Nagar Panchayat,1
+Gujarat,Mehsana,Mehsana-I,0
+Gujarat,Mehsana,Mehsana-II,0
+Gujarat,Mehsana,Mehsana-III,0
+Gujarat,Mehsana,Mehsana Nagar Panchayat,1
+Kerala,Ernakulam,Aluva,1
+Kerala,Ernakulam,Kothamangalam,1
+Kerala,Ernakulam,Muvattupuzha,1
+Kerala,Ernakulam,Paravur,1
+Kerala,Ernakulam,Ernakulam Municipal Corporation,1
+Kerala,Thiruvananthapuram,Nedumangad,1
+Kerala,Thiruvananthapuram,Neyyattinkara,1
+Kerala,Thiruvananthapuram,Chirayinkeezhu,1
+Kerala,Thiruvananthapuram,Varkala,1
+Kerala,Thiruvananthapuram,Thiruvananthapuram Municipal Corporation,1
+Kerala,Kozhikode,Vadakara,1
+Kerala,Kozhikode,Koyilandy,1
+Kerala,Kozhikode,Thamarassery,1
+Kerala,Kozhikode,Perambra,1
+Kerala,Kozhikode,Kozhikode Municipal Corporation,1
+Kerala,Thrissur,Chalakudy,1
+Kerala,Thrissur,Kodungallur,1
+Kerala,Thrissur,Irinjalakuda,1
+Kerala,Thrissur,Wadakkanchery,1
+Kerala,Thrissur,Thrissur Municipal Corporation,1
+Kerala,Kollam,Kollam-I,0
+Kerala,Kollam,Kollam-II,0
+Kerala,Kollam,Kollam-III,0
+Kerala,Kollam,Kollam Nagar Panchayat,1
+Kerala,Kannur,Kannur-I,0
+Kerala,Kannur,Kannur-II,0
+Kerala,Kannur,Kannur-III,0
+Kerala,Kannur,Kannur Nagar Panchayat,1
+Kerala,Palakkad,Palakkad-I,0
+Kerala,Palakkad,Palakkad-II,0
+Kerala,Palakkad,Palakkad-III,0
+Kerala,Palakkad,Palakkad Nagar Panchayat,1
+Kerala,Alappuzha,Alappuzha-I,0
+Kerala,Alappuzha,Alappuzha-II,0
+Kerala,Alappuzha,Alappuzha-III,0
+Kerala,Alappuzha,Alappuzha Nagar Panchayat,1
+Kerala,Malappuram,Malappuram-I,0
+Kerala,Malappuram,Malappuram-II,0
+Kerala,Malappuram,Malappuram-III,0
+Kerala,Malappuram,Malappuram Nagar Panchayat,1
+Kerala,Kottayam,Kottayam-I,0
+Kerala,Kottayam,Kottayam-II,0
+Kerala,Kottayam,Kottayam-III,0
+Kerala,Kottayam,Kottayam Nagar Panchayat,1
+Odisha,Khordha,Balianta,1
+Odisha,Khordha,Bhubaneswar,1
+Odisha,Khordha,Jatni,1
+Odisha,Khordha,Banpur,1
+Odisha,Khordha,Khordha Municipal Corporation,1
+Odisha,Cuttack,Salipur,1
+Odisha,Cuttack,Niali,1
+Odisha,Cuttack,Banki,1
+Odisha,Cuttack,Athagarh,1
+Odisha,Cuttack,Cuttack Municipal Corporation,1
+Odisha,Ganjam,Chhatrapur,0
+Odisha,Ganjam,Berhampur,0
+Odisha,Ganjam,Aska,0
+Odisha,Ganjam,Hinjilicut,0
+Odisha,Ganjam,Ganjam Nagar Panchayat,1
+Odisha,Sundargarh,Rourkela,0
+Odisha,Sundargarh,Bonai,0
+Odisha,Sundargarh,Rajgangpur,0
+Odisha,Sundargarh,Kuarmunda,0
+Odisha,Sundargarh,Sundargarh Nagar Panchayat,1
+Odisha,Balasore,Balasore-I,0
+Odisha,Balasore,Balasore-II,0
+Odisha,Balasore,Balasore-III,0
+Odisha,Balasore,Balasore Nagar Panchayat,1
+Odisha,Sambalpur,Sambalpur-I,0
+Odisha,Sambalpur,Sambalpur-II,0
+Odisha,Sambalpur,Sambalpur-III,0
+Odisha,Sambalpur,Sambalpur Nagar Panchayat,1
+Odisha,Puri,Puri-I,0
+Odisha,Puri,Puri-II,0
+Odisha,Puri,Puri-III,0
+Odisha,Puri,Puri Nagar Panchayat,1
+Odisha,Mayurbhanj,Mayurbhanj-I,0
+Odisha,Mayurbhanj,Mayurbhanj-II,0
+Odisha,Mayurbhanj,Mayurbhanj-III,0
+Odisha,Mayurbhanj,Mayurbhanj Nagar Panchayat,1
+Odisha,Bolangir,Bolangir-I,0
+Odisha,Bolangir,Bolangir-II,0
+Odisha,Bolangir,Bolangir-III,0
+Odisha,Bolangir,Bolangir Nagar Panchayat,1
+Telangana,Hyderabad,Secunderabad,1
+Telangana,Hyderabad,Charminar,1
+Telangana,Hyderabad,Khairatabad,1
+Telangana,Hyderabad,Ameerpet,1
+Telangana,Hyderabad,Hyderabad Municipal Corporation,1
+Telangana,Warangal,Hanamkonda,1
+Telangana,Warangal,Narsampet,1
+Telangana,Warangal,Wardhannapet,1
+Telangana,Warangal,Parkal,1
+Telangana,Warangal,Warangal Municipal Corporation,1
+Telangana,Karimnagar,Huzurabad,0
+Telangana,Karimnagar,Jammikunta,0
+Telangana,Karimnagar,Manakondur,0
+Telangana,Karimnagar,Choppadandi,0
+Telangana,Karimnagar,Karimnagar Nagar Panchayat,1
+Telangana,Nalgonda,Miryalaguda,0
+Telangana,Nalgonda,Devarakonda,0
+Telangana,Nalgonda,Nakrekal,0
+Telangana,Nalgonda,Suryapet,0
+Telangana,Nalgonda,Nalgonda Nagar Panchayat,1
+Telangana,Khammam,Khammam-I,0
+Telangana,Khammam,Khammam-II,0
+Telangana,Khammam,Khammam-III,0
+Telangana,Khammam,Khammam Nagar Panchayat,1
+Telangana,Nizamabad,Nizamabad-I,0
+Telangana,Nizamabad,Nizamabad-II,0
+Telangana,Nizamabad,Nizamabad-III,0
+Telangana,Nizamabad,Nizamabad Nagar Panchayat,1
+Telangana,Medak,Medak-I,0
+Telangana,Medak,Medak-II,0
+Telangana,Medak,Medak-III,0
+Telangana,Medak,Medak Nagar Panchayat,1
+Telangana,Rangareddy,Rangareddy-I,0
+Telangana,Rangareddy,Rangareddy-II,0
+Telangana,Rangareddy,Rangareddy-III,0
+Telangana,Rangareddy,Rangareddy Nagar Panchayat,1
+Telangana,Mahbubnagar,Mahbubnagar-I,0
+Telangana,Mahbubnagar,Mahbubnagar-II,0
+Telangana,Mahbubnagar,Mahbubnagar-III,0
+Telangana,Mahbubnagar,Mahbubnagar Nagar Panchayat,1
+Assam,Kamrup Metropolitan,Dispur,1
+Assam,Kamrup Metropolitan,Chandrapur,1
+Assam,Kamrup Metropolitan,Sonapur,1
+Assam,Kamrup Metropolitan,Azara,1
+Assam,Kamrup Metropolitan,Kamrup Metropolitan Municipal Corporation,1
+Assam,Dibrugarh,Tingkhong,0
+Assam,Dibrugarh,Khowang,0
+Assam,Dibrugarh,Barbaruah,0
+Assam,Dibrugarh,Tengakhat,0
+Assam,Dibrugarh,Dibrugarh Nagar Panchayat,1
+Assam,Cachar,Silchar,0
+Assam,Cachar,Lakhipur,0
+Assam,Cachar,Sonai,0
+Assam,Cachar,Katigorah,0
+Assam,Cachar,Cachar Nagar Panchayat,1
+Assam,Nagaon,Kaliabor,0
+Assam,Nagaon,Rupahi,0
+Assam,Nagaon,Dhing,0
+Assam,Nagaon,Batadraba,0
+Assam,Nagaon,Nagaon Nagar Panchayat,1
+Assam,Jorhat,Jorhat-I,0
+Assam,Jorhat,Jorhat-II,0
+Assam,Jorhat,Jorhat-III,0
+Assam,Jorhat,Jorhat Nagar Panchayat,1
+Assam,Sonitpur,Sonitpur-I,0
+Assam,Sonitpur,Sonitpur-II,0
+Assam,Sonitpur,Sonitpur-III,0
+Assam,Sonitpur,Sonitpur Nagar Panchayat,1
+Assam,Barpeta,Barpeta-I,0
+Assam,Barpeta,Barpeta-II,0
+Assam,Barpeta,Barpeta-III,0
+Assam,Barpeta,Barpeta Nagar Panchayat,1
+Assam,Tinsukia,Tinsukia-I,0
+Assam,Tinsukia,Tinsukia-II,0
+Assam,Tinsukia,Tinsukia-III,0
+Assam,Tinsukia,Tinsukia Nagar Panchayat,1
+Punjab,Ludhiana,Jagraon,1
+Punjab,Ludhiana,Khanna,1
+Punjab,Ludhiana,Samrala,1
+Punjab,Ludhiana,Payal,1
+Punjab,Ludhiana,Ludhiana Municipal Corporation,1
+Punjab,Amritsar,Ajnala,1
+Punjab,Amritsar,Majitha,1
+Punjab,Amritsar,Baba Bakala,1
+Punjab,Amritsar,Attari,1
+Punjab,Amritsar,Amritsar Municipal Corporation,1
+Punjab,Jalandhar,Phillaur,1
+Punjab,Jalandhar,Nakodar,1
+Punjab,Jalandhar,Shahkot,1
+Punjab,Jalandhar,Adampur,1
+Punjab,Jalandhar,Jalandhar Municipal Corporation,1
+Punjab,Patiala,Rajpura,1
+Punjab,Patiala,Nabha,1
+Punjab,Patiala,Samana,1
+Punjab,Patiala,Patran,1
+Punjab,Patiala,Patiala Municipal Corporation,1
+Punjab,Bathinda,Bathinda-I,0
+Punjab,Bathinda,Bathinda-II,0
+Punjab,Bathinda,Bathinda-III,0
+Punjab,Bathinda,Bathinda Nagar Panchayat,1
+Punjab,Firozpur,Firozpur-I,0
+Punjab,Firozpur,Firozpur-II,0
+Punjab,Firozpur,Firozpur-III,0
+Punjab,Firozpur,Firozpur Nagar Panchayat,1
+Punjab,Hoshiarpur,Hoshiarpur-I,0
+Punjab,Hoshiarpur,Hoshiarpur-II,0
+Punjab,Hoshiarpur,Hoshiarpur-III,0
+Punjab,Hoshiarpur,Hoshiarpur Nagar Panchayat,1
+Punjab,Sangrur,Sangrur-I,0
+Punjab,Sangrur,Sangrur-II,0
+Punjab,Sangrur,Sangrur-III,0
+Punjab,Sangrur,Sangrur Nagar Panchayat,1
+Jharkhand,Ranchi,Kanke,1
+Jharkhand,Ranchi,Ormanjhi,1
+Jharkhand,Ranchi,Bundu,1
+Jharkhand,Ranchi,Silli,1
+Jharkhand,Ranchi,Ranchi Municipal Corporation,1
+Jharkhand,Dhanbad,Baliapur,1
+Jharkhand,Dhanbad,Govindpur,1
+Jharkhand,Dhanbad,Nirsa,1
+Jharkhand,Dhanbad,Tundi,1
+Jharkhand,Dhanbad,Dhanbad Municipal Corporation,1
+Jharkhand,East Singhbhum,Jamshedpur,1
+Jharkhand,East Singhbhum,Ghatshila,1
+Jharkhand,East Singhbhum,Potka,1
+Jharkhand,East Singhbhum,Patamda,1
+Jharkhand,East Singhbhum,East Singhbhum Municipal Corporation,1
+Jharkhand,Bokaro,Chas,0
+Jharkhand,Bokaro,Chandankiyari,0
+Jharkhand,Bokaro,Bermo,0
+Jharkhand,Bokaro,Peterwar,0
+Jharkhand,Bokaro,Bokaro Nagar Panchayat,1
+Jharkhand,Hazaribagh,Hazaribagh-I,0
+Jharkhand,Hazaribagh,Hazaribagh-II,0
+Jharkhand,Hazaribagh,Hazaribagh-III,0
+Jharkhand,Hazaribagh,Hazaribagh Nagar Panchayat,1
+Jharkhand,Deoghar,Deoghar-I,0
+Jharkhand,Deoghar,Deoghar-II,0
+Jharkhand,Deoghar,Deoghar-III,0
+Jharkhand,Deoghar,Deoghar Nagar Panchayat,1
+Jharkhand,Giridih,Giridih-I,0
+Jharkhand,Giridih,Giridih-II,0
+Jharkhand,Giridih,Giridih-III,0
+Jharkhand,Giridih,Giridih Nagar Panchayat,1
+Jharkhand,Palamu,Palamu-I,0
+Jharkhand,Palamu,Palamu-II,0
+Jharkhand,Palamu,Palamu-III,0
+Jharkhand,Palamu,Palamu Nagar Panchayat,1
+Chhattisgarh,Raipur,Arang,1
+Chhattisgarh,Raipur,Abhanpur,1
+Chhattisgarh,Raipur,Tilda,1
+Chhattisgarh,Raipur,Dharsiwa,1
+Chhattisgarh,Raipur,Raipur Municipal Corporation,1
+Chhattisgarh,Bilaspur,Kota,1
+Chhattisgarh,Bilaspur,Masturi,1
+Chhattisgarh,Bilaspur,Takhatpur,1
+Chhattisgarh,Bilaspur,Bilha,1
+Chhattisgarh,Bilaspur,Bilaspur Municipal Corporation,1
+Chhattisgarh,Durg,Patan,1
+Chhattisgarh,Durg,Dhamdha,1
+Chhattisgarh,Durg,Bhilai,1
+Chhattisgarh,Durg,Utai,1
+Chhattisgarh,Durg,Durg Municipal Corporation,1
+Chhattisgarh,Korba,Katghora,0
+Chhattisgarh,Korba,Podi Uproda,0
+Chhattisgarh,Korba,Kartala,0
+Chhattisgarh,Korba,Pali,0
+Chhattisgarh,Korba,Korba Nagar Panchayat,1
+Chhattisgarh,Raigarh,Raigarh-I,0
+Chhattisgarh,Raigarh,Raigarh-II,0
+Chhattisgarh,Raigarh,Raigarh-III,0
+Chhattisgarh,Raigarh,Raigarh Nagar Panchayat,1
+Chhattisgarh,Bastar,Bastar-I,0
+Chhattisgarh,Bastar,Bastar-II,0
+Chhattisgarh,Bastar,Bastar-III,0
+Chhattisgarh,Bastar,Bastar Nagar Panchayat,1
+Chhattisgarh,Rajnandgaon,Rajnandgaon-I,0
+Chhattisgarh,Rajnandgaon,Rajnandgaon-II,0
+Chhattisgarh,Rajnandgaon,Rajnandgaon-III,0
+Chhattisgarh,Rajnandgaon,Rajnandgaon Nagar Panchayat,1
+Chhattisgarh,Surguja,Surguja-I,0
+Chhattisgarh,Surguja,Surguja-II,0
+Chhattisgarh,Surguja,Surguja-III,0
+Chhattisgarh,Surguja,Surguja Nagar Panchayat,1
+Haryana,Gurugram,Sohna,1
+Haryana,Gurugram,Pataudi,1
+Haryana,Gurugram,Farukh Nagar,1
+Haryana,Gurugram,Manesar,1
+Haryana,Gurugram,Gurugram Municipal Corporation,1
+Haryana,Faridabad,Ballabgarh,1
+Haryana,Faridabad,Tigaon,1
+Haryana,Faridabad,Prithla,1
+Haryana,Faridabad,Badhkal,1
+Haryana,Faridabad,Faridabad Municipal Corporation,1
+Haryana,Hisar,Hansi,0
+Haryana,Hisar,Barwala,0
+Haryana,Hisar,Narnaund,0
+Haryana,Hisar,Adampur,0
+Haryana,Hisar,Hisar Nagar Panchayat,1
+Haryana,Karnal,Gharaunda,0
+Haryana,Karnal,Indri,0
+Haryana,Karnal,Nilokheri,0
+Haryana,Karnal,Assandh,0
+Haryana,Karnal,Karnal Nagar Panchayat,1
+Haryana,Ambala,Ambala-I,0
+Haryana,Ambala,Ambala-II,0
+Haryana,Ambala,Ambala-III,0
+Haryana,Ambala,Ambala Nagar Panchayat,1
+Haryana,Rohtak,Rohtak-I,0
+Haryana,Rohtak,Rohtak-II,0
+Haryana,Rohtak,Rohtak-III,0
+Haryana,Rohtak,Rohtak Nagar Panchayat,1
+Haryana,Panipat,Panipat-I,0
+Haryana,Panipat,Panipat-II,0
+Haryana,Panipat,Panipat-III,0
+Haryana,Panipat,Panipat Nagar Panchayat,1
+Haryana,Sonipat,Sonipat-I,0
+Haryana,Sonipat,Sonipat-II,0
+Haryana,Sonipat,Sonipat-III,0
+Haryana,Sonipat,Sonipat Nagar Panchayat,1
+Delhi,New Delhi,Chanakyapuri,1
+Delhi,New Delhi,Connaught Place,1
+Delhi,New Delhi,Karol Bagh,1
+Delhi,New Delhi,Delhi Cantonment,1
+Delhi,New Delhi,New Delhi Municipal Corporation,1
+Delhi,North West Delhi,Narela,1
+Delhi,North West Delhi,Rohini,1
+Delhi,North West Delhi,Kanjhawala,1
+Delhi,North West Delhi,Saraswati Vihar,1
+Delhi,North West Delhi,North West Delhi Municipal Corporation,1
+Delhi,South Delhi,Saket,1
+Delhi,South Delhi,Hauz Khas,1
+Delhi,South Delhi,Mehrauli,1
+Delhi,South Delhi,Defence Colony,1
+Delhi,South Delhi,South Delhi Municipal Corporation,1
+Delhi,East Delhi,Preet Vihar,1
+Delhi,East Delhi,Mayur Vihar,1
+Delhi,East Delhi,Gandhi Nagar,1
+Delhi,East Delhi,Vivek Vihar,1
+Delhi,East Delhi,East Delhi Municipal Corporation,1
+Delhi,West Delhi,West Delhi-I,1
+Delhi,West Delhi,West Delhi-II,1
+Delhi,West Delhi,West Delhi-III,1
+Delhi,West Delhi,West Delhi Municipal Corporation,1
+Delhi,North East Delhi,North East Delhi-I,1
+Delhi,North East Delhi,North East Delhi-II,1
+Delhi,North East Delhi,North East Delhi-III,1
+Delhi,North East Delhi,North East Delhi Municipal Corporation,1
+Delhi,Shahdara,Shahdara-I,1
+Delhi,Shahdara,Shahdara-II,1
+Delhi,Shahdara,Shahdara-III,1
+Delhi,Shahdara,Shahdara Municipal Corporation,1
+Delhi,Central Delhi,Central Delhi-I,1
+Delhi,Central Delhi,Central Delhi-II,1
+Delhi,Central Delhi,Central Delhi-III,1
+Delhi,Central Delhi,Central Delhi Municipal Corporation,1
+Jammu And Kashmir,Srinagar,Ganderbal,1
+Jammu And Kashmir,Srinagar,Chadoora,1
+Jammu And Kashmir,Srinagar,Pampore,1
+Jammu And Kashmir,Srinagar,Khanmoh,1
+Jammu And Kashmir,Srinagar,Srinagar Municipal Corporation,1
+Jammu And Kashmir,Jammu,Akhnoor,1
+Jammu And Kashmir,Jammu,Bishnah,1
+Jammu And Kashmir,Jammu,R.S. Pura,1
+Jammu And Kashmir,Jammu,Marh,1
+Jammu And Kashmir,Jammu,Jammu Municipal Corporation,1
+Jammu And Kashmir,Anantnag,Anantnag-I,0
+Jammu And Kashmir,Anantnag,Anantnag-II,0
+Jammu And Kashmir,Anantnag,Anantnag-III,0
+Jammu And Kashmir,Anantnag,Anantnag Nagar Panchayat,1
+Jammu And Kashmir,Baramulla,Baramulla-I,0
+Jammu And Kashmir,Baramulla,Baramulla-II,0
+Jammu And Kashmir,Baramulla,Baramulla-III,0
+Jammu And Kashmir,Baramulla,Baramulla Nagar Panchayat,1
+Jammu And Kashmir,Udhampur,Udhampur-I,0
+Jammu And Kashmir,Udhampur,Udhampur-II,0
+Jammu And Kashmir,Udhampur,Udhampur-III,0
+Jammu And Kashmir,Udhampur,Udhampur Nagar Panchayat,1
+Jammu And Kashmir,Kathua,Kathua-I,0
+Jammu And Kashmir,Kathua,Kathua-II,0
+Jammu And Kashmir,Kathua,Kathua-III,0
+Jammu And Kashmir,Kathua,Kathua Nagar Panchayat,1
+Uttarakhand,Dehradun,Vikasnagar,1
+Uttarakhand,Dehradun,Doiwala,1
+Uttarakhand,Dehradun,Rishikesh,1
+Uttarakhand,Dehradun,Chakrata,1
+Uttarakhand,Dehradun,Dehradun Municipal Corporation,1
+Uttarakhand,Haridwar,Roorkee,0
+Uttarakhand,Haridwar,Laksar,0
+Uttarakhand,Haridwar,Bhagwanpur,0
+Uttarakhand,Haridwar,Narsan,0
+Uttarakhand,Haridwar,Haridwar Nagar Panchayat,1
+Uttarakhand,Nainital,Haldwani,0
+Uttarakhand,Nainital,Ramnagar,0
+Uttarakhand,Nainital,Bhimtal,0
+Uttarakhand,Nainital,Kaladhungi,0
+Uttarakhand,Nainital,Nainital Nagar Panchayat,1
+Uttarakhand,Udham Singh Nagar,Rudrapur,0
+Uttarakhand,Udham Singh Nagar,Kashipur,0
+Uttarakhand,Udham Singh Nagar,Bazpur,0
+Uttarakhand,Udham Singh Nagar,Khatima,0
+Uttarakhand,Udham Singh Nagar,Udham Singh Nagar Nagar Panchayat,1
+Uttarakhand,Pauri Garhwal,Pauri Garhwal-I,0
+Uttarakhand,Pauri Garhwal,Pauri Garhwal-II,0
+Uttarakhand,Pauri Garhwal,Pauri Garhwal-III,0
+Uttarakhand,Pauri Garhwal,Pauri Garhwal Nagar Panchayat,1
+Uttarakhand,Almora,Almora-I,0
+Uttarakhand,Almora,Almora-II,0
+Uttarakhand,Almora,Almora-III,0
+Uttarakhand,Almora,Almora Nagar Panchayat,1
+Himachal Pradesh,Shimla,Shimla-I,1
+Himachal Pradesh,Shimla,Shimla-II,1
+Himachal Pradesh,Shimla,Shimla-III,1
+Himachal Pradesh,Shimla,Shimla Municipal Corporation,1
+Himachal Pradesh,Kangra,Kangra-I,0
+Himachal Pradesh,Kangra,Kangra-II,0
+Himachal Pradesh,Kangra,Kangra-III,0
+Himachal Pradesh,Kangra,Kangra Nagar Panchayat,1
+Himachal Pradesh,Mandi,Mandi-I,0
+Himachal Pradesh,Mandi,Mandi-II,0
+Himachal Pradesh,Mandi,Mandi-III,0
+Himachal Pradesh,Mandi,Mandi Nagar Panchayat,1
+Himachal Pradesh,Solan,Solan-I,0
+Himachal Pradesh,Solan,Solan-II,0
+Himachal Pradesh,Solan,Solan-III,0
+Himachal Pradesh,Solan,Solan Nagar Panchayat,1
+Himachal Pradesh,Una,Una-I,0
+Himachal Pradesh,Una,Una-II,0
+Himachal Pradesh,Una,Una-III,0
+Himachal Pradesh,Una,Una Nagar Panchayat,1
+Manipur,Imphal West,Imphal West-I,1
+Manipur,Imphal West,Imphal West-II,1
+Manipur,Imphal West,Imphal West-III,1
+Manipur,Imphal West,Imphal West Municipal Corporation,1
+Manipur,Imphal East,Imphal East-I,0
+Manipur,Imphal East,Imphal East-II,0
+Manipur,Imphal East,Imphal East-III,0
+Manipur,Imphal East,Imphal East Nagar Panchayat,1
+Manipur,Churachandpur,Churachandpur-I,0
+Manipur,Churachandpur,Churachandpur-II,0
+Manipur,Churachandpur,Churachandpur-III,0
+Manipur,Churachandpur,Churachandpur Nagar Panchayat,1
+Goa,North Goa,North Goa-I,1
+Goa,North Goa,North Goa-II,1
+Goa,North Goa,North Goa-III,1
+Goa,North Goa,North Goa Municipal Corporation,1
+Goa,South Goa,South Goa-I,0
+Goa,South Goa,South Goa-II,0
+Goa,South Goa,South Goa-III,0
+Goa,South Goa,South Goa Nagar Panchayat,1
+Arunachal Pradesh,Papum Pare,Papum Pare-I,0
+Arunachal Pradesh,Papum Pare,Papum Pare-II,0
+Arunachal Pradesh,Papum Pare,Papum Pare-III,0
+Arunachal Pradesh,Papum Pare,Papum Pare Nagar Panchayat,1
+Arunachal Pradesh,East Siang,East Siang-I,0
+Arunachal Pradesh,East Siang,East Siang-II,0
+Arunachal Pradesh,East Siang,East Siang-III,0
+Arunachal Pradesh,East Siang,East Siang Nagar Panchayat,1
+Arunachal Pradesh,Tawang,Tawang-I,0
+Arunachal Pradesh,Tawang,Tawang-II,0
+Arunachal Pradesh,Tawang,Tawang-III,0
+Arunachal Pradesh,Tawang,Tawang Nagar Panchayat,1
+Tripura,West Tripura,West Tripura-I,1
+Tripura,West Tripura,West Tripura-II,1
+Tripura,West Tripura,West Tripura-III,1
+Tripura,West Tripura,West Tripura Municipal Corporation,1
+Tripura,South Tripura,South Tripura-I,0
+Tripura,South Tripura,South Tripura-II,0
+Tripura,South Tripura,South Tripura-III,0
+Tripura,South Tripura,South Tripura Nagar Panchayat,1
+Tripura,Dhalai,Dhalai-I,0
+Tripura,Dhalai,Dhalai-II,0
+Tripura,Dhalai,Dhalai-III,0
+Tripura,Dhalai,Dhalai Nagar Panchayat,1
+Meghalaya,East Khasi Hills,East Khasi Hills-I,1
+Meghalaya,East Khasi Hills,East Khasi Hills-II,1
+Meghalaya,East Khasi Hills,East Khasi Hills-III,1
+Meghalaya,East Khasi Hills,East Khasi Hills Municipal Corporation,1
+Meghalaya,West Garo Hills,West Garo Hills-I,0
+Meghalaya,West Garo Hills,West Garo Hills-II,0
+Meghalaya,West Garo Hills,West Garo Hills-III,0
+Meghalaya,West Garo Hills,West Garo Hills Nagar Panchayat,1
+Meghalaya,Ri Bhoi,Ri Bhoi-I,0
+Meghalaya,Ri Bhoi,Ri Bhoi-II,0
+Meghalaya,Ri Bhoi,Ri Bhoi-III,0
+Meghalaya,Ri Bhoi,Ri Bhoi Nagar Panchayat,1
+Mizoram,Aizawl,Aizawl-I,1
+Mizoram,Aizawl,Aizawl-II,1
+Mizoram,Aizawl,Aizawl-III,1
+Mizoram,Aizawl,Aizawl Municipal Corporation,1
+Mizoram,Lunglei,Lunglei-I,0
+Mizoram,Lunglei,Lunglei-II,0
+Mizoram,Lunglei,Lunglei-III,0
+Mizoram,Lunglei,Lunglei Nagar Panchayat,1
+Nagaland,Kohima,Kohima-I,1
+Nagaland,Kohima,Kohima-II,1
+Nagaland,Kohima,Kohima-III,1
+Nagaland,Kohima,Kohima Municipal Corporation,1
+Nagaland,Dimapur,Dimapur-I,1
+Nagaland,Dimapur,Dimapur-II,1
+Nagaland,Dimapur,Dimapur-III,1
+Nagaland,Dimapur,Dimapur Municipal Corporation,1
+Sikkim,East Sikkim,East Sikkim-I,1
+Sikkim,East Sikkim,East Sikkim-II,1
+Sikkim,East Sikkim,East Sikkim-III,1
+Sikkim,East Sikkim,East Sikkim Municipal Corporation,1
+Sikkim,South Sikkim,South Sikkim-I,0
+Sikkim,South Sikkim,South Sikkim-II,0
+Sikkim,South Sikkim,South Sikkim-III,0
+Sikkim,South Sikkim,South Sikkim Nagar Panchayat,1
+Puducherry,Puducherry,Puducherry-I,1
+Puducherry,Puducherry,Puducherry-II,1
+Puducherry,Puducherry,Puducherry-III,1
+Puducherry,Puducherry,Puducherry Municipal Corporation,1
+Puducherry,Karaikal,Karaikal-I,0
+Puducherry,Karaikal,Karaikal-II,0
+Puducherry,Karaikal,Karaikal-III,0
+Puducherry,Karaikal,Karaikal Nagar Panchayat,1
+Puducherry,Mahe,Mahe-I,0
+Puducherry,Mahe,Mahe-II,0
+Puducherry,Mahe,Mahe-III,0
+Puducherry,Mahe,Mahe Nagar Panchayat,1
+Puducherry,Yanam,Yanam-I,0
+Puducherry,Yanam,Yanam-II,0
+Puducherry,Yanam,Yanam-III,0
+Puducherry,Yanam,Yanam Nagar Panchayat,1
+Ladakh,Leh,Leh-I,0
+Ladakh,Leh,Leh-II,0
+Ladakh,Leh,Leh-III,0
+Ladakh,Leh,Leh Nagar Panchayat,1
+Ladakh,Kargil,Kargil-I,0
+Ladakh,Kargil,Kargil-II,0
+Ladakh,Kargil,Kargil-III,0
+Ladakh,Kargil,Kargil Nagar Panchayat,1
+The Dadra And Nagar Haveli And Daman And Diu,Dadra And Nagar Haveli,Dadra And Nagar Haveli-I,0
+The Dadra And Nagar Haveli And Daman And Diu,Dadra And Nagar Haveli,Dadra And Nagar Haveli-II,0
+The Dadra And Nagar Haveli And Daman And Diu,Dadra And Nagar Haveli,Dadra And Nagar Haveli-III,0
+The Dadra And Nagar Haveli And Daman And Diu,Dadra And Nagar Haveli,Dadra And Nagar Haveli Nagar Panchayat,1
+The Dadra And Nagar Haveli And Daman And Diu,Daman,Daman-I,1
+The Dadra And Nagar Haveli And Daman And Diu,Daman,Daman-II,1
+The Dadra And Nagar Haveli And Daman And Diu,Daman,Daman-III,1
+The Dadra And Nagar Haveli And Daman And Diu,Daman,Daman Municipal Corporation,1
+The Dadra And Nagar Haveli And Daman And Diu,Diu,Diu-I,0
+The Dadra And Nagar Haveli And Daman And Diu,Diu,Diu-II,0
+The Dadra And Nagar Haveli And Daman And Diu,Diu,Diu-III,0
+The Dadra And Nagar Haveli And Daman And Diu,Diu,Diu Nagar Panchayat,1
+Andaman And Nicobar Islands,South Andaman,South Andaman-I,1
+Andaman And Nicobar Islands,South Andaman,South Andaman-II,1
+Andaman And Nicobar Islands,South Andaman,South Andaman-III,1
+Andaman And Nicobar Islands,South Andaman,South Andaman Municipal Corporation,1
+Andaman And Nicobar Islands,North And Middle Andaman,North And Middle Andaman-I,0
+Andaman And Nicobar Islands,North And Middle Andaman,North And Middle Andaman-II,0
+Andaman And Nicobar Islands,North And Middle Andaman,North And Middle Andaman-III,0
+Andaman And Nicobar Islands,North And Middle Andaman,North And Middle Andaman Nagar Panchayat,1
+Andaman And Nicobar Islands,Nicobars,Nicobars-I,0
+Andaman And Nicobar Islands,Nicobars,Nicobars-II,0
+Andaman And Nicobar Islands,Nicobars,Nicobars-III,0
+Andaman And Nicobar Islands,Nicobars,Nicobars Nagar Panchayat,1
+Chandigarh,Chandigarh,Chandigarh (Central),1
+Chandigarh,Chandigarh,Chandigarh (East),1
+Chandigarh,Chandigarh,Chandigarh (South),1
+Chandigarh,Chandigarh,Manimajra,1
+Chandigarh,Chandigarh,Chandigarh Municipal Corporation,1
+Lakshadweep,Kavaratti,Kavaratti North,0
+Lakshadweep,Kavaratti,Kavaratti South,0
+Lakshadweep,Kavaratti,Kavaratti Nagar Panchayat,1
+Lakshadweep,Agatti,Agatti Island,0
+Lakshadweep,Agatti,Agatti Nagar Panchayat,1
+Lakshadweep,Amini,Amini Island,0
+Lakshadweep,Amini,Amini Nagar Panchayat,1
+Lakshadweep,Andrott,Andrott Island,0
+Lakshadweep,Andrott,Andrott Nagar Panchayat,1
+Lakshadweep,Minicoy,Minicoy Island,0
+Lakshadweep,Minicoy,Minicoy Nagar Panchayat,1

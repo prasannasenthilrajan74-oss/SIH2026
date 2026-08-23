@@ -1,0 +1,877 @@
+entity_id,entity_name,entity_type,state_ut,district,entity_status
+SYN_AGENCY_001,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_002,Solapur Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Maharashtra,Solapur,UNDER_REVIEW
+SYN_AGENCY_003,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_004,Solapur District Development Authority,IMPLEMENTING_AGENCY,Maharashtra,Solapur,ACTIVE
+SYN_AGENCY_005,Cuddalore Rural Development Agency,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_AGENCY_006,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_007,Begusarai Urban Development Agency,IMPLEMENTING_AGENCY,Bihar,Begusarai,ACTIVE
+SYN_AGENCY_008,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_009,Kalaburagi Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Karnataka,Kalaburagi,SUSPENDED
+SYN_AGENCY_010,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_011,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_012,Cuddalore Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,UNDER_REVIEW
+SYN_AGENCY_013,Cuddalore Rural Development Agency,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_AGENCY_014,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_015,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_016,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_017,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_018,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_019,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_020,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_021,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_022,Balasore Rural Development Agency,IMPLEMENTING_AGENCY,Odisha,Balasore,ACTIVE
+SYN_AGENCY_023,Cuddalore Urban Development Agency,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_AGENCY_024,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_025,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_026,Amravati Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Maharashtra,Amravati,ACTIVE
+SYN_AGENCY_027,North 24 Parganas District Development Authority,IMPLEMENTING_AGENCY,West Bengal,North 24 Parganas,ACTIVE
+SYN_AGENCY_028,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_029,Cuddalore Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,SUSPENDED
+SYN_AGENCY_030,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_031,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_032,Gaya Rural Development Agency,IMPLEMENTING_AGENCY,Bihar,Gaya,UNDER_REVIEW
+SYN_AGENCY_033,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_034,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_035,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,SUSPENDED
+SYN_AGENCY_036,Gaya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Bihar,Gaya,SUSPENDED
+SYN_AGENCY_037,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_038,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_039,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_040,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,SUSPENDED
+SYN_AGENCY_041,Ganjam Urban Development Agency,IMPLEMENTING_AGENCY,Odisha,Ganjam,SUSPENDED
+SYN_AGENCY_042,Cuddalore Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,UNDER_REVIEW
+SYN_AGENCY_043,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_044,Kottayam Urban Development Agency,IMPLEMENTING_AGENCY,Kerala,Kottayam,ACTIVE
+SYN_AGENCY_045,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_046,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_047,Chennai Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Tamil Nadu,Chennai,UNDER_REVIEW
+SYN_AGENCY_048,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_049,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_050,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_051,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_052,North 24 Parganas District Development Authority,IMPLEMENTING_AGENCY,West Bengal,North 24 Parganas,ACTIVE
+SYN_AGENCY_053,Solapur Rural Development Agency,IMPLEMENTING_AGENCY,Maharashtra,Solapur,ACTIVE
+SYN_AGENCY_054,Cuddalore Rural Development Agency,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_AGENCY_055,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_056,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_057,Gwalior Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Madhya Pradesh,Gwalior,UNDER_REVIEW
+SYN_AGENCY_058,Ganjam Urban Development Agency,IMPLEMENTING_AGENCY,Odisha,Ganjam,ACTIVE
+SYN_AGENCY_059,Gaya District Development Authority,IMPLEMENTING_AGENCY,Bihar,Gaya,ACTIVE
+SYN_AGENCY_060,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_061,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_062,Gwalior Urban Development Agency,IMPLEMENTING_AGENCY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_AGENCY_063,Gaya District Development Authority,IMPLEMENTING_AGENCY,Bihar,Gaya,UNDER_REVIEW
+SYN_AGENCY_064,Solapur Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Maharashtra,Solapur,ACTIVE
+SYN_AGENCY_065,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_066,Cuddalore District Development Authority,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_AGENCY_067,Nashik Urban Development Agency,IMPLEMENTING_AGENCY,Maharashtra,Nashik,ACTIVE
+SYN_AGENCY_068,Gaya District Development Authority,IMPLEMENTING_AGENCY,Bihar,Gaya,UNDER_REVIEW
+SYN_AGENCY_069,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_070,Dibrugarh Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Assam,Dibrugarh,ACTIVE
+SYN_AGENCY_071,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_072,Solapur District Development Authority,IMPLEMENTING_AGENCY,Maharashtra,Solapur,ACTIVE
+SYN_AGENCY_073,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_074,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_075,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_076,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_AGENCY_077,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_078,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_AGENCY_079,Cuddalore Urban Development Agency,IMPLEMENTING_AGENCY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_AGENCY_080,Kalaburagi Rural Development Agency,IMPLEMENTING_AGENCY,Karnataka,Kalaburagi,ACTIVE
+SYN_CONTRACTOR_001,"M/s Amrit Constructions, Solapur",CONTRACTOR,Maharashtra,Solapur,ACTIVE
+SYN_CONTRACTOR_002,"M/s Samarth Infra Projects, Solapur",CONTRACTOR,Maharashtra,Solapur,ACTIVE
+SYN_CONTRACTOR_003,"M/s Prakash Infrastructure Pvt Ltd, Solapur",CONTRACTOR,Maharashtra,Solapur,ACTIVE
+SYN_CONTRACTOR_004,"M/s Lakshmi Infra Projects, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,UNDER_REVIEW
+SYN_CONTRACTOR_005,"M/s Narayan Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_006,"M/s Guru Kripa Builders, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_007,"M/s Jyoti Infrastructure Pvt Ltd, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_008,"M/s Sai Krishna Builders, Bastar",CONTRACTOR,Chhattisgarh,Bastar,ACTIVE
+SYN_CONTRACTOR_009,"M/s Maruti Infra Projects, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_010,"M/s Sundaram Constructions, Bastar",CONTRACTOR,Chhattisgarh,Bastar,ACTIVE
+SYN_CONTRACTOR_011,"M/s Rajeshwari Engineering Works, Bastar",CONTRACTOR,Chhattisgarh,Bastar,ACTIVE
+SYN_CONTRACTOR_012,"M/s Annapurna Infra Projects, Bastar",CONTRACTOR,Chhattisgarh,Bastar,UNDER_REVIEW
+SYN_CONTRACTOR_013,"M/s Jai Bharat Builders, Deoghar",CONTRACTOR,Jharkhand,Deoghar,ACTIVE
+SYN_CONTRACTOR_014,"M/s Jyoti Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_015,"M/s Lakshmi Infrastructure Pvt Ltd, Gwalior",CONTRACTOR,Madhya Pradesh,Gwalior,ACTIVE
+SYN_CONTRACTOR_016,"M/s Deepak Civil Works, Pauri Garhwal",CONTRACTOR,Uttarakhand,Pauri Garhwal,ACTIVE
+SYN_CONTRACTOR_017,"M/s Hariom Constructions, North 24 Parganas",CONTRACTOR,West Bengal,North 24 Parganas,ACTIVE
+SYN_CONTRACTOR_018,"M/s Annapurna Infra Projects, Durg",CONTRACTOR,Chhattisgarh,Durg,ACTIVE
+SYN_CONTRACTOR_019,"M/s Sai Krishna Infrastructure Pvt Ltd, East Godavari",CONTRACTOR,Andhra Pradesh,East Godavari,ACTIVE
+SYN_CONTRACTOR_020,"M/s Bhagyalakshmi Builders, Tawang",CONTRACTOR,Arunachal Pradesh,Tawang,ACTIVE
+SYN_CONTRACTOR_021,"M/s Jai Bharat Infrastructure Pvt Ltd, Alwar",CONTRACTOR,Rajasthan,Alwar,ACTIVE
+SYN_CONTRACTOR_022,"M/s Sundaram Infra Projects, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_023,"M/s Rajeshwari Civil Works, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_024,"M/s Guru Kripa Constructions, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_025,"M/s Indus Engineering Works, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_026,"M/s Kalyan Infrastructure Pvt Ltd, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_027,"M/s Mahaveer Infra Projects, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,SUSPENDED
+SYN_CONTRACTOR_028,"M/s Prakash Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_029,"M/s Samarth Infrastructure Pvt Ltd, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_030,"M/s Prakash Constructions, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_031,"M/s Mahaveer Civil Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_032,"M/s Kalyan Infra Projects, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_033,"M/s Indus Infrastructure Pvt Ltd, Aurangabad",CONTRACTOR,Maharashtra,Aurangabad,UNDER_REVIEW
+SYN_CONTRACTOR_034,"M/s Bhoomi Builders, East Sikkim",CONTRACTOR,Sikkim,East Sikkim,SUSPENDED
+SYN_CONTRACTOR_035,"M/s Chetak Infra Projects, Bastar",CONTRACTOR,Chhattisgarh,Bastar,ACTIVE
+SYN_CONTRACTOR_036,"M/s Yashoda Infrastructure Pvt Ltd, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_CONTRACTOR_037,"M/s Samarth Engineering Works, Kalaburagi",CONTRACTOR,Karnataka,Kalaburagi,ACTIVE
+SYN_CONTRACTOR_038,"M/s Annapurna Constructions, Kalaburagi",CONTRACTOR,Karnataka,Kalaburagi,SUSPENDED
+SYN_CONTRACTOR_039,"M/s Sai Krishna Civil Works, Kalaburagi",CONTRACTOR,Karnataka,Kalaburagi,ACTIVE
+SYN_CONTRACTOR_040,"M/s Satyam Civil Works, Ganjam",CONTRACTOR,Odisha,Ganjam,ACTIVE
+SYN_CONTRACTOR_041,"M/s Girija Infra Projects, Ganjam",CONTRACTOR,Odisha,Ganjam,ACTIVE
+SYN_CONTRACTOR_042,"M/s Ganesh Engineering Works, Amritsar",CONTRACTOR,Punjab,Amritsar,ACTIVE
+SYN_CONTRACTOR_043,"M/s Shanti Constructions, Karnal",CONTRACTOR,Haryana,Karnal,ACTIVE
+SYN_CONTRACTOR_044,"M/s Om Sai Civil Works, Ahmedabad",CONTRACTOR,Gujarat,Ahmedabad,INACTIVE
+SYN_CONTRACTOR_045,"M/s Vishwakarma Infrastructure Pvt Ltd, Hisar",CONTRACTOR,Haryana,Hisar,ACTIVE
+SYN_CONTRACTOR_046,"M/s Sundaram Infrastructure Pvt Ltd, Durg",CONTRACTOR,Chhattisgarh,Durg,ACTIVE
+SYN_CONTRACTOR_047,"M/s Jai Bharat Builders, Bhagalpur",CONTRACTOR,Bihar,Bhagalpur,ACTIVE
+SYN_CONTRACTOR_048,"M/s Hariom Civil Works, Bhagalpur",CONTRACTOR,Bihar,Bhagalpur,ACTIVE
+SYN_CONTRACTOR_049,"M/s Kalyan Constructions, Bhagalpur",CONTRACTOR,Bihar,Bhagalpur,ACTIVE
+SYN_CONTRACTOR_050,"M/s Guru Kripa Infra Projects, Bhagalpur",CONTRACTOR,Bihar,Bhagalpur,ACTIVE
+SYN_CONTRACTOR_051,"M/s Jyoti Builders, Howrah",CONTRACTOR,West Bengal,Howrah,UNDER_REVIEW
+SYN_CONTRACTOR_052,"M/s Mahaveer Infrastructure Pvt Ltd, Gwalior",CONTRACTOR,Madhya Pradesh,Gwalior,ACTIVE
+SYN_CONTRACTOR_053,"M/s Amrit Civil Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_054,"M/s Samarth Builders, Lucknow",CONTRACTOR,Uttar Pradesh,Lucknow,ACTIVE
+SYN_CONTRACTOR_055,"M/s Prakash Infra Projects, Gwalior",CONTRACTOR,Madhya Pradesh,Gwalior,SUSPENDED
+SYN_CONTRACTOR_056,"M/s Konark Engineering Works, Gwalior",CONTRACTOR,Madhya Pradesh,Gwalior,ACTIVE
+SYN_CONTRACTOR_057,"M/s Uday Constructions, Gwalior",CONTRACTOR,Madhya Pradesh,Gwalior,ACTIVE
+SYN_CONTRACTOR_058,"M/s Satyam Infra Projects, Kanpur Nagar",CONTRACTOR,Uttar Pradesh,Kanpur Nagar,SUSPENDED
+SYN_CONTRACTOR_059,"M/s Shanti Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_060,"M/s Sri Balaji Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_061,"M/s Maruti Constructions, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_062,"M/s Sai Krishna Engineering Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_CONTRACTOR_063,"M/s Annapurna Civil Works, Kalaburagi",CONTRACTOR,Karnataka,Kalaburagi,ACTIVE
+SYN_CONTRACTOR_064,"M/s Samarth Constructions, Kalaburagi",CONTRACTOR,Karnataka,Kalaburagi,ACTIVE
+SYN_CONTRACTOR_065,"M/s Uday Engineering Works, Ahmedabad",CONTRACTOR,Gujarat,Ahmedabad,ACTIVE
+SYN_CONTRACTOR_066,"M/s Chetak Infrastructure Pvt Ltd, Hyderabad",CONTRACTOR,Telangana,Hyderabad,ACTIVE
+SYN_CONTRACTOR_067,"M/s Bhoomi Infra Projects, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_068,"M/s Guru Kripa Civil Works, Gwalior",CONTRACTOR,Madhya Pradesh,Gwalior,ACTIVE
+SYN_CONTRACTOR_069,"M/s Amrit Engineering Works, Hyderabad",CONTRACTOR,Telangana,Hyderabad,ACTIVE
+SYN_CONTRACTOR_070,"M/s Hariom Constructions, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_071,"M/s Deepak Civil Works, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_072,"M/s Rajeshwari Engineering Works, Kolkata",CONTRACTOR,West Bengal,Kolkata,ACTIVE
+SYN_CONTRACTOR_073,"M/s Sundaram Constructions, Kalaburagi",CONTRACTOR,Karnataka,Kalaburagi,ACTIVE
+SYN_CONTRACTOR_074,"M/s Jai Bharat Builders, Dimapur",CONTRACTOR,Nagaland,Dimapur,ACTIVE
+SYN_CONTRACTOR_075,"M/s Annapurna Infra Projects, Hingoli",CONTRACTOR,Maharashtra,Hingoli,ACTIVE
+SYN_CONTRACTOR_076,"M/s Sai Krishna Infrastructure Pvt Ltd, Hingoli",CONTRACTOR,Maharashtra,Hingoli,ACTIVE
+SYN_CONTRACTOR_077,"M/s Maruti Engineering Works, Lucknow",CONTRACTOR,Uttar Pradesh,Lucknow,ACTIVE
+SYN_CONTRACTOR_078,"M/s Sri Balaji Constructions, Bharatpur",CONTRACTOR,Rajasthan,Bharatpur,ACTIVE
+SYN_CONTRACTOR_079,"M/s Bhoomi Civil Works, Anantapur",CONTRACTOR,Andhra Pradesh,Anantapur,ACTIVE
+SYN_CONTRACTOR_080,"M/s Jai Bharat Engineering Works, Jhansi",CONTRACTOR,Uttar Pradesh,Jhansi,ACTIVE
+SYN_CONTRACTOR_081,"M/s Bhagyalakshmi Constructions, Jhansi",CONTRACTOR,Uttar Pradesh,Jhansi,ACTIVE
+SYN_CONTRACTOR_082,"M/s Rajeshwari Infra Projects, Jhansi",CONTRACTOR,Uttar Pradesh,Jhansi,ACTIVE
+SYN_CONTRACTOR_083,"M/s Sundaram Infrastructure Pvt Ltd, Krishna",CONTRACTOR,Andhra Pradesh,Krishna,ACTIVE
+SYN_CONTRACTOR_084,"M/s Sri Balaji Infrastructure Pvt Ltd, Jhansi",CONTRACTOR,Uttar Pradesh,Jhansi,UNDER_REVIEW
+SYN_CONTRACTOR_085,"M/s Bhoomi Builders, Jhansi",CONTRACTOR,Uttar Pradesh,Jhansi,ACTIVE
+SYN_CONTRACTOR_086,"M/s Vishwakarma Civil Works, Nagpur",CONTRACTOR,Maharashtra,Nagpur,ACTIVE
+SYN_CONTRACTOR_087,"M/s Ganesh Engineering Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_CONTRACTOR_088,"M/s Trimurti Engineering Works, Jhansi",CONTRACTOR,Uttar Pradesh,Jhansi,SUSPENDED
+SYN_CONTRACTOR_089,"M/s Raghav Constructions, North 24 Parganas",CONTRACTOR,West Bengal,North 24 Parganas,UNDER_REVIEW
+SYN_CONTRACTOR_090,"M/s Trimurti Infrastructure Pvt Ltd, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_091,"M/s Yashoda Engineering Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_092,"M/s Mahaveer Infra Projects, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,SUSPENDED
+SYN_CONTRACTOR_093,"M/s Raghav Builders, Pali",CONTRACTOR,Rajasthan,Pali,SUSPENDED
+SYN_CONTRACTOR_094,"M/s Sri Balaji Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_095,"M/s Maruti Infrastructure Pvt Ltd, Pali",CONTRACTOR,Rajasthan,Pali,ACTIVE
+SYN_CONTRACTOR_096,"M/s Chetak Civil Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_097,"M/s Bhoomi Constructions, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_098,"M/s Navdurga Infrastructure Pvt Ltd, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_099,"M/s Venkateshwara Infra Projects, Solapur",CONTRACTOR,Maharashtra,Solapur,ACTIVE
+SYN_CONTRACTOR_100,"M/s Prakash Infra Projects, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_101,"M/s Samarth Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_102,"M/s Yashoda Constructions, Amritsar",CONTRACTOR,Punjab,Amritsar,ACTIVE
+SYN_CONTRACTOR_103,"M/s Chetak Engineering Works, Haridwar",CONTRACTOR,Uttarakhand,Haridwar,ACTIVE
+SYN_CONTRACTOR_104,"M/s Guru Kripa Civil Works, Baramulla",CONTRACTOR,Jammu And Kashmir,Baramulla,ACTIVE
+SYN_CONTRACTOR_105,"M/s Indus Constructions, Baramulla",CONTRACTOR,Jammu And Kashmir,Baramulla,ACTIVE
+SYN_CONTRACTOR_106,"M/s Kalyan Engineering Works, Diu",CONTRACTOR,The Dadra And Nagar Haveli And Daman And Diu,Diu,ACTIVE
+SYN_CONTRACTOR_107,"M/s Mahaveer Infrastructure Pvt Ltd, Baramulla",CONTRACTOR,Jammu And Kashmir,Baramulla,ACTIVE
+SYN_CONTRACTOR_108,"M/s Bhagyalakshmi Infra Projects, Chennai",CONTRACTOR,Tamil Nadu,Chennai,ACTIVE
+SYN_CONTRACTOR_109,"M/s Jai Bharat Builders, Baramulla",CONTRACTOR,Jammu And Kashmir,Baramulla,ACTIVE
+SYN_CONTRACTOR_110,"M/s Satyam Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_111,"M/s Shanti Infrastructure Pvt Ltd, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_112,"M/s Ganesh Infra Projects, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_113,"M/s Vishwakarma Builders, North 24 Parganas",CONTRACTOR,West Bengal,North 24 Parganas,ACTIVE
+SYN_CONTRACTOR_114,"M/s Bhagyalakshmi Constructions, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_115,"M/s Jai Bharat Engineering Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_116,"M/s Venkateshwara Civil Works, Bardhaman",CONTRACTOR,West Bengal,Bardhaman,ACTIVE
+SYN_CONTRACTOR_117,"M/s Amrit Infra Projects, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_118,"M/s Guru Kripa Builders, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_119,"M/s Indus Infrastructure Pvt Ltd, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_120,"M/s Deepak Infra Projects, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_121,"M/s Rajeshwari Infrastructure Pvt Ltd, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_122,"M/s Jyoti Constructions, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_123,"M/s Hariom Builders, South 24 Parganas",CONTRACTOR,West Bengal,South 24 Parganas,ACTIVE
+SYN_CONTRACTOR_124,"M/s Annapurna Civil Works, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_125,"M/s Sai Krishna Infra Projects, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_126,"M/s Sundaram Engineering Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_127,"M/s Om Sai Constructions, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_128,"M/s Bhoomi Infra Projects, Jamnagar",CONTRACTOR,Gujarat,Jamnagar,ACTIVE
+SYN_CONTRACTOR_129,"M/s Chetak Civil Works, Gaya",CONTRACTOR,Bihar,Gaya,ACTIVE
+SYN_CONTRACTOR_130,"M/s Bhoomi Civil Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_131,"M/s Sri Balaji Constructions, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_132,"M/s Uday Infrastructure Pvt Ltd, Saran",CONTRACTOR,Bihar,Saran,ACTIVE
+SYN_CONTRACTOR_133,"M/s Konark Engineering Works, Solapur",CONTRACTOR,Maharashtra,Solapur,ACTIVE
+SYN_CONTRACTOR_134,"M/s Annapurna Infra Projects, Kottayam",CONTRACTOR,Kerala,Kottayam,ACTIVE
+SYN_CONTRACTOR_135,"M/s Om Sai Builders, Saran",CONTRACTOR,Bihar,Saran,ACTIVE
+SYN_CONTRACTOR_136,"M/s Maruti Engineering Works, Kottayam",CONTRACTOR,Kerala,Kottayam,ACTIVE
+SYN_CONTRACTOR_137,"M/s Sai Krishna Infrastructure Pvt Ltd, Prayagraj",CONTRACTOR,Uttar Pradesh,Prayagraj,ACTIVE
+SYN_CONTRACTOR_138,"M/s Guru Kripa Builders, Chennai",CONTRACTOR,Tamil Nadu,Chennai,ACTIVE
+SYN_CONTRACTOR_139,"M/s Indus Constructions, Saran",CONTRACTOR,Bihar,Saran,ACTIVE
+SYN_CONTRACTOR_140,"M/s Ganesh Constructions, Saran",CONTRACTOR,Bihar,Saran,ACTIVE
+SYN_CONTRACTOR_141,"M/s Sri Balaji Civil Works, Balasore",CONTRACTOR,Odisha,Balasore,ACTIVE
+SYN_CONTRACTOR_142,"M/s Bhoomi Engineering Works, Balasore",CONTRACTOR,Odisha,Balasore,ACTIVE
+SYN_CONTRACTOR_143,"M/s Chetak Infrastructure Pvt Ltd, Thanjavur",CONTRACTOR,Tamil Nadu,Thanjavur,ACTIVE
+SYN_CONTRACTOR_144,"M/s Yashoda Builders, Chittoor",CONTRACTOR,Andhra Pradesh,Chittoor,ACTIVE
+SYN_CONTRACTOR_145,"M/s Trimurti Infra Projects, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_146,"M/s Raghav Infrastructure Pvt Ltd, Indore",CONTRACTOR,Madhya Pradesh,Indore,UNDER_REVIEW
+SYN_CONTRACTOR_147,"M/s Narayan Engineering Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_148,"M/s Kalyan Constructions, Bareilly",CONTRACTOR,Uttar Pradesh,Bareilly,UNDER_REVIEW
+SYN_CONTRACTOR_149,"M/s Indus Civil Works, Bhagalpur",CONTRACTOR,Bihar,Bhagalpur,ACTIVE
+SYN_CONTRACTOR_150,"M/s Bhagyalakshmi Civil Works, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_151,"M/s Vishwakarma Engineering Works, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,UNDER_REVIEW
+SYN_CONTRACTOR_152,"M/s Ganesh Infrastructure Pvt Ltd, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_153,"M/s Shanti Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,SUSPENDED
+SYN_CONTRACTOR_154,"M/s Guru Kripa Infra Projects, Amritsar",CONTRACTOR,Punjab,Amritsar,UNDER_REVIEW
+SYN_CONTRACTOR_155,"M/s Amrit Infrastructure Pvt Ltd, Amritsar",CONTRACTOR,Punjab,Amritsar,ACTIVE
+SYN_CONTRACTOR_156,"M/s Venkateshwara Engineering Works, Cuddalore",CONTRACTOR,Tamil Nadu,Cuddalore,ACTIVE
+SYN_CONTRACTOR_157,"M/s Navdurga Constructions, Jammu",CONTRACTOR,Jammu And Kashmir,Jammu,ACTIVE
+SYN_CONTRACTOR_158,"M/s Raghav Civil Works, Bhagalpur",CONTRACTOR,Bihar,Bhagalpur,ACTIVE
+SYN_CONTRACTOR_159,"M/s Mahaveer Engineering Works, Sonitpur",CONTRACTOR,Assam,Sonitpur,ACTIVE
+SYN_CONTRACTOR_160,"M/s Raghav Infra Projects, Hassan",CONTRACTOR,Karnataka,Hassan,ACTIVE
+SYN_CONTRACTOR_161,"M/s Trimurti Builders, Kottayam",CONTRACTOR,Kerala,Kottayam,ACTIVE
+SYN_CONTRACTOR_162,"M/s Kalyan Engineering Works, Kottayam",CONTRACTOR,Kerala,Kottayam,ACTIVE
+SYN_CONTRACTOR_163,"M/s Narayan Infrastructure Pvt Ltd, Kannur",CONTRACTOR,Kerala,Kannur,ACTIVE
+SYN_CONTRACTOR_164,"M/s Guru Kripa Civil Works, Kolhapur",CONTRACTOR,Maharashtra,Kolhapur,ACTIVE
+SYN_CONTRACTOR_165,"M/s Indus Constructions, Varanasi",CONTRACTOR,Uttar Pradesh,Varanasi,ACTIVE
+SYN_CONTRACTOR_166,"M/s Venkateshwara Infrastructure Pvt Ltd, Solapur",CONTRACTOR,Maharashtra,Solapur,ACTIVE
+SYN_CONTRACTOR_167,"M/s Amrit Infra Projects, Kolhapur",CONTRACTOR,Maharashtra,Kolhapur,ACTIVE
+SYN_CONTRACTOR_168,"M/s Bhagyalakshmi Infra Projects, Ahmedabad",CONTRACTOR,Gujarat,Ahmedabad,UNDER_REVIEW
+SYN_CONTRACTOR_169,"M/s Jai Bharat Civil Works, Ahmedabad",CONTRACTOR,Gujarat,Ahmedabad,ACTIVE
+SYN_CONTRACTOR_170,"M/s Bhagyalakshmi Civil Works, Ahmedabad",CONTRACTOR,Gujarat,Ahmedabad,ACTIVE
+SYN_CONTRACTOR_171,"M/s Vishwakarma Engineering Works, Alwar",CONTRACTOR,Rajasthan,Alwar,ACTIVE
+SYN_CONTRACTOR_172,"M/s Sundaram Builders, Anantapur",CONTRACTOR,Andhra Pradesh,Anantapur,ACTIVE
+SYN_CONTRACTOR_173,"M/s Jai Bharat Constructions, Murshidabad",CONTRACTOR,West Bengal,Murshidabad,UNDER_REVIEW
+SYN_CONTRACTOR_174,"M/s Guru Kripa Infra Projects, Murshidabad",CONTRACTOR,West Bengal,Murshidabad,SUSPENDED
+SYN_CONTRACTOR_175,"M/s Rajeshwari Infrastructure Pvt Ltd, Solapur",CONTRACTOR,Maharashtra,Solapur,SUSPENDED
+SYN_CONTRACTOR_176,"M/s Kalyan Constructions, Ghaziabad",CONTRACTOR,Uttar Pradesh,Ghaziabad,SUSPENDED
+SYN_CONTRACTOR_177,"M/s Indus Builders, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_178,"M/s Raghav Civil Works, Ayodhya",CONTRACTOR,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_CONTRACTOR_179,"M/s Narayan Infra Projects, Darbhanga",CONTRACTOR,Bihar,Darbhanga,ACTIVE
+SYN_CONTRACTOR_180,"M/s Trimurti Engineering Works, Solapur",CONTRACTOR,Maharashtra,Solapur,UNDER_REVIEW
+SYN_DA_001,Ayodhya Zilla Parishad,DISTRICT_AUTHORITY,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_DA_002,Cuddalore Zilla Parishad,DISTRICT_AUTHORITY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_DA_003,Solapur Zilla Parishad,DISTRICT_AUTHORITY,Maharashtra,Solapur,ACTIVE
+SYN_DA_004,Gaya Zilla Parishad,DISTRICT_AUTHORITY,Bihar,Gaya,ACTIVE
+SYN_DA_005,"Office of the District Collector, Anantapur",DISTRICT_AUTHORITY,Andhra Pradesh,Anantapur,ACTIVE
+SYN_DA_006,Kalaburagi Zilla Parishad,DISTRICT_AUTHORITY,Karnataka,Kalaburagi,ACTIVE
+SYN_DA_007,Bardhaman Zilla Parishad,DISTRICT_AUTHORITY,West Bengal,Bardhaman,ACTIVE
+SYN_DA_008,"State Quality Monitoring Unit, Kottayam",VERIFICATION_AGENCY,Kerala,Kottayam,ACTIVE
+SYN_DA_009,"State Quality Monitoring Unit, Jodhpur",VERIFICATION_AGENCY,Rajasthan,Jodhpur,ACTIVE
+SYN_DA_010,"State Quality Monitoring Unit, Gwalior",VERIFICATION_AGENCY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_DA_011,"State Quality Monitoring Unit, Jamnagar",VERIFICATION_AGENCY,Gujarat,Jamnagar,ACTIVE
+SYN_DA_012,"State Quality Monitoring Unit, Azamgarh",VERIFICATION_AGENCY,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_DA_013,"State Quality Monitoring Unit, Kanchipuram",VERIFICATION_AGENCY,Tamil Nadu,Kanchipuram,INACTIVE
+SYN_DA_014,"Office of the District Collector, Ludhiana",DISTRICT_AUTHORITY,Punjab,Ludhiana,ACTIVE
+SYN_DA_015,"Office of the District Collector, Hyderabad",DISTRICT_AUTHORITY,Telangana,Hyderabad,ACTIVE
+SYN_DA_016,"State Quality Monitoring Unit, Bastar",VERIFICATION_AGENCY,Chhattisgarh,Bastar,ACTIVE
+SYN_DA_017,Jammu Zilla Parishad,DISTRICT_AUTHORITY,Jammu And Kashmir,Jammu,ACTIVE
+SYN_DA_018,"Office of the District Collector, Karnal",DISTRICT_AUTHORITY,Haryana,Karnal,ACTIVE
+SYN_DA_019,"Office of the District Collector, North West Delhi",DISTRICT_AUTHORITY,Delhi,North West Delhi,ACTIVE
+SYN_DA_020,"Office of the District Collector, Hazaribagh",DISTRICT_AUTHORITY,Jharkhand,Hazaribagh,ACTIVE
+SYN_DA_021,Tirupati Zilla Parishad,DISTRICT_AUTHORITY,Andhra Pradesh,Tirupati,INACTIVE
+SYN_DA_022,"Office of the District Collector, Bareilly",DISTRICT_AUTHORITY,Uttar Pradesh,Bareilly,ACTIVE
+SYN_DA_023,Vellore Zilla Parishad,DISTRICT_AUTHORITY,Tamil Nadu,Vellore,INACTIVE
+SYN_DA_024,"Office of the District Collector, Chandigarh",DISTRICT_AUTHORITY,Chandigarh,Chandigarh,ACTIVE
+SYN_DA_025,"Office of the District Collector, Dimapur",DISTRICT_AUTHORITY,Nagaland,Dimapur,ACTIVE
+SYN_DA_026,Amravati Technical Verification Cell,VERIFICATION_AGENCY,Maharashtra,Amravati,ACTIVE
+SYN_DA_027,"State Quality Monitoring Unit, Bokaro",VERIFICATION_AGENCY,Jharkhand,Bokaro,INACTIVE
+SYN_DA_028,Bharatpur Technical Verification Cell,VERIFICATION_AGENCY,Rajasthan,Bharatpur,INACTIVE
+SYN_DA_029,"State Quality Monitoring Unit, Bhagalpur",VERIFICATION_AGENCY,Bihar,Bhagalpur,INACTIVE
+SYN_DA_030,"State Quality Monitoring Unit, Darjeeling",VERIFICATION_AGENCY,West Bengal,Darjeeling,ACTIVE
+SYN_DA_031,"State Quality Monitoring Unit, Howrah",VERIFICATION_AGENCY,West Bengal,Howrah,ACTIVE
+SYN_DA_032,"State Quality Monitoring Unit, Kottayam",VERIFICATION_AGENCY,Kerala,Kottayam,ACTIVE
+SYN_DA_033,"State Quality Monitoring Unit, Vadodara",VERIFICATION_AGENCY,Gujarat,Vadodara,INACTIVE
+SYN_DA_034,"Office of the District Collector, Ayodhya",DISTRICT_AUTHORITY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_DA_035,"Office of the District Collector, Ayodhya",DISTRICT_AUTHORITY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_DA_036,"Office of the District Collector, Aligarh",DISTRICT_AUTHORITY,Uttar Pradesh,Aligarh,ACTIVE
+SYN_DA_037,Gwalior Zilla Parishad,DISTRICT_AUTHORITY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_DA_038,"Office of the District Collector, Hingoli",DISTRICT_AUTHORITY,Maharashtra,Hingoli,ACTIVE
+SYN_DA_039,"Office of the District Collector, Ernakulam",DISTRICT_AUTHORITY,Kerala,Ernakulam,INACTIVE
+SYN_DA_040,Aurangabad Zilla Parishad,DISTRICT_AUTHORITY,Maharashtra,Aurangabad,ACTIVE
+SYN_DA_041,Jhansi Zilla Parishad,DISTRICT_AUTHORITY,Uttar Pradesh,Jhansi,ACTIVE
+SYN_DA_042,"Office of the District Collector, Giridih",DISTRICT_AUTHORITY,Jharkhand,Giridih,INACTIVE
+SYN_DA_043,Cuddalore Zilla Parishad,DISTRICT_AUTHORITY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_DA_044,"Office of the District Collector, Patna",DISTRICT_AUTHORITY,Bihar,Patna,INACTIVE
+SYN_DA_045,Sambalpur Zilla Parishad,DISTRICT_AUTHORITY,Odisha,Sambalpur,ACTIVE
+SYN_DA_046,"Office of the District Collector, Ernakulam",DISTRICT_AUTHORITY,Kerala,Ernakulam,ACTIVE
+SYN_DA_047,Anantapur Zilla Parishad,DISTRICT_AUTHORITY,Andhra Pradesh,Anantapur,ACTIVE
+SYN_DA_048,Karimnagar Technical Verification Cell,VERIFICATION_AGENCY,Telangana,Karimnagar,ACTIVE
+SYN_DA_049,"Office of the District Collector, Ayodhya",DISTRICT_AUTHORITY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_DA_050,"State Quality Monitoring Unit, Karimnagar",VERIFICATION_AGENCY,Telangana,Karimnagar,ACTIVE
+SYN_DA_051,Gwalior Technical Verification Cell,VERIFICATION_AGENCY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_DA_052,Una Zilla Parishad,DISTRICT_AUTHORITY,Himachal Pradesh,Una,INACTIVE
+SYN_DA_053,"Office of the District Collector, Hoshiarpur",DISTRICT_AUTHORITY,Punjab,Hoshiarpur,INACTIVE
+SYN_DA_054,Darjeeling Zilla Parishad,DISTRICT_AUTHORITY,West Bengal,Darjeeling,ACTIVE
+SYN_DA_055,Solapur Zilla Parishad,DISTRICT_AUTHORITY,Maharashtra,Solapur,ACTIVE
+SYN_DA_056,Ayodhya Zilla Parishad,DISTRICT_AUTHORITY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_DA_057,Surat Zilla Parishad,DISTRICT_AUTHORITY,Gujarat,Surat,ACTIVE
+SYN_DA_058,"Office of the District Collector, Chandigarh",DISTRICT_AUTHORITY,Chandigarh,Chandigarh,INACTIVE
+SYN_DA_059,"Office of the District Collector, Ghaziabad",DISTRICT_AUTHORITY,Uttar Pradesh,Ghaziabad,ACTIVE
+SYN_DA_060,"Office of the District Collector, Sambalpur",DISTRICT_AUTHORITY,Odisha,Sambalpur,ACTIVE
+SYN_DEPT_001,"Health & Family Welfare Department, Kathua",GOVERNMENT_DEPARTMENT,Jammu And Kashmir,Kathua,INACTIVE
+SYN_DEPT_002,"Rural Water Supply Department, Tirupati",GOVERNMENT_DEPARTMENT,Andhra Pradesh,Tirupati,ACTIVE
+SYN_DEPT_003,"School Education Department, Palakkad",GOVERNMENT_DEPARTMENT,Kerala,Palakkad,INACTIVE
+SYN_DEPT_004,"Health & Family Welfare Department, Bastar",GOVERNMENT_DEPARTMENT,Chhattisgarh,Bastar,INACTIVE
+SYN_DEPT_005,"Health & Family Welfare Department, Gaya",GOVERNMENT_DEPARTMENT,Bihar,Gaya,ACTIVE
+SYN_DEPT_006,"Health & Family Welfare Department, Faridabad",GOVERNMENT_DEPARTMENT,Haryana,Faridabad,INACTIVE
+SYN_DEPT_007,"Rural Water Supply Department, Bastar",GOVERNMENT_DEPARTMENT,Chhattisgarh,Bastar,ACTIVE
+SYN_DEPT_008,"Public Works Department, Aligarh",GOVERNMENT_DEPARTMENT,Uttar Pradesh,Aligarh,INACTIVE
+SYN_DEPT_009,"Public Works Department, North Goa",GOVERNMENT_DEPARTMENT,Goa,North Goa,ACTIVE
+SYN_DEPT_010,"School Education Department, Jamnagar",GOVERNMENT_DEPARTMENT,Gujarat,Jamnagar,ACTIVE
+SYN_DEPT_011,"Public Works Department, Udham Singh Nagar",GOVERNMENT_DEPARTMENT,Uttarakhand,Udham Singh Nagar,INACTIVE
+SYN_DEPT_012,"School Education Department, Dindigul",GOVERNMENT_DEPARTMENT,Tamil Nadu,Dindigul,INACTIVE
+SYN_DEPT_013,"School Education Department, Nizamabad",GOVERNMENT_DEPARTMENT,Telangana,Nizamabad,INACTIVE
+SYN_DEPT_014,"Health & Family Welfare Department, Bokaro",GOVERNMENT_DEPARTMENT,Jharkhand,Bokaro,ACTIVE
+SYN_DEPT_015,"School Education Department, Kalaburagi",GOVERNMENT_DEPARTMENT,Karnataka,Kalaburagi,ACTIVE
+SYN_DEPT_016,"Health & Family Welfare Department, Kollam",GOVERNMENT_DEPARTMENT,Kerala,Kollam,ACTIVE
+SYN_DEPT_017,"Public Works Department, Jorhat",GOVERNMENT_DEPARTMENT,Assam,Jorhat,INACTIVE
+SYN_DEPT_018,"Rural Water Supply Department, Bengaluru Urban",GOVERNMENT_DEPARTMENT,Karnataka,Bengaluru Urban,INACTIVE
+SYN_DEPT_019,"Rural Water Supply Department, Kozhikode",GOVERNMENT_DEPARTMENT,Kerala,Kozhikode,INACTIVE
+SYN_DEPT_020,"Health & Family Welfare Department, Moradabad",GOVERNMENT_DEPARTMENT,Uttar Pradesh,Moradabad,ACTIVE
+SYN_DEPT_021,"Rural Water Supply Department, Dimapur",GOVERNMENT_DEPARTMENT,Nagaland,Dimapur,ACTIVE
+SYN_DEPT_022,"School Education Department, West Garo Hills",GOVERNMENT_DEPARTMENT,Meghalaya,West Garo Hills,ACTIVE
+SYN_DEPT_023,"Health & Family Welfare Department, Dibrugarh",GOVERNMENT_DEPARTMENT,Assam,Dibrugarh,ACTIVE
+SYN_DEPT_024,"Rural Water Supply Department, Gaya",GOVERNMENT_DEPARTMENT,Bihar,Gaya,INACTIVE
+SYN_DEPT_025,"Public Works Department, West Godavari",GOVERNMENT_DEPARTMENT,Andhra Pradesh,West Godavari,INACTIVE
+SYN_DEPT_026,"Public Works Department, Purba Medinipur",GOVERNMENT_DEPARTMENT,West Bengal,Purba Medinipur,INACTIVE
+SYN_DEPT_027,"Public Works Department, Amritsar",GOVERNMENT_DEPARTMENT,Punjab,Amritsar,ACTIVE
+SYN_DEPT_028,"Health & Family Welfare Department, Bharatpur",GOVERNMENT_DEPARTMENT,Rajasthan,Bharatpur,ACTIVE
+SYN_DEPT_029,"Public Works Department, Vellore",GOVERNMENT_DEPARTMENT,Tamil Nadu,Vellore,INACTIVE
+SYN_DEPT_030,"Public Works Department, Chennai",GOVERNMENT_DEPARTMENT,Tamil Nadu,Chennai,ACTIVE
+SYN_GOVAGENCY_001,Ayodhya Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GOVAGENCY_002,Dibrugarh Rural Development Agency,IMPLEMENTING_AGENCY,Assam,Dibrugarh,ACTIVE
+SYN_GOVAGENCY_003,Ayodhya Urban Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GOVAGENCY_004,Vadodara District Development Authority,IMPLEMENTING_AGENCY,Gujarat,Vadodara,ACTIVE
+SYN_GOVAGENCY_005,Baramulla Rural Development Agency,IMPLEMENTING_AGENCY,Jammu And Kashmir,Baramulla,ACTIVE
+SYN_GOVAGENCY_006,Kannur Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Kerala,Kannur,ACTIVE
+SYN_GOVAGENCY_007,Gwalior District Development Authority,IMPLEMENTING_AGENCY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_GOVAGENCY_008,East Khasi Hills Urban Development Agency,IMPLEMENTING_AGENCY,Meghalaya,East Khasi Hills,ACTIVE
+SYN_GOVAGENCY_009,Balasore Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Odisha,Balasore,ACTIVE
+SYN_GOVAGENCY_010,Bikaner Urban Development Agency,IMPLEMENTING_AGENCY,Rajasthan,Bikaner,ACTIVE
+SYN_GOVAGENCY_011,Amritsar Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Punjab,Amritsar,ACTIVE
+SYN_GOVAGENCY_012,Ayodhya Rural Development Agency,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GOVAGENCY_013,Kalaburagi Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Karnataka,Kalaburagi,ACTIVE
+SYN_GOVAGENCY_014,Hazaribagh District Development Authority,IMPLEMENTING_AGENCY,Jharkhand,Hazaribagh,INACTIVE
+SYN_GOVAGENCY_015,Mandi District Development Authority,IMPLEMENTING_AGENCY,Himachal Pradesh,Mandi,INACTIVE
+SYN_GOVAGENCY_016,Ahmedabad Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Gujarat,Ahmedabad,ACTIVE
+SYN_GOVAGENCY_017,Darjeeling Rural Development Agency,IMPLEMENTING_AGENCY,West Bengal,Darjeeling,ACTIVE
+SYN_GOVAGENCY_018,Kollam Urban Development Agency,IMPLEMENTING_AGENCY,Kerala,Kollam,ACTIVE
+SYN_GOVAGENCY_019,Indore Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Madhya Pradesh,Indore,ACTIVE
+SYN_GOVAGENCY_020,West Garo Hills Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Meghalaya,West Garo Hills,ACTIVE
+SYN_GOVAGENCY_021,Thane District Development Authority,IMPLEMENTING_AGENCY,Maharashtra,Thane,ACTIVE
+SYN_GOVAGENCY_022,Azamgarh Panchayati Raj Engineering Division,IMPLEMENTING_AGENCY,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_GOVAGENCY_023,Tiruchirappalli District Development Authority,IMPLEMENTING_AGENCY,Tamil Nadu,Tiruchirappalli,INACTIVE
+SYN_GOVAGENCY_024,Ayodhya District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GOVAGENCY_025,Moradabad District Development Authority,IMPLEMENTING_AGENCY,Uttar Pradesh,Moradabad,INACTIVE
+SYN_GP_001,Ayodhya Municipal Corporation,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GP_002,Gwalior Municipal Corporation,LOCAL_BODY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_GP_003,Solapur Block Panchayat,LOCAL_BODY,Maharashtra,Solapur,ACTIVE
+SYN_GP_004,Nellore Block Panchayat,LOCAL_BODY,Andhra Pradesh,Nellore,ACTIVE
+SYN_GP_005,Bengaluru Urban Nagar Panchayat,LOCAL_BODY,Karnataka,Bengaluru Urban,ACTIVE
+SYN_GP_006,Ayodhya Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GP_007,Ganjam Municipal Corporation,LOCAL_BODY,Odisha,Ganjam,ACTIVE
+SYN_GP_008,Cuddalore Nagar Panchayat,LOCAL_BODY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_GP_009,Bareilly Block Panchayat,LOCAL_BODY,Uttar Pradesh,Bareilly,ACTIVE
+SYN_GP_010,Bareilly Block Panchayat,LOCAL_BODY,Uttar Pradesh,Bareilly,ACTIVE
+SYN_GP_011,Kottayam Nagar Panchayat,LOCAL_BODY,Kerala,Kottayam,ACTIVE
+SYN_GP_012,Krishna Municipal Corporation,LOCAL_BODY,Andhra Pradesh,Krishna,ACTIVE
+SYN_GP_013,Hyderabad Nagar Panchayat,LOCAL_BODY,Telangana,Hyderabad,ACTIVE
+SYN_GP_014,Aurangabad Nagar Panchayat,LOCAL_BODY,Maharashtra,Aurangabad,ACTIVE
+SYN_GP_015,South Sikkim Nagar Panchayat,LOCAL_BODY,Sikkim,South Sikkim,INACTIVE
+SYN_GP_016,Satna Panchayat Samiti,LOCAL_BODY,Madhya Pradesh,Satna,ACTIVE
+SYN_GP_017,Ayodhya Municipal Corporation,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GP_018,Ayodhya Block Panchayat,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GP_019,Murshidabad Municipal Corporation,LOCAL_BODY,West Bengal,Murshidabad,ACTIVE
+SYN_GP_020,Chennai Block Panchayat,LOCAL_BODY,Tamil Nadu,Chennai,ACTIVE
+SYN_GP_021,Nagpur Nagar Panchayat,LOCAL_BODY,Maharashtra,Nagpur,ACTIVE
+SYN_GP_022,Mehsana Panchayat Samiti,LOCAL_BODY,Gujarat,Mehsana,ACTIVE
+SYN_GP_023,Gaya Municipal Corporation,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_GP_024,Jammu Panchayat Samiti,LOCAL_BODY,Jammu And Kashmir,Jammu,ACTIVE
+SYN_GP_025,Balasore Nagar Panchayat,LOCAL_BODY,Odisha,Balasore,ACTIVE
+SYN_GP_026,Dhanbad Municipal Corporation,LOCAL_BODY,Jharkhand,Dhanbad,ACTIVE
+SYN_GP_027,Dibrugarh Panchayat Samiti,LOCAL_BODY,Assam,Dibrugarh,ACTIVE
+SYN_GP_028,Jodhpur Block Panchayat,LOCAL_BODY,Rajasthan,Jodhpur,ACTIVE
+SYN_GP_029,Bardhaman Nagar Panchayat,LOCAL_BODY,West Bengal,Bardhaman,ACTIVE
+SYN_GP_030,Jamnagar Block Panchayat,LOCAL_BODY,Gujarat,Jamnagar,ACTIVE
+SYN_GP_031,North Goa Municipal Corporation,LOCAL_BODY,Goa,North Goa,ACTIVE
+SYN_GP_032,Ganjam Panchayat Samiti,LOCAL_BODY,Odisha,Ganjam,ACTIVE
+SYN_GP_033,Amritsar Nagar Panchayat,LOCAL_BODY,Punjab,Amritsar,ACTIVE
+SYN_GP_034,Gwalior Nagar Panchayat,LOCAL_BODY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_GP_035,Ayodhya Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GP_036,Ayodhya Municipal Corporation,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_GP_037,Surat Nagar Panchayat,LOCAL_BODY,Gujarat,Surat,ACTIVE
+SYN_GP_038,Khammam Nagar Panchayat,LOCAL_BODY,Telangana,Khammam,ACTIVE
+SYN_GP_039,Chittoor Municipal Corporation,LOCAL_BODY,Andhra Pradesh,Chittoor,ACTIVE
+SYN_GP_040,Bardhaman Nagar Panchayat,LOCAL_BODY,West Bengal,Bardhaman,ACTIVE
+SYN_GP_041,Kottayam Block Panchayat,LOCAL_BODY,Kerala,Kottayam,ACTIVE
+SYN_GP_042,Gurugram Block Panchayat,LOCAL_BODY,Haryana,Gurugram,INACTIVE
+SYN_GP_043,Kalaburagi Panchayat Samiti,LOCAL_BODY,Karnataka,Kalaburagi,ACTIVE
+SYN_GP_044,Chandigarh Block Panchayat,LOCAL_BODY,Chandigarh,Chandigarh,ACTIVE
+SYN_GP_045,Dharwad Nagar Panchayat,LOCAL_BODY,Karnataka,Dharwad,ACTIVE
+SYN_GP_046,Nizamabad Panchayat Samiti,LOCAL_BODY,Telangana,Nizamabad,ACTIVE
+SYN_GP_047,Pali Municipal Corporation,LOCAL_BODY,Rajasthan,Pali,ACTIVE
+SYN_GP_048,Dibrugarh Block Panchayat,LOCAL_BODY,Assam,Dibrugarh,ACTIVE
+SYN_GP_049,Kanchipuram Block Panchayat,LOCAL_BODY,Tamil Nadu,Kanchipuram,ACTIVE
+SYN_GP_050,Visakhapatnam Municipal Corporation,LOCAL_BODY,Andhra Pradesh,Visakhapatnam,ACTIVE
+SYN_GP_051,Dharwad Nagar Panchayat,LOCAL_BODY,Karnataka,Dharwad,ACTIVE
+SYN_GP_052,Jamnagar Municipal Corporation,LOCAL_BODY,Gujarat,Jamnagar,ACTIVE
+SYN_GP_053,Tirupati Panchayat Samiti,LOCAL_BODY,Andhra Pradesh,Tirupati,ACTIVE
+SYN_GP_054,South 24 Parganas Nagar Panchayat,LOCAL_BODY,West Bengal,South 24 Parganas,ACTIVE
+SYN_GP_055,Kalaburagi Block Panchayat,LOCAL_BODY,Karnataka,Kalaburagi,ACTIVE
+SYN_GP_056,Agra Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Agra,ACTIVE
+SYN_GP_057,Dibrugarh Municipal Corporation,LOCAL_BODY,Assam,Dibrugarh,ACTIVE
+SYN_GP_058,Bastar Block Panchayat,LOCAL_BODY,Chhattisgarh,Bastar,ACTIVE
+SYN_GP_059,Cuddalore Nagar Panchayat,LOCAL_BODY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_GP_060,Kollam Nagar Panchayat,LOCAL_BODY,Kerala,Kollam,ACTIVE
+SYN_GP_061,North 24 Parganas Municipal Corporation,LOCAL_BODY,West Bengal,North 24 Parganas,ACTIVE
+SYN_GP_062,Salem Panchayat Samiti,LOCAL_BODY,Tamil Nadu,Salem,ACTIVE
+SYN_GP_063,Bokaro Nagar Panchayat,LOCAL_BODY,Jharkhand,Bokaro,ACTIVE
+SYN_GP_064,Bastar Municipal Corporation,LOCAL_BODY,Chhattisgarh,Bastar,ACTIVE
+SYN_GP_065,Mandi Panchayat Samiti,LOCAL_BODY,Himachal Pradesh,Mandi,ACTIVE
+SYN_MC_001,Gaya Municipal Corporation,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_MC_002,Ayodhya Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_MC_003,Ayodhya Nagar Panchayat,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_MC_004,Haridwar Block Panchayat,LOCAL_BODY,Uttarakhand,Haridwar,ACTIVE
+SYN_MC_005,Ayodhya Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_MC_006,Bhagalpur Municipal Corporation,LOCAL_BODY,Bihar,Bhagalpur,ACTIVE
+SYN_MC_007,Kottayam Municipal Corporation,LOCAL_BODY,Kerala,Kottayam,INACTIVE
+SYN_MC_008,Dibrugarh Nagar Panchayat,LOCAL_BODY,Assam,Dibrugarh,ACTIVE
+SYN_MC_009,Nellore Block Panchayat,LOCAL_BODY,Andhra Pradesh,Nellore,ACTIVE
+SYN_MC_010,Varanasi Nagar Panchayat,LOCAL_BODY,Uttar Pradesh,Varanasi,ACTIVE
+SYN_MC_011,Bengaluru Urban Block Panchayat,LOCAL_BODY,Karnataka,Bengaluru Urban,INACTIVE
+SYN_MC_012,Chennai Panchayat Samiti,LOCAL_BODY,Tamil Nadu,Chennai,ACTIVE
+SYN_MC_013,Solapur Nagar Panchayat,LOCAL_BODY,Maharashtra,Solapur,ACTIVE
+SYN_MC_014,Bhopal Block Panchayat,LOCAL_BODY,Madhya Pradesh,Bhopal,ACTIVE
+SYN_MC_015,Cuttack Municipal Corporation,LOCAL_BODY,Odisha,Cuttack,INACTIVE
+SYN_MC_016,Thrissur Municipal Corporation,LOCAL_BODY,Kerala,Thrissur,ACTIVE
+SYN_MC_017,Shimla Block Panchayat,LOCAL_BODY,Himachal Pradesh,Shimla,ACTIVE
+SYN_MC_018,Almora Nagar Panchayat,LOCAL_BODY,Uttarakhand,Almora,INACTIVE
+SYN_MC_019,Aligarh Nagar Panchayat,LOCAL_BODY,Uttar Pradesh,Aligarh,INACTIVE
+SYN_MC_020,Nagpur Block Panchayat,LOCAL_BODY,Maharashtra,Nagpur,ACTIVE
+SYN_MC_021,Rohtak Nagar Panchayat,LOCAL_BODY,Haryana,Rohtak,ACTIVE
+SYN_MC_022,Dewas Municipal Corporation,LOCAL_BODY,Madhya Pradesh,Dewas,ACTIVE
+SYN_MC_023,Ayodhya Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_MC_024,Ghaziabad Nagar Panchayat,LOCAL_BODY,Uttar Pradesh,Ghaziabad,ACTIVE
+SYN_MC_025,Hooghly Block Panchayat,LOCAL_BODY,West Bengal,Hooghly,ACTIVE
+SYN_MC_026,Chandigarh Panchayat Samiti,LOCAL_BODY,Chandigarh,Chandigarh,ACTIVE
+SYN_MC_027,Ganjam Panchayat Samiti,LOCAL_BODY,Odisha,Ganjam,INACTIVE
+SYN_MC_028,Anantapur Block Panchayat,LOCAL_BODY,Andhra Pradesh,Anantapur,ACTIVE
+SYN_MC_029,New Delhi Nagar Panchayat,LOCAL_BODY,Delhi,New Delhi,ACTIVE
+SYN_MC_030,Bengaluru Urban Nagar Panchayat,LOCAL_BODY,Karnataka,Bengaluru Urban,ACTIVE
+SYN_MUNI_001,Nashik Block Panchayat,LOCAL_BODY,Maharashtra,Nashik,ACTIVE
+SYN_MUNI_002,Jammu Panchayat Samiti,LOCAL_BODY,Jammu And Kashmir,Jammu,ACTIVE
+SYN_MUNI_003,Gaya Municipal Corporation,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_MUNI_004,North 24 Parganas Block Panchayat,LOCAL_BODY,West Bengal,North 24 Parganas,ACTIVE
+SYN_MUNI_005,Hooghly Municipal Corporation,LOCAL_BODY,West Bengal,Hooghly,INACTIVE
+SYN_MUNI_006,Kannur Municipal Corporation,LOCAL_BODY,Kerala,Kannur,ACTIVE
+SYN_MUNI_007,Satna Panchayat Samiti,LOCAL_BODY,Madhya Pradesh,Satna,ACTIVE
+SYN_MUNI_008,Haridwar Panchayat Samiti,LOCAL_BODY,Uttarakhand,Haridwar,ACTIVE
+SYN_MUNI_009,Azamgarh Block Panchayat,LOCAL_BODY,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_MUNI_010,Gaya Block Panchayat,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_MUNI_011,Gaya Panchayat Samiti,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_MUNI_012,Indore Panchayat Samiti,LOCAL_BODY,Madhya Pradesh,Indore,ACTIVE
+SYN_MUNI_013,Alwar Nagar Panchayat,LOCAL_BODY,Rajasthan,Alwar,ACTIVE
+SYN_MUNI_014,Amritsar Nagar Panchayat,LOCAL_BODY,Punjab,Amritsar,ACTIVE
+SYN_MUNI_015,Ganjam Municipal Corporation,LOCAL_BODY,Odisha,Ganjam,ACTIVE
+SYN_MUNI_016,East Khasi Hills Nagar Panchayat,LOCAL_BODY,Meghalaya,East Khasi Hills,ACTIVE
+SYN_MUNI_017,Pauri Garhwal Municipal Corporation,LOCAL_BODY,Uttarakhand,Pauri Garhwal,INACTIVE
+SYN_MUNI_018,Tumakuru Block Panchayat,LOCAL_BODY,Karnataka,Tumakuru,ACTIVE
+SYN_MUNI_019,Deoghar Panchayat Samiti,LOCAL_BODY,Jharkhand,Deoghar,ACTIVE
+SYN_MUNI_020,Cuddalore Block Panchayat,LOCAL_BODY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_MUNI_021,Hingoli Nagar Panchayat,LOCAL_BODY,Maharashtra,Hingoli,ACTIVE
+SYN_MUNI_022,Gaya Municipal Corporation,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_MUNI_023,Solapur Panchayat Samiti,LOCAL_BODY,Maharashtra,Solapur,ACTIVE
+SYN_MUNI_024,Darbhanga Nagar Panchayat,LOCAL_BODY,Bihar,Darbhanga,ACTIVE
+SYN_MUNI_025,Krishna Block Panchayat,LOCAL_BODY,Andhra Pradesh,Krishna,ACTIVE
+SYN_MUNI_026,Purba Medinipur Panchayat Samiti,LOCAL_BODY,West Bengal,Purba Medinipur,ACTIVE
+SYN_MUNI_027,Tinsukia Panchayat Samiti,LOCAL_BODY,Assam,Tinsukia,INACTIVE
+SYN_MUNI_028,Tirupati Block Panchayat,LOCAL_BODY,Andhra Pradesh,Tirupati,ACTIVE
+SYN_MUNI_029,Kargil Block Panchayat,LOCAL_BODY,Ladakh,Kargil,INACTIVE
+SYN_MUNI_030,Amravati Nagar Panchayat,LOCAL_BODY,Maharashtra,Amravati,ACTIVE
+SYN_PRI_001,Mahe Block Panchayat,LOCAL_BODY,Puducherry,Mahe,INACTIVE
+SYN_PRI_002,Guntur Nagar Panchayat,LOCAL_BODY,Andhra Pradesh,Guntur,ACTIVE
+SYN_PRI_003,Darbhanga Block Panchayat,LOCAL_BODY,Bihar,Darbhanga,ACTIVE
+SYN_PRI_004,Dibrugarh Panchayat Samiti,LOCAL_BODY,Assam,Dibrugarh,ACTIVE
+SYN_PRI_005,Gaya Block Panchayat,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_PRI_006,Kutch Panchayat Samiti,LOCAL_BODY,Gujarat,Kutch,INACTIVE
+SYN_PRI_007,Bastar Municipal Corporation,LOCAL_BODY,Chhattisgarh,Bastar,ACTIVE
+SYN_PRI_008,New Delhi Municipal Corporation,LOCAL_BODY,Delhi,New Delhi,ACTIVE
+SYN_PRI_009,North Goa Nagar Panchayat,LOCAL_BODY,Goa,North Goa,ACTIVE
+SYN_PRI_010,Jamnagar Block Panchayat,LOCAL_BODY,Gujarat,Jamnagar,ACTIVE
+SYN_PRI_011,Faridabad Nagar Panchayat,LOCAL_BODY,Haryana,Faridabad,ACTIVE
+SYN_PRI_012,Mandi Municipal Corporation,LOCAL_BODY,Himachal Pradesh,Mandi,ACTIVE
+SYN_PRI_013,Jodhpur Panchayat Samiti,LOCAL_BODY,Rajasthan,Jodhpur,ACTIVE
+SYN_PRI_014,Madurai Municipal Corporation,LOCAL_BODY,Tamil Nadu,Madurai,INACTIVE
+SYN_PRI_015,Kalaburagi Panchayat Samiti,LOCAL_BODY,Karnataka,Kalaburagi,ACTIVE
+SYN_PRI_016,Kottayam Panchayat Samiti,LOCAL_BODY,Kerala,Kottayam,ACTIVE
+SYN_PRI_017,Azamgarh Block Panchayat,LOCAL_BODY,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_PRI_018,Hingoli Block Panchayat,LOCAL_BODY,Maharashtra,Hingoli,INACTIVE
+SYN_PRI_019,West Garo Hills Block Panchayat,LOCAL_BODY,Meghalaya,West Garo Hills,INACTIVE
+SYN_PRI_020,Aurangabad Nagar Panchayat,LOCAL_BODY,Maharashtra,Aurangabad,ACTIVE
+SYN_PRI_021,Churachandpur Block Panchayat,LOCAL_BODY,Manipur,Churachandpur,ACTIVE
+SYN_PRI_022,Shivamogga Nagar Panchayat,LOCAL_BODY,Karnataka,Shivamogga,INACTIVE
+SYN_PRI_023,Giridih Nagar Panchayat,LOCAL_BODY,Jharkhand,Giridih,INACTIVE
+SYN_PRI_024,Dimapur Block Panchayat,LOCAL_BODY,Nagaland,Dimapur,ACTIVE
+SYN_PRI_025,Ganjam Panchayat Samiti,LOCAL_BODY,Odisha,Ganjam,ACTIVE
+SYN_PRI_026,Karaikal Nagar Panchayat,LOCAL_BODY,Puducherry,Karaikal,INACTIVE
+SYN_PRI_027,Amritsar Block Panchayat,LOCAL_BODY,Punjab,Amritsar,ACTIVE
+SYN_PRI_028,Alwar Nagar Panchayat,LOCAL_BODY,Rajasthan,Alwar,ACTIVE
+SYN_PRI_029,North 24 Parganas Municipal Corporation,LOCAL_BODY,West Bengal,North 24 Parganas,INACTIVE
+SYN_PRI_030,Cuddalore Block Panchayat,LOCAL_BODY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_PRI_031,Bhagalpur Panchayat Samiti,LOCAL_BODY,Bihar,Bhagalpur,INACTIVE
+SYN_PRI_032,Daman Panchayat Samiti,LOCAL_BODY,The Dadra And Nagar Haveli And Daman And Diu,Daman,ACTIVE
+SYN_PRI_033,West Tripura Municipal Corporation,LOCAL_BODY,Tripura,West Tripura,ACTIVE
+SYN_PRI_034,Moradabad Nagar Panchayat,LOCAL_BODY,Uttar Pradesh,Moradabad,ACTIVE
+SYN_PRI_035,East Singhbhum Block Panchayat,LOCAL_BODY,Jharkhand,East Singhbhum,INACTIVE
+SYN_PRI_036,Howrah Municipal Corporation,LOCAL_BODY,West Bengal,Howrah,ACTIVE
+SYN_PS_001,Mandi Nagar Panchayat,LOCAL_BODY,Himachal Pradesh,Mandi,ACTIVE
+SYN_PS_002,Jammu Municipal Corporation,LOCAL_BODY,Jammu And Kashmir,Jammu,INACTIVE
+SYN_PS_003,Lunglei Municipal Corporation,LOCAL_BODY,Mizoram,Lunglei,ACTIVE
+SYN_PS_004,Malappuram Nagar Panchayat,LOCAL_BODY,Kerala,Malappuram,INACTIVE
+SYN_PS_005,Gwalior Nagar Panchayat,LOCAL_BODY,Madhya Pradesh,Gwalior,INACTIVE
+SYN_PS_006,Kolhapur Municipal Corporation,LOCAL_BODY,Maharashtra,Kolhapur,ACTIVE
+SYN_PS_007,Bolangir Nagar Panchayat,LOCAL_BODY,Odisha,Bolangir,INACTIVE
+SYN_PS_008,Ajmer Block Panchayat,LOCAL_BODY,Rajasthan,Ajmer,INACTIVE
+SYN_PS_009,Dindigul Block Panchayat,LOCAL_BODY,Tamil Nadu,Dindigul,INACTIVE
+SYN_PS_010,Bardhaman Block Panchayat,LOCAL_BODY,West Bengal,Bardhaman,ACTIVE
+SYN_PS_011,Hingoli Panchayat Samiti,LOCAL_BODY,Maharashtra,Hingoli,INACTIVE
+SYN_PS_012,West Garo Hills Panchayat Samiti,LOCAL_BODY,Meghalaya,West Garo Hills,INACTIVE
+SYN_PS_013,Amravati Municipal Corporation,LOCAL_BODY,Maharashtra,Amravati,ACTIVE
+SYN_PS_014,Azamgarh Nagar Panchayat,LOCAL_BODY,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_PS_015,Azamgarh Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_PS_016,Ayodhya Municipal Corporation,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_PS_017,Yanam Panchayat Samiti,LOCAL_BODY,Puducherry,Yanam,ACTIVE
+SYN_PS_018,Hooghly Block Panchayat,LOCAL_BODY,West Bengal,Hooghly,INACTIVE
+SYN_PS_019,Krishna Nagar Panchayat,LOCAL_BODY,Andhra Pradesh,Krishna,ACTIVE
+SYN_PS_020,Mumbai Suburban Block Panchayat,LOCAL_BODY,Maharashtra,Mumbai Suburban,ACTIVE
+SYN_PS_021,Ayodhya Municipal Corporation,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_PS_022,Sonitpur Nagar Panchayat,LOCAL_BODY,Assam,Sonitpur,INACTIVE
+SYN_PS_023,Cuddalore Nagar Panchayat,LOCAL_BODY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_PS_024,Amritsar Nagar Panchayat,LOCAL_BODY,Punjab,Amritsar,ACTIVE
+SYN_PS_025,Balasore Block Panchayat,LOCAL_BODY,Odisha,Balasore,ACTIVE
+SYN_PS_026,Udhampur Panchayat Samiti,LOCAL_BODY,Jammu And Kashmir,Udhampur,INACTIVE
+SYN_PS_027,Krishna Block Panchayat,LOCAL_BODY,Andhra Pradesh,Krishna,ACTIVE
+SYN_PS_028,Dharwad Block Panchayat,LOCAL_BODY,Karnataka,Dharwad,ACTIVE
+SYN_PS_029,Coimbatore Block Panchayat,LOCAL_BODY,Tamil Nadu,Coimbatore,INACTIVE
+SYN_PS_030,Sangrur Nagar Panchayat,LOCAL_BODY,Punjab,Sangrur,INACTIVE
+SYN_PS_031,Mayurbhanj Nagar Panchayat,LOCAL_BODY,Odisha,Mayurbhanj,INACTIVE
+SYN_PS_032,Bareilly Municipal Corporation,LOCAL_BODY,Uttar Pradesh,Bareilly,ACTIVE
+SYN_PS_033,Jhansi Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Jhansi,ACTIVE
+SYN_PS_034,Bardhaman Block Panchayat,LOCAL_BODY,West Bengal,Bardhaman,ACTIVE
+SYN_PS_035,Hingoli Nagar Panchayat,LOCAL_BODY,Maharashtra,Hingoli,ACTIVE
+SYN_PS_036,Imphal East Municipal Corporation,LOCAL_BODY,Manipur,Imphal East,INACTIVE
+SYN_PS_037,Satna Municipal Corporation,LOCAL_BODY,Madhya Pradesh,Satna,INACTIVE
+SYN_PS_038,Solapur Nagar Panchayat,LOCAL_BODY,Maharashtra,Solapur,ACTIVE
+SYN_PS_039,Saran Panchayat Samiti,LOCAL_BODY,Bihar,Saran,INACTIVE
+SYN_PS_040,South Tripura Municipal Corporation,LOCAL_BODY,Tripura,South Tripura,INACTIVE
+SYN_PS_041,Giridih Municipal Corporation,LOCAL_BODY,Jharkhand,Giridih,ACTIVE
+SYN_PS_042,Nadia Nagar Panchayat,LOCAL_BODY,West Bengal,Nadia,INACTIVE
+SYN_PS_043,Alwar Block Panchayat,LOCAL_BODY,Rajasthan,Alwar,ACTIVE
+SYN_PS_044,Dimapur Municipal Corporation,LOCAL_BODY,Nagaland,Dimapur,INACTIVE
+SYN_PS_045,Vadodara Panchayat Samiti,LOCAL_BODY,Gujarat,Vadodara,ACTIVE
+SYN_PS_046,North Goa Block Panchayat,LOCAL_BODY,Goa,North Goa,ACTIVE
+SYN_PS_047,Tirunelveli Municipal Corporation,LOCAL_BODY,Tamil Nadu,Tirunelveli,INACTIVE
+SYN_PS_048,Patiala Block Panchayat,LOCAL_BODY,Punjab,Patiala,ACTIVE
+SYN_PS_049,Gwalior Municipal Corporation,LOCAL_BODY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_PS_050,Ayodhya Municipal Corporation,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_PS_051,Mathura Block Panchayat,LOCAL_BODY,Uttar Pradesh,Mathura,ACTIVE
+SYN_PS_052,Jamnagar Nagar Panchayat,LOCAL_BODY,Gujarat,Jamnagar,ACTIVE
+SYN_PS_053,Surguja Block Panchayat,LOCAL_BODY,Chhattisgarh,Surguja,INACTIVE
+SYN_PS_054,Gaya Block Panchayat,LOCAL_BODY,Bihar,Gaya,INACTIVE
+SYN_PS_055,Hooghly Nagar Panchayat,LOCAL_BODY,West Bengal,Hooghly,ACTIVE
+SYN_SUPPLIER_001,"M/s Shanti Building Materials, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_SUPPLIER_002,"M/s Sai Krishna Suppliers, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_SUPPLIER_003,"M/s Annapurna Traders, Sonipat",SUPPLIER,Haryana,Sonipat,ACTIVE
+SYN_SUPPLIER_004,"M/s Samarth Building Materials, Dimapur",SUPPLIER,Nagaland,Dimapur,ACTIVE
+SYN_SUPPLIER_005,"M/s Uday Hardware & Steel, Kottayam",SUPPLIER,Kerala,Kottayam,ACTIVE
+SYN_SUPPLIER_006,"M/s Konark Traders, Anantapur",SUPPLIER,Andhra Pradesh,Anantapur,ACTIVE
+SYN_SUPPLIER_007,"M/s Girija Enterprises, Kottayam",SUPPLIER,Kerala,Kottayam,ACTIVE
+SYN_SUPPLIER_008,"M/s Guru Kripa Cement Agencies, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_SUPPLIER_009,"M/s Jyoti Building Materials, Ganjam",SUPPLIER,Odisha,Ganjam,ACTIVE
+SYN_SUPPLIER_010,"M/s Hariom Enterprises, Hyderabad",SUPPLIER,Telangana,Hyderabad,ACTIVE
+SYN_SUPPLIER_011,"M/s Amrit Cement Agencies, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_SUPPLIER_012,"M/s Venkateshwara Suppliers, Darbhanga",SUPPLIER,Bihar,Darbhanga,ACTIVE
+SYN_SUPPLIER_013,"M/s Navdurga Building Materials, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_SUPPLIER_014,"M/s Om Sai Cement Agencies, Alappuzha",SUPPLIER,Kerala,Alappuzha,ACTIVE
+SYN_SUPPLIER_015,"M/s Annapurna Enterprises, Rohtas",SUPPLIER,Bihar,Rohtas,ACTIVE
+SYN_SUPPLIER_016,"M/s Sai Krishna Traders, Azamgarh",SUPPLIER,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_SUPPLIER_017,"M/s Maruti Hardware & Steel, Jodhpur",SUPPLIER,Rajasthan,Jodhpur,ACTIVE
+SYN_SUPPLIER_018,"M/s Satyam Enterprises, Karnal",SUPPLIER,Haryana,Karnal,ACTIVE
+SYN_SUPPLIER_019,"M/s Girija Traders, Solapur",SUPPLIER,Maharashtra,Solapur,ACTIVE
+SYN_SUPPLIER_020,"M/s Satyam Cement Agencies, Satna",SUPPLIER,Madhya Pradesh,Satna,ACTIVE
+SYN_SUPPLIER_021,"M/s Shanti Building Materials, Balasore",SUPPLIER,Odisha,Balasore,ACTIVE
+SYN_SUPPLIER_022,"M/s Konark Traders, Solapur",SUPPLIER,Maharashtra,Solapur,ACTIVE
+SYN_SUPPLIER_023,"M/s Girija Suppliers, Gwalior",SUPPLIER,Madhya Pradesh,Gwalior,ACTIVE
+SYN_SUPPLIER_024,"M/s Bhagyalakshmi Enterprises, Gaya",SUPPLIER,Bihar,Gaya,ACTIVE
+SYN_SUPPLIER_025,"M/s Navdurga Hardware & Steel, Dibrugarh",SUPPLIER,Assam,Dibrugarh,ACTIVE
+SYN_SUPPLIER_026,"M/s Ganesh Suppliers, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_SUPPLIER_027,"M/s Vishwakarma Traders, Gaya",SUPPLIER,Bihar,Gaya,ACTIVE
+SYN_SUPPLIER_028,"M/s Hariom Hardware & Steel, Bastar",SUPPLIER,Chhattisgarh,Bastar,ACTIVE
+SYN_SUPPLIER_029,"M/s Jyoti Building Materials, Gandhinagar",SUPPLIER,Gujarat,Gandhinagar,ACTIVE
+SYN_SUPPLIER_030,"M/s Prakash Cement Agencies, Lucknow",SUPPLIER,Uttar Pradesh,Lucknow,ACTIVE
+SYN_SUPPLIER_031,"M/s Samarth Building Materials, Gaya",SUPPLIER,Bihar,Gaya,ACTIVE
+SYN_SUPPLIER_032,"M/s Kalyan Traders, Amravati",SUPPLIER,Maharashtra,Amravati,ACTIVE
+SYN_SUPPLIER_033,"M/s Mahaveer Enterprises, North 24 Parganas",SUPPLIER,West Bengal,North 24 Parganas,ACTIVE
+SYN_SUPPLIER_034,"M/s Bhoomi Enterprises, Hooghly",SUPPLIER,West Bengal,Hooghly,ACTIVE
+SYN_SUPPLIER_035,"M/s Sri Balaji Hardware & Steel, Bastar",SUPPLIER,Chhattisgarh,Bastar,ACTIVE
+SYN_SUPPLIER_036,"M/s Uday Suppliers, Moradabad",SUPPLIER,Uttar Pradesh,Moradabad,ACTIVE
+SYN_SUPPLIER_037,"M/s Chetak Traders, Mangaluru",SUPPLIER,Karnataka,Mangaluru,ACTIVE
+SYN_SUPPLIER_038,"M/s Annapurna Cement Agencies, Thane",SUPPLIER,Maharashtra,Thane,ACTIVE
+SYN_SUPPLIER_039,"M/s Om Sai Building Materials, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_SUPPLIER_040,"M/s Yashoda Building Materials, Rajkot",SUPPLIER,Gujarat,Rajkot,ACTIVE
+SYN_SUPPLIER_041,"M/s Trimurti Cement Agencies, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_SUPPLIER_042,"M/s Raghav Suppliers, Latur",SUPPLIER,Maharashtra,Latur,ACTIVE
+SYN_SUPPLIER_043,"M/s Sai Krishna Traders, Sundargarh",SUPPLIER,Odisha,Sundargarh,INACTIVE
+SYN_SUPPLIER_044,"M/s Kalyan Hardware & Steel, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_SUPPLIER_045,"M/s Indus Enterprises, Jamnagar",SUPPLIER,Gujarat,Jamnagar,ACTIVE
+SYN_ULB_001,Amravati Block Panchayat,LOCAL_BODY,Maharashtra,Amravati,ACTIVE
+SYN_ULB_002,Bengaluru Urban Block Panchayat,LOCAL_BODY,Karnataka,Bengaluru Urban,INACTIVE
+SYN_ULB_003,Kottayam Panchayat Samiti,LOCAL_BODY,Kerala,Kottayam,ACTIVE
+SYN_ULB_004,Jammu Block Panchayat,LOCAL_BODY,Jammu And Kashmir,Jammu,ACTIVE
+SYN_ULB_005,Ayodhya Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_ULB_006,Bolangir Block Panchayat,LOCAL_BODY,Odisha,Bolangir,INACTIVE
+SYN_ULB_007,Rohtas Nagar Panchayat,LOCAL_BODY,Bihar,Rohtas,ACTIVE
+SYN_ULB_008,Gwalior Nagar Panchayat,LOCAL_BODY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_ULB_009,Hoshiarpur Block Panchayat,LOCAL_BODY,Punjab,Hoshiarpur,INACTIVE
+SYN_ULB_010,Dibrugarh Municipal Corporation,LOCAL_BODY,Assam,Dibrugarh,ACTIVE
+SYN_ULB_011,Bardhaman Nagar Panchayat,LOCAL_BODY,West Bengal,Bardhaman,ACTIVE
+SYN_ULB_012,Ayodhya Nagar Panchayat,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_ULB_013,Ghaziabad Panchayat Samiti,LOCAL_BODY,Uttar Pradesh,Ghaziabad,ACTIVE
+SYN_ULB_014,East Khasi Hills Panchayat Samiti,LOCAL_BODY,Meghalaya,East Khasi Hills,ACTIVE
+SYN_ULB_015,Hingoli Municipal Corporation,LOCAL_BODY,Maharashtra,Hingoli,INACTIVE
+SYN_ULB_016,Giridih Block Panchayat,LOCAL_BODY,Jharkhand,Giridih,INACTIVE
+SYN_ULB_017,Mayurbhanj Municipal Corporation,LOCAL_BODY,Odisha,Mayurbhanj,ACTIVE
+SYN_ULB_018,East Delhi Municipal Corporation,LOCAL_BODY,Delhi,East Delhi,ACTIVE
+SYN_ULB_019,Mandi Block Panchayat,LOCAL_BODY,Himachal Pradesh,Mandi,INACTIVE
+SYN_ULB_020,Ayodhya Block Panchayat,LOCAL_BODY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_ULB_021,Bardhaman Municipal Corporation,LOCAL_BODY,West Bengal,Bardhaman,ACTIVE
+SYN_ULB_022,Ajmer Nagar Panchayat,LOCAL_BODY,Rajasthan,Ajmer,INACTIVE
+SYN_ULB_023,Dindigul Nagar Panchayat,LOCAL_BODY,Tamil Nadu,Dindigul,INACTIVE
+SYN_ULB_024,Deoghar Municipal Corporation,LOCAL_BODY,Jharkhand,Deoghar,ACTIVE
+SYN_ULB_025,Mangaluru Municipal Corporation,LOCAL_BODY,Karnataka,Mangaluru,ACTIVE
+SYN_ULB_026,Leh Municipal Corporation,LOCAL_BODY,Ladakh,Leh,ACTIVE
+SYN_ULB_027,Cuttack Nagar Panchayat,LOCAL_BODY,Odisha,Cuttack,ACTIVE
+SYN_ULB_028,Nashik Block Panchayat,LOCAL_BODY,Maharashtra,Nashik,ACTIVE
+SYN_ULB_029,Ganjam Municipal Corporation,LOCAL_BODY,Odisha,Ganjam,ACTIVE
+SYN_ULB_030,Nellore Nagar Panchayat,LOCAL_BODY,Andhra Pradesh,Nellore,ACTIVE
+SYN_USERAGENCY_001,Mysuru Municipal Corporation,LOCAL_BODY,Karnataka,Mysuru,ACTIVE
+SYN_USERAGENCY_002,Jammu Block Panchayat,LOCAL_BODY,Jammu And Kashmir,Jammu,ACTIVE
+SYN_USERAGENCY_003,New Delhi Nagar Panchayat,LOCAL_BODY,Delhi,New Delhi,ACTIVE
+SYN_USERAGENCY_004,Anantapur Municipal Corporation,LOCAL_BODY,Andhra Pradesh,Anantapur,ACTIVE
+SYN_USERAGENCY_005,Hyderabad Panchayat Samiti,LOCAL_BODY,Telangana,Hyderabad,ACTIVE
+SYN_USERAGENCY_006,Gwalior Municipal Corporation,LOCAL_BODY,Madhya Pradesh,Gwalior,ACTIVE
+SYN_USERAGENCY_007,Jamnagar Nagar Panchayat,LOCAL_BODY,Gujarat,Jamnagar,ACTIVE
+SYN_USERAGENCY_008,Dibrugarh Panchayat Samiti,LOCAL_BODY,Assam,Dibrugarh,ACTIVE
+SYN_USERAGENCY_009,Cuddalore Block Panchayat,LOCAL_BODY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_USERAGENCY_010,Sambalpur Municipal Corporation,LOCAL_BODY,Odisha,Sambalpur,ACTIVE
+SYN_USERAGENCY_011,Bharatpur Nagar Panchayat,LOCAL_BODY,Rajasthan,Bharatpur,ACTIVE
+SYN_USERAGENCY_012,Nicobars Panchayat Samiti,LOCAL_BODY,Andaman And Nicobar Islands,Nicobars,ACTIVE
+SYN_USERAGENCY_013,Muzaffarpur Nagar Panchayat,LOCAL_BODY,Bihar,Muzaffarpur,ACTIVE
+SYN_USERAGENCY_014,Patna Block Panchayat,LOCAL_BODY,Bihar,Patna,ACTIVE
+SYN_USERAGENCY_015,Bardhaman Municipal Corporation,LOCAL_BODY,West Bengal,Bardhaman,ACTIVE
+SYN_USERAGENCY_016,Thrissur Nagar Panchayat,LOCAL_BODY,Kerala,Thrissur,ACTIVE
+SYN_USERAGENCY_017,Ahmedabad Panchayat Samiti,LOCAL_BODY,Gujarat,Ahmedabad,ACTIVE
+SYN_USERAGENCY_018,South Tripura Municipal Corporation,LOCAL_BODY,Tripura,South Tripura,ACTIVE
+SYN_USERAGENCY_019,Gaya Panchayat Samiti,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_USERAGENCY_020,Dibrugarh Block Panchayat,LOCAL_BODY,Assam,Dibrugarh,ACTIVE
+SYN_USERAGENCY_021,North 24 Parganas Nagar Panchayat,LOCAL_BODY,West Bengal,North 24 Parganas,ACTIVE
+SYN_USERAGENCY_022,Khordha Municipal Corporation,LOCAL_BODY,Odisha,Khordha,ACTIVE
+SYN_USERAGENCY_023,Thane Municipal Corporation,LOCAL_BODY,Maharashtra,Thane,ACTIVE
+SYN_USERAGENCY_024,Hisar Block Panchayat,LOCAL_BODY,Haryana,Hisar,ACTIVE
+SYN_USERAGENCY_025,Cuddalore Block Panchayat,LOCAL_BODY,Tamil Nadu,Cuddalore,ACTIVE
+SYN_USERAGENCY_026,Karnal Municipal Corporation,LOCAL_BODY,Haryana,Karnal,ACTIVE
+SYN_USERAGENCY_027,Ajmer Panchayat Samiti,LOCAL_BODY,Rajasthan,Ajmer,ACTIVE
+SYN_USERAGENCY_028,Jodhpur Block Panchayat,LOCAL_BODY,Rajasthan,Jodhpur,ACTIVE
+SYN_USERAGENCY_029,Aligarh Nagar Panchayat,LOCAL_BODY,Uttar Pradesh,Aligarh,ACTIVE
+SYN_USERAGENCY_030,Guntur Municipal Corporation,LOCAL_BODY,Andhra Pradesh,Guntur,ACTIVE
+SYN_USERAGENCY_031,Bilaspur Panchayat Samiti,LOCAL_BODY,Chhattisgarh,Bilaspur,ACTIVE
+SYN_USERAGENCY_032,Gaya Panchayat Samiti,LOCAL_BODY,Bihar,Gaya,ACTIVE
+SYN_USERAGENCY_033,Mysuru Block Panchayat,LOCAL_BODY,Karnataka,Mysuru,ACTIVE
+SYN_USERAGENCY_034,Indore Block Panchayat,LOCAL_BODY,Madhya Pradesh,Indore,ACTIVE
+SYN_USERAGENCY_035,Chennai Municipal Corporation,LOCAL_BODY,Tamil Nadu,Chennai,ACTIVE
+SYN_VENDOR_001,"M/s Sai Krishna Enterprises, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_002,"M/s Bhoomi Building Materials, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_VENDOR_003,"M/s Sri Balaji Suppliers, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_VENDOR_004,"M/s Yashoda Enterprises, Dibrugarh",SUPPLIER,Assam,Dibrugarh,UNDER_REVIEW
+SYN_VENDOR_005,"M/s Chetak Cement Agencies, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_VENDOR_006,"M/s Prakash Hardware & Steel, Kalaburagi",SUPPLIER,Karnataka,Kalaburagi,ACTIVE
+SYN_VENDOR_007,"M/s Trimurti Traders, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,SUSPENDED
+SYN_VENDOR_008,"M/s Kalyan Cement Agencies, Deoghar",SUPPLIER,Jharkhand,Deoghar,ACTIVE
+SYN_VENDOR_009,"M/s Mahaveer Building Materials, Amritsar",SUPPLIER,Punjab,Amritsar,ACTIVE
+SYN_VENDOR_010,"M/s Lakshmi Building Materials, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_011,"M/s Jyoti Cement Agencies, Amritsar",SUPPLIER,Punjab,Amritsar,ACTIVE
+SYN_VENDOR_012,"M/s Raghav Traders, Gaya",SUPPLIER,Bihar,Gaya,UNDER_REVIEW
+SYN_VENDOR_013,"M/s Narayan Suppliers, Kalaburagi",SUPPLIER,Karnataka,Kalaburagi,ACTIVE
+SYN_VENDOR_014,"M/s Konark Hardware & Steel, Gaya",SUPPLIER,Bihar,Gaya,ACTIVE
+SYN_VENDOR_015,"M/s Trimurti Enterprises, Amritsar",SUPPLIER,Punjab,Amritsar,ACTIVE
+SYN_VENDOR_016,"M/s Satyam Suppliers, Gaya",SUPPLIER,Bihar,Gaya,ACTIVE
+SYN_VENDOR_017,"M/s Girija Traders, Firozpur",SUPPLIER,Punjab,Firozpur,ACTIVE
+SYN_VENDOR_018,"M/s Ganesh Building Materials, Kalaburagi",SUPPLIER,Karnataka,Kalaburagi,ACTIVE
+SYN_VENDOR_019,"M/s Shanti Cement Agencies, Haridwar",SUPPLIER,Uttarakhand,Haridwar,ACTIVE
+SYN_VENDOR_020,"M/s Raghav Enterprises, Bhopal",SUPPLIER,Madhya Pradesh,Bhopal,ACTIVE
+SYN_VENDOR_021,"M/s Narayan Cement Agencies, Jammu",SUPPLIER,Jammu And Kashmir,Jammu,ACTIVE
+SYN_VENDOR_022,"M/s Lakshmi Suppliers, Anantapur",SUPPLIER,Andhra Pradesh,Anantapur,ACTIVE
+SYN_VENDOR_023,"M/s Jyoti Building Materials, Ahmedabad",SUPPLIER,Gujarat,Ahmedabad,ACTIVE
+SYN_VENDOR_024,"M/s Guru Kripa Cement Agencies, Bathinda",SUPPLIER,Punjab,Bathinda,ACTIVE
+SYN_VENDOR_025,"M/s Amrit Enterprises, Alwar",SUPPLIER,Rajasthan,Alwar,ACTIVE
+SYN_VENDOR_026,"M/s Venkateshwara Traders, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_027,"M/s Navdurga Hardware & Steel, Dibrugarh",SUPPLIER,Assam,Dibrugarh,ACTIVE
+SYN_VENDOR_028,"M/s Bhagyalakshmi Enterprises, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_VENDOR_029,"M/s Vishwakarma Traders, Amritsar",SUPPLIER,Punjab,Amritsar,UNDER_REVIEW
+SYN_VENDOR_030,"M/s Kalyan Enterprises, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_VENDOR_031,"M/s Indus Traders, Bardhaman",SUPPLIER,West Bengal,Bardhaman,ACTIVE
+SYN_VENDOR_032,"M/s Guru Kripa Hardware & Steel, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_033,"M/s Amrit Building Materials, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_VENDOR_034,"M/s Yashoda Traders, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_035,"M/s Samarth Suppliers, Gaya",SUPPLIER,Bihar,Gaya,ACTIVE
+SYN_VENDOR_036,"M/s Prakash Building Materials, Ghaziabad",SUPPLIER,Uttar Pradesh,Ghaziabad,SUSPENDED
+SYN_VENDOR_037,"M/s Mahaveer Cement Agencies, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_038,"M/s Ganesh Enterprises, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_039,"M/s Shanti Traders, Pali",SUPPLIER,Rajasthan,Pali,ACTIVE
+SYN_VENDOR_040,"M/s Maruti Enterprises, North 24 Parganas",SUPPLIER,West Bengal,North 24 Parganas,ACTIVE
+SYN_VENDOR_041,"M/s Sri Balaji Traders, Hyderabad",SUPPLIER,Telangana,Hyderabad,ACTIVE
+SYN_VENDOR_042,"M/s Bhagyalakshmi Building Materials, North 24 Parganas",SUPPLIER,West Bengal,North 24 Parganas,SUSPENDED
+SYN_VENDOR_043,"M/s Sai Krishna Cement Agencies, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_044,"M/s Yashoda Cement Agencies, Amritsar",SUPPLIER,Punjab,Amritsar,ACTIVE
+SYN_VENDOR_045,"M/s Trimurti Suppliers, Gwalior",SUPPLIER,Madhya Pradesh,Gwalior,ACTIVE
+SYN_VENDOR_046,"M/s Bhoomi Hardware & Steel, Azamgarh",SUPPLIER,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_VENDOR_047,"M/s Chetak Enterprises, Deoghar",SUPPLIER,Jharkhand,Deoghar,ACTIVE
+SYN_VENDOR_048,"M/s Jyoti Suppliers, Baramulla",SUPPLIER,Jammu And Kashmir,Baramulla,ACTIVE
+SYN_VENDOR_049,"M/s Hariom Traders, Kanpur Nagar",SUPPLIER,Uttar Pradesh,Kanpur Nagar,ACTIVE
+SYN_VENDOR_050,"M/s Kalyan Cement Agencies, Diu",SUPPLIER,The Dadra And Nagar Haveli And Daman And Diu,Diu,ACTIVE
+SYN_VENDOR_051,"M/s Mahaveer Enterprises, Hingoli",SUPPLIER,Maharashtra,Hingoli,ACTIVE
+SYN_VENDOR_052,"M/s Guru Kripa Building Materials, Hoshiarpur",SUPPLIER,Punjab,Hoshiarpur,ACTIVE
+SYN_VENDOR_053,"M/s Indus Suppliers, Azamgarh",SUPPLIER,Uttar Pradesh,Azamgarh,ACTIVE
+SYN_VENDOR_054,"M/s Yashoda Suppliers, Agra",SUPPLIER,Uttar Pradesh,Agra,ACTIVE
+SYN_VENDOR_055,"M/s Chetak Cement Agencies, Moradabad",SUPPLIER,Uttar Pradesh,Moradabad,ACTIVE
+SYN_VENDOR_056,"M/s Prakash Hardware & Steel, Lucknow",SUPPLIER,Uttar Pradesh,Lucknow,ACTIVE
+SYN_VENDOR_057,"M/s Trimurti Traders, Mathura",SUPPLIER,Uttar Pradesh,Mathura,UNDER_REVIEW
+SYN_VENDOR_058,"M/s Maruti Traders, Bardhaman",SUPPLIER,West Bengal,Bardhaman,ACTIVE
+SYN_VENDOR_059,"M/s Sai Krishna Enterprises, Mangaluru",SUPPLIER,Karnataka,Mangaluru,ACTIVE
+SYN_VENDOR_060,"M/s Maruti Suppliers, Bareilly",SUPPLIER,Uttar Pradesh,Bareilly,SUSPENDED
+SYN_VENDOR_061,"M/s Sri Balaji Traders, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_VENDOR_062,"M/s Bhoomi Hardware & Steel, Dibrugarh",SUPPLIER,Assam,Dibrugarh,UNDER_REVIEW
+SYN_VENDOR_063,"M/s Konark Enterprises, Hooghly",SUPPLIER,West Bengal,Hooghly,ACTIVE
+SYN_VENDOR_064,"M/s Navdurga Traders, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_065,"M/s Om Sai Suppliers, Jamnagar",SUPPLIER,Gujarat,Jamnagar,ACTIVE
+SYN_VENDOR_066,"M/s Annapurna Building Materials, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,UNDER_REVIEW
+SYN_VENDOR_067,"M/s Sai Krishna Cement Agencies, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_VENDOR_068,"M/s Kalyan Enterprises, Kalaburagi",SUPPLIER,Karnataka,Kalaburagi,SUSPENDED
+SYN_VENDOR_069,"M/s Indus Traders, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_070,"M/s Kalyan Traders, Meerut",SUPPLIER,Uttar Pradesh,Meerut,UNDER_REVIEW
+SYN_VENDOR_071,"M/s Mahaveer Enterprises, Aligarh",SUPPLIER,Uttar Pradesh,Aligarh,ACTIVE
+SYN_VENDOR_072,"M/s Prakash Hardware & Steel, Cuttack",SUPPLIER,Odisha,Cuttack,ACTIVE
+SYN_VENDOR_073,"M/s Samarth Traders, Bardhaman",SUPPLIER,West Bengal,Bardhaman,ACTIVE
+SYN_VENDOR_074,"M/s Uday Suppliers, Aligarh",SUPPLIER,Uttar Pradesh,Aligarh,ACTIVE
+SYN_VENDOR_075,"M/s Konark Cement Agencies, Amritsar",SUPPLIER,Punjab,Amritsar,ACTIVE
+SYN_VENDOR_076,"M/s Girija Building Materials, Ganjam",SUPPLIER,Odisha,Ganjam,ACTIVE
+SYN_VENDOR_077,"M/s Sri Balaji Hardware & Steel, Haridwar",SUPPLIER,Uttarakhand,Haridwar,ACTIVE
+SYN_VENDOR_078,"M/s Ganesh Cement Agencies, Dimapur",SUPPLIER,Nagaland,Dimapur,ACTIVE
+SYN_VENDOR_079,"M/s Vishwakarma Building Materials, Jammu",SUPPLIER,Jammu And Kashmir,Jammu,ACTIVE
+SYN_VENDOR_080,"M/s Deepak Traders, Kanpur Nagar",SUPPLIER,Uttar Pradesh,Kanpur Nagar,ACTIVE
+SYN_VENDOR_081,"M/s Hariom Enterprises, Bhagalpur",SUPPLIER,Bihar,Bhagalpur,ACTIVE
+SYN_VENDOR_082,"M/s Sundaram Building Materials, Bharatpur",SUPPLIER,Rajasthan,Bharatpur,ACTIVE
+SYN_VENDOR_083,"M/s Rajeshwari Hardware & Steel, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_084,"M/s Bhagyalakshmi Suppliers, Azamgarh",SUPPLIER,Uttar Pradesh,Azamgarh,UNDER_REVIEW
+SYN_VENDOR_085,"M/s Jai Bharat Cement Agencies, Bhagalpur",SUPPLIER,Bihar,Bhagalpur,ACTIVE
+SYN_VENDOR_086,"M/s Maruti Hardware & Steel, Chittoor",SUPPLIER,Andhra Pradesh,Chittoor,ACTIVE
+SYN_VENDOR_087,"M/s Sai Krishna Traders, North 24 Parganas",SUPPLIER,West Bengal,North 24 Parganas,ACTIVE
+SYN_VENDOR_088,"M/s Girija Traders, Nagpur",SUPPLIER,Maharashtra,Nagpur,ACTIVE
+SYN_VENDOR_089,"M/s Satyam Suppliers, Purba Medinipur",SUPPLIER,West Bengal,Purba Medinipur,ACTIVE
+SYN_VENDOR_090,"M/s Girija Suppliers, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_091,"M/s Konark Building Materials, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_092,"M/s Maruti Enterprises, Kottayam",SUPPLIER,Kerala,Kottayam,UNDER_REVIEW
+SYN_VENDOR_093,"M/s Satyam Cement Agencies, Bardhaman",SUPPLIER,West Bengal,Bardhaman,ACTIVE
+SYN_VENDOR_094,"M/s Annapurna Traders, Thane",SUPPLIER,Maharashtra,Thane,ACTIVE
+SYN_VENDOR_095,"M/s Sai Krishna Hardware & Steel, Bareilly",SUPPLIER,Uttar Pradesh,Bareilly,SUSPENDED
+SYN_VENDOR_096,"M/s Navdurga Cement Agencies, Cuddalore",SUPPLIER,Tamil Nadu,Cuddalore,ACTIVE
+SYN_VENDOR_097,"M/s Om Sai Enterprises, Pali",SUPPLIER,Rajasthan,Pali,ACTIVE
+SYN_VENDOR_098,"M/s Deepak Suppliers, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,SUSPENDED
+SYN_VENDOR_099,"M/s Rajeshwari Traders, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_100,"M/s Uday Traders, Dibrugarh",SUPPLIER,Assam,Dibrugarh,ACTIVE
+SYN_VENDOR_101,"M/s Konark Enterprises, Nashik",SUPPLIER,Maharashtra,Nashik,ACTIVE
+SYN_VENDOR_102,"M/s Girija Hardware & Steel, Bhagalpur",SUPPLIER,Bihar,Bhagalpur,ACTIVE
+SYN_VENDOR_103,"M/s Satyam Building Materials, Cuttack",SUPPLIER,Odisha,Cuttack,ACTIVE
+SYN_VENDOR_104,"M/s Maruti Suppliers, North 24 Parganas",SUPPLIER,West Bengal,North 24 Parganas,ACTIVE
+SYN_VENDOR_105,"M/s Sai Krishna Cement Agencies, Gorakhpur",SUPPLIER,Uttar Pradesh,Gorakhpur,ACTIVE
+SYN_VENDOR_106,"M/s Annapurna Enterprises, Kottayam",SUPPLIER,Kerala,Kottayam,ACTIVE
+SYN_VENDOR_107,"M/s Om Sai Hardware & Steel, Kalaburagi",SUPPLIER,Karnataka,Kalaburagi,ACTIVE
+SYN_VENDOR_108,"M/s Sundaram Cement Agencies, Haridwar",SUPPLIER,Uttarakhand,Haridwar,ACTIVE
+SYN_VENDOR_109,"M/s Rajeshwari Enterprises, Bhopal",SUPPLIER,Madhya Pradesh,Bhopal,ACTIVE
+SYN_VENDOR_110,"M/s Navdurga Suppliers, Hingoli",SUPPLIER,Maharashtra,Hingoli,ACTIVE
+SYN_VENDOR_111,"M/s Om Sai Building Materials, Kamrup Metropolitan",SUPPLIER,Assam,Kamrup Metropolitan,ACTIVE
+SYN_VENDOR_112,"M/s Annapurna Hardware & Steel, Agra",SUPPLIER,Uttar Pradesh,Agra,ACTIVE
+SYN_VENDOR_113,"M/s Sai Krishna Enterprises, Almora",SUPPLIER,Uttarakhand,Almora,ACTIVE
+SYN_VENDOR_114,"M/s Jyoti Traders, Alwar",SUPPLIER,Rajasthan,Alwar,ACTIVE
+SYN_VENDOR_115,"M/s Hariom Hardware & Steel, Jhansi",SUPPLIER,Uttar Pradesh,Jhansi,ACTIVE
+SYN_VENDOR_116,"M/s Amrit Building Materials, Agra",SUPPLIER,Uttar Pradesh,Agra,ACTIVE
+SYN_VENDOR_117,"M/s Venkateshwara Cement Agencies, Sambalpur",SUPPLIER,Odisha,Sambalpur,ACTIVE
+SYN_VENDOR_118,"M/s Uday Suppliers, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,SUSPENDED
+SYN_VENDOR_119,"M/s Samarth Traders, Ayodhya",SUPPLIER,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_VENDOR_120,"M/s Satyam Building Materials, Bardhaman",SUPPLIER,West Bengal,Bardhaman,ACTIVE
+SYN_ZP_001,Ernakulam Technical Verification Cell,VERIFICATION_AGENCY,Kerala,Ernakulam,ACTIVE
+SYN_ZP_002,Karnal Zilla Parishad,DISTRICT_AUTHORITY,Haryana,Karnal,ACTIVE
+SYN_ZP_003,"Office of the District Collector, Ahmedabad",DISTRICT_AUTHORITY,Gujarat,Ahmedabad,ACTIVE
+SYN_ZP_004,Jabalpur Zilla Parishad,DISTRICT_AUTHORITY,Madhya Pradesh,Jabalpur,ACTIVE
+SYN_ZP_005,"Office of the District Collector, Kamrup Metropolitan",DISTRICT_AUTHORITY,Assam,Kamrup Metropolitan,ACTIVE
+SYN_ZP_006,Sikar Zilla Parishad,DISTRICT_AUTHORITY,Rajasthan,Sikar,ACTIVE
+SYN_ZP_007,"Office of the District Collector, Hyderabad",DISTRICT_AUTHORITY,Telangana,Hyderabad,ACTIVE
+SYN_ZP_008,Bastar Zilla Parishad,DISTRICT_AUTHORITY,Chhattisgarh,Bastar,ACTIVE
+SYN_ZP_009,Ayodhya Zilla Parishad,DISTRICT_AUTHORITY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_ZP_010,"Office of the District Collector, Bharatpur",DISTRICT_AUTHORITY,Rajasthan,Bharatpur,ACTIVE
+SYN_ZP_011,"Office of the District Collector, South Delhi",DISTRICT_AUTHORITY,Delhi,South Delhi,ACTIVE
+SYN_ZP_012,"Office of the District Collector, East Singhbhum",DISTRICT_AUTHORITY,Jharkhand,East Singhbhum,ACTIVE
+SYN_ZP_013,"Office of the District Collector, Mandi",DISTRICT_AUTHORITY,Himachal Pradesh,Mandi,ACTIVE
+SYN_ZP_014,"Office of the District Collector, New Delhi",DISTRICT_AUTHORITY,Delhi,New Delhi,ACTIVE
+SYN_ZP_015,Satara Zilla Parishad,DISTRICT_AUTHORITY,Maharashtra,Satara,ACTIVE
+SYN_ZP_016,Alappuzha Technical Verification Cell,VERIFICATION_AGENCY,Kerala,Alappuzha,ACTIVE
+SYN_ZP_017,"State Quality Monitoring Unit, Vellore",VERIFICATION_AGENCY,Tamil Nadu,Vellore,ACTIVE
+SYN_ZP_018,"State Quality Monitoring Unit, Madurai",VERIFICATION_AGENCY,Tamil Nadu,Madurai,ACTIVE
+SYN_ZP_019,Raipur Technical Verification Cell,VERIFICATION_AGENCY,Chhattisgarh,Raipur,ACTIVE
+SYN_ZP_020,"State Quality Monitoring Unit, Anantapur",VERIFICATION_AGENCY,Andhra Pradesh,Anantapur,ACTIVE
+SYN_ZP_021,"State Quality Monitoring Unit, North 24 Parganas",VERIFICATION_AGENCY,West Bengal,North 24 Parganas,ACTIVE
+SYN_ZP_022,"State Quality Monitoring Unit, Howrah",VERIFICATION_AGENCY,West Bengal,Howrah,ACTIVE
+SYN_ZP_023,Raigarh Technical Verification Cell,VERIFICATION_AGENCY,Chhattisgarh,Raigarh,ACTIVE
+SYN_ZP_024,"State Quality Monitoring Unit, Kolhapur",VERIFICATION_AGENCY,Maharashtra,Kolhapur,ACTIVE
+SYN_ZP_025,"Office of the District Collector, Jhansi",DISTRICT_AUTHORITY,Uttar Pradesh,Jhansi,ACTIVE
+SYN_ZP_026,Una Zilla Parishad,DISTRICT_AUTHORITY,Himachal Pradesh,Una,ACTIVE
+SYN_ZP_027,"Office of the District Collector, Bareilly",DISTRICT_AUTHORITY,Uttar Pradesh,Bareilly,ACTIVE
+SYN_ZP_028,"Office of the District Collector, Ayodhya",DISTRICT_AUTHORITY,Uttar Pradesh,Ayodhya,ACTIVE
+SYN_ZP_029,"Office of the District Collector, Thrissur",DISTRICT_AUTHORITY,Kerala,Thrissur,ACTIVE
+SYN_ZP_030,Ujjain Zilla Parishad,DISTRICT_AUTHORITY,Madhya Pradesh,Ujjain,ACTIVE
+SYN_ZP_031,"Office of the District Collector, Bastar",DISTRICT_AUTHORITY,Chhattisgarh,Bastar,ACTIVE
+SYN_ZP_032,Chennai Zilla Parishad,DISTRICT_AUTHORITY,Tamil Nadu,Chennai,ACTIVE
+SYN_ZP_033,Agra Zilla Parishad,DISTRICT_AUTHORITY,Uttar Pradesh,Agra,ACTIVE
+SYN_ZP_034,Papum Pare Zilla Parishad,DISTRICT_AUTHORITY,Arunachal Pradesh,Papum Pare,ACTIVE
+SYN_ZP_035,Coimbatore Zilla Parishad,DISTRICT_AUTHORITY,Tamil Nadu,Coimbatore,ACTIVE
+SYN_ZP_036,Kangra Zilla Parishad,DISTRICT_AUTHORITY,Himachal Pradesh,Kangra,ACTIVE
+SYN_ZP_037,"Office of the District Collector, Lucknow",DISTRICT_AUTHORITY,Uttar Pradesh,Lucknow,ACTIVE
+SYN_ZP_038,Imphal West Technical Verification Cell,VERIFICATION_AGENCY,Manipur,Imphal West,ACTIVE
+SYN_ZP_039,North Goa Zilla Parishad,DISTRICT_AUTHORITY,Goa,North Goa,ACTIVE
+SYN_ZP_040,Kanpur Nagar Zilla Parishad,DISTRICT_AUTHORITY,Uttar Pradesh,Kanpur Nagar,ACTIVE
+SYN_ZP_041,"Office of the District Collector, Sonipat",DISTRICT_AUTHORITY,Haryana,Sonipat,ACTIVE
+SYN_ZP_042,"Office of the District Collector, Warangal",DISTRICT_AUTHORITY,Telangana,Warangal,ACTIVE
+SYN_ZP_043,"Office of the District Collector, Sagar",DISTRICT_AUTHORITY,Madhya Pradesh,Sagar,ACTIVE
+SYN_ZP_044,Kottayam Zilla Parishad,DISTRICT_AUTHORITY,Kerala,Kottayam,ACTIVE
+SYN_ZP_045,Khammam Technical Verification Cell,VERIFICATION_AGENCY,Telangana,Khammam,ACTIVE
+SYN_ZP_046,Bardhaman Zilla Parishad,DISTRICT_AUTHORITY,West Bengal,Bardhaman,ACTIVE
+SYN_ZP_047,"Office of the District Collector, East Siang",DISTRICT_AUTHORITY,Arunachal Pradesh,East Siang,ACTIVE
+SYN_ZP_048,Hooghly Technical Verification Cell,VERIFICATION_AGENCY,West Bengal,Hooghly,ACTIVE
+SYN_ZP_049,"State Quality Monitoring Unit, Jamnagar",VERIFICATION_AGENCY,Gujarat,Jamnagar,ACTIVE
+SYN_ZP_050,"State Quality Monitoring Unit, Alappuzha",VERIFICATION_AGENCY,Kerala,Alappuzha,ACTIVE
+SYN_ZP_051,Nellore Technical Verification Cell,VERIFICATION_AGENCY,Andhra Pradesh,Nellore,ACTIVE
+SYN_ZP_052,New Delhi Technical Verification Cell,VERIFICATION_AGENCY,Delhi,New Delhi,ACTIVE
+SYN_ZP_053,Tirunelveli Technical Verification Cell,VERIFICATION_AGENCY,Tamil Nadu,Tirunelveli,ACTIVE
+SYN_ZP_054,Bareilly Zilla Parishad,DISTRICT_AUTHORITY,Uttar Pradesh,Bareilly,ACTIVE
+SYN_ZP_055,"Office of the District Collector, Gwalior",DISTRICT_AUTHORITY,Madhya Pradesh,Gwalior,ACTIVE

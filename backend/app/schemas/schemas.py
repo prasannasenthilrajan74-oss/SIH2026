@@ -133,6 +133,8 @@ class WorkResponse(WorkBase):
     created_at: datetime
     implementing_agency_name: Optional[str] = None
     risk_scores: Optional[RiskScoreResponse] = None
+    primary_attribution: Optional[str] = None
+    backtrack_summary: Optional[str] = None
 
     class Config:
         from_attributes = True

@@ -76,12 +76,17 @@ class AnomalyDetector:
         
         X = df[feature_cols].fillna(0).values
         
+        # Standardize features so raw rupees don't dominate percentages or ratios
+        from sklearn.preprocessing import StandardScaler
+        scaler = StandardScaler()
+        X_scaled = scaler.fit_transform(X)
+
         # Fit model
-        self.model.fit(X)
+        self.model.fit(X_scaled)
         self.is_fitted = True
         
         # Isolation Forest decision_function returns negative values for anomalies (lower is more anomalous)
-        raw_scores = self.model.decision_function(X)
+        raw_scores = self.model.decision_function(X_scaled)
         
         # Map raw scores to 0-100 scale: higher means more anomalous
         # decision_function output is roughly in range [-0.5, 0.5]

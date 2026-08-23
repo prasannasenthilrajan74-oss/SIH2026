@@ -56,13 +56,19 @@ def calculate_text_similarities(query_desc: str, corpus: list[str]) -> list[floa
     similarities = cosine_similarity(query_vector, corpus_vectors)
     return list(similarities[0])
 
-def find_duplicate_works(db: Session, target_work: Work, threshold: float = 0.65) -> list[dict]:
-    # Fetch works in same district and category (to narrow candidate list)
-    candidates = db.query(Work).filter(
-        Work.id != target_work.id,
-        Work.district_code == target_work.district_code,
-        Work.category == target_work.category
-    ).all()
+def find_duplicate_works(db: Session, target_work: Work, threshold: float = 0.65, candidate_pool: list[Work] = None) -> list[dict]:
+    # Narrow candidate list by district and category
+    if candidate_pool is not None:
+        candidates = [
+            c for c in candidate_pool
+            if c.id != target_work.id and c.district_code == target_work.district_code and c.category == target_work.category
+        ]
+    else:
+        candidates = db.query(Work).filter(
+            Work.id != target_work.id,
+            Work.district_code == target_work.district_code,
+            Work.category == target_work.category
+        ).all()
 
     if not candidates:
         return []

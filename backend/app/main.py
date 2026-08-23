@@ -23,8 +23,8 @@ try:
     rs_count = db.query(RiskScore).count()
     if rs_count == 0:
         print("No risk scores found. Running initial rules engine and ML anomaly scoring...")
-        works = db.query(Work).all()
-        for w in works:
+        all_works = db.query(Work).all()
+        for w in all_works:
             run_rules_on_work(db, w)
         update_all_risk_scores(db)
         print("Initial risk profiles successfully compiled.")

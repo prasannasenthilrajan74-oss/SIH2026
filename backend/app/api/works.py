@@ -7,6 +7,31 @@ from backend.app.schemas.schemas import WorkResponse, RiskScoreResponse, Payment
 from backend.app.nlp.similarity import find_duplicate_works
 from typing import List, Dict, Any, Optional
 
+def resolve_work_backtracking(db: Session, w: Work, agency_cache: dict, district_cache: dict, threshold: float = 30.0, fast_mode: bool = False):
+    rs = w.risk_scores
+    primary_attribution = "NORMAL_CASE"
+    backtrack_summary = "This project's risk level is within normal parameters."
+    
+    if rs and rs.overall_score >= threshold:
+        primary_attribution = "ISOLATED_CASE"
+        backtrack_summary = "This project shows isolated risk indicators, but no broader organizational or geographic concentration pattern exists."
+        
+        ag_counts = agency_cache.get("_ag_counts", {})
+        ds_counts = district_cache.get("_ds_counts", {})
+        
+        ag_c = ag_counts.get(w.implementing_agency_id, 0)
+        ds_c = ds_counts.get(w.district_code, 0)
+        
+        if w.implementing_agency_id and ag_c >= 55:
+            primary_attribution = "AGENCY_CONCENTRATION"
+            agency_name = w.implementing_agency.name if w.implementing_agency else f"Agency #{w.implementing_agency_id}"
+            backtrack_summary = f"Agency concentration: {ag_c} elevated risk projects concentrated under {agency_name}."
+        elif w.district_code and ds_c >= 50:
+            primary_attribution = "DISTRICT_CONCENTRATION"
+            backtrack_summary = f"District concentration: {ds_c} elevated risk projects concentrated in district {w.district_code}."
+                
+    return primary_attribution, backtrack_summary
+
 router = APIRouter(prefix="/works", tags=["Projects"])
 
 @router.get("/", response_model=Dict[str, Any])
@@ -20,7 +45,7 @@ def get_works(
     status: Optional[str] = None,
     risk_level: Optional[str] = None,
     search: Optional[str] = None,
-    limit: int = Query(20, ge=1, le=100),
+    limit: int = Query(20, ge=1, le=1000),
     offset: int = Query(0, ge=0)
 ):
     query = db.query(Work).join(RiskScore)
@@ -68,6 +93,21 @@ def get_works(
 
     # Format output
     work_list = []
+    from sqlalchemy import func
+    ag_rows = db.query(Work.implementing_agency_id, func.count(Work.id))\
+        .join(RiskScore)\
+        .filter(RiskScore.overall_score >= 35.0, Work.implementing_agency_id.isnot(None))\
+        .group_by(Work.implementing_agency_id)\
+        .all()
+    agency_cache = {"_ag_counts": dict(ag_rows)}
+
+    ds_rows = db.query(Work.district_code, func.count(Work.id))\
+        .join(RiskScore)\
+        .filter(RiskScore.overall_score >= 35.0, Work.district_code.isnot(None))\
+        .group_by(Work.district_code)\
+        .all()
+    district_cache = {"_ds_counts": dict(ds_rows)}
+
     for w in works:
         agency_name = w.implementing_agency.name if w.implementing_agency else None
         
@@ -89,6 +129,8 @@ def get_works(
                 factors=rs.factors,
                 updated_at=rs.updated_at
             )
+            
+        attr, summary = resolve_work_backtracking(db, w, agency_cache, district_cache, fast_mode=True)
             
         work_list.append(WorkResponse(
             id=w.id,
@@ -116,7 +158,9 @@ def get_works(
             financial_progress=w.financial_progress,
             created_at=w.created_at,
             implementing_agency_name=agency_name,
-            risk_scores=rs_resp
+            risk_scores=rs_resp,
+            primary_attribution=attr,
+            backtrack_summary=summary
         ))
 
     return {
@@ -150,6 +194,8 @@ def get_work_by_id(id: str, db: Session = Depends(get_db), current_user: User = 
             updated_at=rs.updated_at
         )
 
+    attr, summary = resolve_work_backtracking(db, w, {}, {})
+
     return WorkResponse(
         id=w.id,
         description=w.description,
@@ -176,7 +222,9 @@ def get_work_by_id(id: str, db: Session = Depends(get_db), current_user: User = 
         financial_progress=w.financial_progress,
         created_at=w.created_at,
         implementing_agency_name=agency_name,
-        risk_scores=rs_resp
+        risk_scores=rs_resp,
+        primary_attribution=attr,
+        backtrack_summary=summary
     )
 
 @router.get("/{id}/payments", response_model=List[PaymentResponse])
@@ -204,3 +252,18 @@ def get_work_controlled_backtrack(id: str, db: Session = Depends(get_db), curren
     if "error" in res:
         raise HTTPException(status_code=404, detail=res["error"])
     return res
+
+@router.post("/refresh-scores")
+def refresh_all_risk_scores(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    """Recalculate risk scores for all works. Ministry Admin and Investigation Officers only."""
+    if current_user.role.name not in ["Ministry Administrator", "Investigation Officer"]:
+        raise HTTPException(status_code=403, detail="Only Ministry Administrators and Investigation Officers can trigger score refresh.")
+    from backend.app.services.risk import update_all_risk_scores
+    try:
+        update_all_risk_scores(db)
+        total = db.query(Work).count()
+        return {"refreshed": total, "total": total, "message": f"AI risk scores refreshed for {total} projects."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Score refresh failed: {str(e)}")
+
+

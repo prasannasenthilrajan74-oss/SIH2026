@@ -12,6 +12,38 @@ from datetime import date, datetime
 
 router = APIRouter(prefix="/system", tags=["System Utilities"])
 
+@router.get("/stats")
+def get_system_stats(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    """Returns system health stats: DB record counts, alert counts, last score refresh."""
+    total_works = db.query(Work).count()
+    total_alerts = db.query(Alert).filter(Alert.status == "ACTIVE").count()
+    critical_alerts = db.query(Alert).filter(Alert.severity == "CRITICAL", Alert.status == "ACTIVE").count()
+    total_investigations = db.query(Investigation).count()
+    risk_score_count = db.query(RiskScore).count()
+
+    # Last risk score update time
+    last_score = db.query(RiskScore).order_by(RiskScore.updated_at.desc()).first()
+    last_refresh = last_score.updated_at.isoformat() if last_score and last_score.updated_at else None
+
+    # ML model status — we consider it "ready" if at least 80% of works have scores
+    ml_coverage = round((risk_score_count / total_works * 100), 1) if total_works > 0 else 0
+    ml_status = "Operational" if ml_coverage >= 80 else ("Partial" if ml_coverage > 0 else "Offline")
+
+    return {
+        "total_works": total_works,
+        "risk_scores_computed": risk_score_count,
+        "ml_coverage_pct": ml_coverage,
+        "ml_status": ml_status,
+        "active_alerts": total_alerts,
+        "critical_alerts": critical_alerts,
+        "open_investigations": total_investigations,
+        "last_score_refresh": last_refresh,
+        "db_status": "Connected"
+    }
+
 def sqla_to_dict(obj):
     if obj is None:
         return None

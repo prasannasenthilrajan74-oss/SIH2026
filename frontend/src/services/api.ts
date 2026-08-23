@@ -197,6 +197,26 @@ export const api = {
     return res.json();
   },
 
+  async getAllDocuments(filters: Record<string, any> = {}) {
+    const params = new URLSearchParams();
+    Object.entries(filters).forEach(([k, v]) => {
+      if (v) params.append(k, String(v));
+    });
+    const res = await fetch(`${API_BASE}/documents/?${params.toString()}`, {
+      headers: getHeaders()
+    });
+    if (!res.ok) throw new Error("Failed to fetch documents");
+    return res.json();
+  },
+
+  async getDocumentExtractions(id: number) {
+    const res = await fetch(`${API_BASE}/documents/${id}/extractions`, {
+      headers: getHeaders()
+    });
+    if (!res.ok) throw new Error("Failed to fetch document OCR extractions");
+    return res.json();
+  },
+
   async uploadDocument(file: File, documentType: string, workId?: string) {
     const formData = new FormData();
     formData.append("file", file);
@@ -253,10 +273,35 @@ export const api = {
   },
 
   async getWorkControlledBacktrack(id: string) {
-    const res = await fetch(`${API_BASE}/works/${id}/controlled-backtrack`, {
+    const res = await fetch(`${API_BASE}/works/${encodeURIComponent(id)}/controlled-backtrack`, {
       headers: getHeaders()
     });
     if (!res.ok) throw new Error("Failed to fetch work root cause analysis");
+    return res.json();
+  },
+
+  async getSystemStats() {
+    const res = await fetch(`${API_BASE}/system/stats`, {
+      headers: getHeaders()
+    });
+    if (!res.ok) throw new Error("Failed to fetch system stats");
+    return res.json();
+  },
+
+  async getAgencyPerformance() {
+    const res = await fetch(`${API_BASE}/dashboard/agency-performance`, {
+      headers: getHeaders()
+    });
+    if (!res.ok) throw new Error("Failed to fetch agency performance");
+    return res.json();
+  },
+
+  async refreshRiskScores() {
+    const res = await fetch(`${API_BASE}/works/refresh-scores`, {
+      method: "POST",
+      headers: getHeaders()
+    });
+    if (!res.ok) throw new Error("Failed to trigger score refresh");
     return res.json();
   }
 };

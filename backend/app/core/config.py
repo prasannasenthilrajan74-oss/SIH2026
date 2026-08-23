@@ -10,6 +10,9 @@ class Settings(BaseSettings):
     OCR_CONFIG: str = "tesseract"
     STORAGE_CONFIG: str = "local"
     REDIS_URL: str = "redis://localhost:6379/0"
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
+    OLLAMA_MODEL: str = "llama3.2:1b"
+    GEMINI_API_KEY: str = ""
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 

@@ -4,12 +4,13 @@ import {
   Settings, UserCheck, MessageSquare, AlertTriangle, 
   MapPin, CheckCircle, Search, LogOut, ArrowRight, 
   TrendingUp, IndianRupee, Clock, Briefcase, FileSearch, 
-  HelpCircle, ChevronRight, RefreshCw, Send, PlusCircle
+  HelpCircle, ChevronRight, RefreshCw, Send, PlusCircle,
+  Cpu, Bot, Building2, Download, Zap, Server, Database
 } from 'lucide-react';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, 
   Legend, ResponsiveContainer, PieChart, Pie, Cell, 
-  LineChart, Line 
+  LineChart, Line, AreaChart, Area, ComposedChart, RadarChart, Radar, PolarGrid, PolarAngleAxis, LabelList
 } from 'recharts';
 import L from 'leaflet';
 import { api } from './services/api';
@@ -63,6 +64,8 @@ interface Work {
   financial_progress: number;
   implementing_agency_name?: string;
   risk_scores?: RiskScores;
+  primary_attribution?: string;
+  backtrack_summary?: string;
 }
 
 interface Alert {
@@ -185,59 +188,103 @@ export default function App() {
 
   if (!isAuthenticated) {
     return (
-      <div className="login-screen">
-        <form className="login-card" onSubmit={handleLogin}>
-          <div className="login-logo">
-            <ShieldAlert size={36} className="logo-icon" />
-            <h1>MPLADS Sentinel AI</h1>
-          </div>
-          <div style={{ textAlign: 'center', marginBottom: '20px', color: '#94a3b8', fontSize: '11px', marginTop: '-15px' }}>
-            "From Passive Monitoring to Proactive Governance"
-          </div>
-          
-          {loginError && (
-            <div style={{ color: 'var(--danger-color)', backgroundColor: 'var(--danger-light)', border: '1px solid #fee2e2', padding: '10px', borderRadius: 'var(--border-radius-md)', marginBottom: '16px', fontSize: '12.5px', fontWeight: '500' }}>
-              {loginError}
+      <div className="login-screen-premium">
+        {/* Left Panel — Branding */}
+        <div className="login-brand-panel">
+          <div className="login-brand-content">
+            <div className="login-brand-logo">
+              <ShieldAlert size={48} />
             </div>
-          )}
-
-          <div className="form-group">
-            <label className="form-label">Username</label>
-            <input 
-              type="text" 
-              className="form-control" 
-              value={usernameInput} 
-              onChange={e => setUsernameInput(e.target.value)} 
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label className="form-label">Password</label>
-            <input 
-              type="password" 
-              className="form-control" 
-              value={passwordInput} 
-              onChange={e => setPasswordInput(e.target.value)} 
-              required
-            />
-          </div>
-
-          <button type="submit" className="btn btn-primary btn-block">
-            Access Command Center <ArrowRight size={16} />
-          </button>
-
-          <div className="login-demo-helper">
-            <p><strong>Demo Roles Quick Credentials:</strong></p>
-            <div className="demo-account-list">
-              <span className="demo-account-tag" onClick={() => { setUsernameInput('admin'); setPasswordInput('admin123'); }}>Ministry Admin</span>
-              <span className="demo-account-tag" onClick={() => { setUsernameInput('state_nodal'); setPasswordInput('state123'); }}>State Nodal</span>
-              <span className="demo-account-tag" onClick={() => { setUsernameInput('district_auth'); setPasswordInput('district123'); }}>District Auth</span>
-              <span className="demo-account-tag" onClick={() => { setUsernameInput('mp_viewer'); setPasswordInput('mp123'); }}>MP / constituency</span>
-              <span className="demo-account-tag" onClick={() => { setUsernameInput('investigator'); setPasswordInput('investigator123'); }}>Investigator</span>
+            <h1 className="login-brand-title">MPLADS Sentinel AI</h1>
+            <p className="login-brand-tagline">"From Passive Monitoring to Proactive Governance"</p>
+            <div className="login-feature-list">
+              <div className="login-feature-item">
+                <div className="login-feature-icon"><Activity size={18} /></div>
+                <div>
+                  <div className="login-feature-title">AI Risk Intelligence</div>
+                  <div className="login-feature-desc">Isolation Forest anomaly detection with Explainable AI scoring</div>
+                </div>
+              </div>
+              <div className="login-feature-item">
+                <div className="login-feature-icon"><Layers size={18} /></div>
+                <div>
+                  <div className="login-feature-title">Root-Cause Backtracking</div>
+                  <div className="login-feature-desc">Controlled variable attribution to isolate agency vs district risk</div>
+                </div>
+              </div>
+              <div className="login-feature-item">
+                <div className="login-feature-icon"><FileText size={18} /></div>
+                <div>
+                  <div className="login-feature-title">OCR Document Verification</div>
+                  <div className="login-feature-desc">Automated cross-validation of PDFs against structured records</div>
+                </div>
+              </div>
+              <div className="login-feature-item">
+                <div className="login-feature-icon"><MapPin size={18} /></div>
+                <div>
+                  <div className="login-feature-title">Geospatial Heatmapping</div>
+                  <div className="login-feature-desc">Real-time GIS-based geographic risk concentration maps</div>
+                </div>
+              </div>
             </div>
+            <div className="login-brand-badge">SIH Problem Statement 26102 · MoSPI DIID</div>
           </div>
-        </form>
+        </div>
+
+        {/* Right Panel — Login Form */}
+        <div className="login-form-panel">
+          <form className="login-form-card" onSubmit={handleLogin}>
+            <div className="login-form-header">
+              <h2>Command Center Access</h2>
+              <p>Authenticate to enter the governance intelligence platform</p>
+            </div>
+
+            {loginError && (
+              <div style={{ color: 'var(--danger-color)', backgroundColor: 'var(--danger-light)', border: '1px solid #fee2e2', padding: '12px 16px', borderRadius: 'var(--border-radius-md)', marginBottom: '20px', fontSize: '13px', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <AlertTriangle size={16} /> {loginError}
+              </div>
+            )}
+
+            <div className="form-group">
+              <label className="form-label">Username</label>
+              <input 
+                type="text" 
+                className="form-control" 
+                value={usernameInput} 
+                onChange={e => setUsernameInput(e.target.value)} 
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Password</label>
+              <input 
+                type="password" 
+                className="form-control" 
+                value={passwordInput} 
+                onChange={e => setPasswordInput(e.target.value)} 
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <button type="submit" className="btn btn-primary btn-block" style={{ padding: '14px', fontSize: '14px', fontWeight: '700', letterSpacing: '0.5px' }}>
+              <Zap size={16} /> Access Command Center
+            </button>
+
+            <div className="login-demo-helper">
+              <p><strong>Demo Accounts:</strong></p>
+              <div className="demo-account-list">
+                <span className="demo-account-tag" onClick={() => { setUsernameInput('admin'); setPasswordInput('admin123'); }}>Ministry Admin</span>
+                <span className="demo-account-tag" onClick={() => { setUsernameInput('state_nodal'); setPasswordInput('state123'); }}>State Nodal</span>
+                <span className="demo-account-tag" onClick={() => { setUsernameInput('district_auth'); setPasswordInput('district123'); }}>District Auth</span>
+                <span className="demo-account-tag" onClick={() => { setUsernameInput('mp_viewer'); setPasswordInput('mp123'); }}>MP Viewer</span>
+                <span className="demo-account-tag" onClick={() => { setUsernameInput('investigator'); setPasswordInput('investigator123'); }}>Investigator</span>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
@@ -266,6 +313,12 @@ export default function App() {
           <div className={`nav-item ${activeTab === 'Risk Monitor' ? 'active' : ''}`} onClick={() => { setActiveTab('Risk Monitor'); setSelectedWorkId(null); }}>
             <ShieldAlert size={16} /> Risk Monitor
           </div>
+          <div className={`nav-item ${activeTab === 'Root-Cause Backtracking' ? 'active' : ''}`} onClick={() => { setActiveTab('Root-Cause Backtracking'); setSelectedWorkId(null); }}>
+            <Layers size={16} /> Root-Cause Backtracking
+          </div>
+          <div className={`nav-item ${activeTab === 'Agency Intelligence' ? 'active' : ''}`} onClick={() => { setActiveTab('Agency Intelligence'); setSelectedWorkId(null); }}>
+            <Building2 size={16} /> Agency Intelligence
+          </div>
           <div className={`nav-item ${activeTab === 'Documents' ? 'active' : ''}`} onClick={() => { setActiveTab('Documents'); setSelectedWorkId(null); }}>
             <FileText size={16} /> Documents & OCR
           </div>
@@ -275,16 +328,22 @@ export default function App() {
           <div className={`nav-item ${activeTab === 'Rules Config' ? 'active' : ''}`} onClick={() => { setActiveTab('Rules Config'); setSelectedWorkId(null); }}>
             <Settings size={16} /> Detection Rules
           </div>
+          <div className={`nav-item ${activeTab === 'AI Assistant' ? 'active' : ''}`} onClick={() => { setActiveTab('AI Assistant'); setSelectedWorkId(null); }}>
+            <Bot size={16} /> AI Assistant
+          </div>
         </div>
 
         <div className="sidebar-footer">
-          <div className="user-profile-info">
-            <span className="profile-username">{currentUser?.username}</span>
-            <span className="profile-role">{currentUser?.role_name}</span>
+          <SystemStatusWidget />
+          <div className="sidebar-footer-user">
+            <div className="user-profile-info">
+              <span className="profile-username">{currentUser?.username}</span>
+              <span className="profile-role">{currentUser?.role_name}</span>
+            </div>
+            <button className="logout-btn" onClick={handleLogout} title="Log Out">
+              <LogOut size={16} />
+            </button>
           </div>
-          <button className="logout-btn" onClick={handleLogout} title="Log Out">
-            <LogOut size={16} />
-          </button>
         </div>
       </div>
 
@@ -385,12 +444,31 @@ export default function App() {
               search={globalSearch}
               onSelectProject={setSelectedWorkId} 
             />
+          ) : activeTab === 'Root-Cause Backtracking' ? (
+            <BacktrackingTab 
+              state={selectedState} 
+              district={selectedDistrict} 
+              category={selectedCategory} 
+              status={selectedStatus} 
+              search={globalSearch}
+              onSelectProject={setSelectedWorkId} 
+            />
+          ) : activeTab === 'Agency Intelligence' ? (
+            <AgencyIntelligenceTab onSelectProject={setSelectedWorkId} />
           ) : activeTab === 'Documents' ? (
             <DocumentsTab onSelectProject={setSelectedWorkId} />
           ) : activeTab === 'Investigations' ? (
             <InvestigationsTab onSelectProject={setSelectedWorkId} currentUser={currentUser} />
           ) : activeTab === 'Rules Config' ? (
             <RulesTab currentUser={currentUser} />
+          ) : activeTab === 'AI Assistant' ? (
+            <AIAssistantTab
+              input={chatInput}
+              setInput={setChatInput}
+              messages={chatMessages}
+              setMessages={setChatMessages}
+              onSelectProject={setSelectedWorkId}
+            />
           ) : null}
         </div>
       </div>
@@ -533,6 +611,25 @@ function OverviewTab({ state, district, category, status, onSelectProject }: any
 
   return (
     <div>
+      {/* Overview header with refresh button */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+        <h2 style={{ fontSize: '16px', fontWeight: '800', color: 'var(--primary-color)' }}>Platform Intelligence Overview</h2>
+        <button 
+          className="btn btn-secondary" 
+          style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px' }}
+          onClick={async () => {
+            try {
+              const res = await api.refreshRiskScores();
+              alert(res.message || 'Risk scores refreshed!');
+              fetchMetrics();
+            } catch (e: any) {
+              alert(e.message || 'Refresh failed — check role permissions.');
+            }
+          }}
+        >
+          <RefreshCw size={14} /> Refresh AI Scores
+        </button>
+      </div>
       <div className="stats-grid">
         <div className="stat-card">
           <span className="stat-card-title">Total Allocated Works</span>
@@ -668,24 +765,32 @@ function OverviewTab({ state, district, category, status, onSelectProject }: any
           <div className="card-header">
             <span className="card-title"><Activity size={16} /> District Risk Scores Ranking</span>
           </div>
-          <div className="card-body" style={{ height: '300px' }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                data={metrics.district_rankings}
-                margin={{ top: 10, right: 10, left: 10, bottom: 20 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="district_name" angle={-15} textAnchor="end" interval={0} style={{ fontSize: '11px' }} />
-                <YAxis style={{ fontSize: '11px' }} domain={[0, 100]} />
-                <Tooltip />
-                <Bar dataKey="avg_risk_score" fill="var(--primary-color)" name="Avg Risk Index">
-                  {metrics.district_rankings && metrics.district_rankings.map((entry: any, index: number) => {
-                    const color = entry.avg_risk_score >= 65 ? 'var(--danger-color)' : 'var(--primary-color)';
-                    return <Cell key={`cell-${index}`} fill={color} />;
-                  })}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+          <div className="card-body" style={{ height: '320px' }}>
+            {(() => {
+              const districtScores = (metrics.district_rankings || []).map((d: any) => Number(d.avg_risk_score) || 0);
+              const minScore = districtScores.length ? Math.max(0, Math.floor(Math.min(...districtScores) - 4)) : 0;
+              const maxScore = districtScores.length ? Math.min(100, Math.ceil(Math.max(...districtScores) + 3)) : 100;
+              return (
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart
+                    data={metrics.district_rankings}
+                    margin={{ top: 20, right: 10, left: 10, bottom: 25 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="district_name" angle={-15} textAnchor="end" interval={0} style={{ fontSize: '11px' }} />
+                    <YAxis style={{ fontSize: '11px' }} domain={[minScore, maxScore]} />
+                    <Tooltip formatter={(val: any) => [`${Number(val).toFixed(1)}/100`, 'Avg Risk Score']} />
+                    <Bar dataKey="avg_risk_score" fill="var(--primary-color)" name="Avg Risk Index" radius={[4, 4, 0, 0]}>
+                      <LabelList dataKey="avg_risk_score" position="top" formatter={(val: any) => Number(val).toFixed(1)} style={{ fontSize: '10px', fontWeight: 'bold', fill: '#1e293b' }} />
+                      {metrics.district_rankings && metrics.district_rankings.map((entry: any, index: number) => {
+                        const color = entry.avg_risk_score >= 65 ? 'var(--danger-color)' : 'var(--primary-color)';
+                        return <Cell key={`cell-${index}`} fill={color} />;
+                      })}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              );
+            })()}
           </div>
         </div>
       </div>
@@ -780,6 +885,7 @@ function RiskMonitorTab({ state, district, category, status, search, onSelectPro
                   <th style={{ textAlign: 'right' }}>Sanctioned Amt</th>
                   <th style={{ textAlign: 'center' }}>Phys / Fin %</th>
                   <th>ML Anomaly Index</th>
+                  <th>Root Cause</th>
                   <th>Warnings Triggered</th>
                   <th style={{ width: '80px' }}>Action</th>
                 </tr>
@@ -787,7 +893,7 @@ function RiskMonitorTab({ state, district, category, status, search, onSelectPro
               <tbody>
                 {works.map(w => {
                   const score = w.risk_scores?.overall_score || 0.0;
-                  const factorCount = w.risk_scores?.factors.length || 0;
+                  const factorCount = w.risk_scores?.factors?.length || 0;
                   
                   return (
                     <tr key={w.id}>
@@ -817,6 +923,17 @@ function RiskMonitorTab({ state, district, category, status, search, onSelectPro
                       <td>
                         <span className={`badge ${getRiskColor(score)}`} style={{ fontWeight: 'bold', fontSize: '11px' }}>
                           {score.toFixed(1)} ({getRiskLabel(score)})
+                        </span>
+                      </td>
+                      <td>
+                        <span className={`badge ${
+                          w.primary_attribution === 'AGENCY_CONCENTRATION' ? 'red' : 
+                          w.primary_attribution === 'DISTRICT_CONCENTRATION' ? 'orange' : 
+                          w.primary_attribution === 'ISOLATED_CASE' ? 'blue' : 'green'
+                        }`} style={{ fontWeight: '600', fontSize: '10.5px' }}>
+                          {w.primary_attribution === 'AGENCY_CONCENTRATION' ? 'Agency Risk' : 
+                           w.primary_attribution === 'DISTRICT_CONCENTRATION' ? 'District Risk' : 
+                           w.primary_attribution === 'ISOLATED_CASE' ? 'Isolated Case' : 'Normal'}
                         </span>
                       </td>
                       <td>
@@ -860,6 +977,548 @@ function RiskMonitorTab({ state, district, category, status, search, onSelectPro
           <button className="btn btn-secondary" style={{ padding: '4px 10px' }} disabled={(page + 1) * limit >= totalCount} onClick={() => setPage(page + 1)}>Next</button>
         </div>
       </div>
+    </div>
+  );
+}
+
+// --- ROOT-CAUSE BACKTRACKING TAB COMPONENT ---
+function BacktrackingTab({ state, district, category, status, search, onSelectProject }: any) {
+  const [works, setWorks] = useState<Work[]>([]);
+  const [allWorksForStats, setAllWorksForStats] = useState<Work[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [attributionFilter, setAttributionFilter] = useState('');
+  
+  // Pagination
+  const [page, setPage] = useState(0);
+  const limit = 12;
+
+  // Selected work for root-cause detailed drawer
+  const [selectedBacktrackWorkId, setSelectedBacktrackWorkId] = useState<string | null>(null);
+  const [backtrackDetail, setBacktrackDetail] = useState<any>(null);
+  const [loadingDetail, setLoadingDetail] = useState(false);
+
+  useEffect(() => {
+    setPage(0);
+    fetchWorks();
+  }, [state, district, category, status, attributionFilter, search]);
+
+  useEffect(() => {
+    fetchWorks();
+  }, [page]);
+
+  const fetchWorks = async () => {
+    setLoading(true);
+    try {
+      const res = await api.getWorks({
+        state_code: state,
+        district_code: district,
+        category: category,
+        status: status,
+        search: search,
+        limit: 200,
+        offset: 0
+      });
+      
+      const worksList = Array.isArray(res) ? res : (res?.works || []);
+      setAllWorksForStats(worksList);
+      
+      let filtered = worksList;
+      if (attributionFilter) {
+        filtered = filtered.filter((w: Work) => w.primary_attribution === attributionFilter);
+      }
+      
+      setTotalCount(filtered.length);
+      setWorks(filtered.slice(page * limit, (page + 1) * limit));
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleViewDetail = async (workId: string) => {
+    setSelectedBacktrackWorkId(workId);
+    setLoadingDetail(true);
+    setBacktrackDetail(null);
+    try {
+      const data = await api.getWorkControlledBacktrack(workId);
+      setBacktrackDetail(data);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setLoadingDetail(false);
+    }
+  };
+
+  const getRiskColor = (score: number) => {
+    if (score >= 85) return 'red';
+    if (score >= 70) return 'orange';
+    if (score >= 45) return 'gray';
+    return 'green';
+  };
+
+  // Stats Calculations
+  const totalChecked = allWorksForStats.length;
+  const flaggedProjects = allWorksForStats.filter(w => w.primary_attribution && w.primary_attribution !== 'NORMAL_CASE');
+  const totalFlagged = flaggedProjects.length;
+  
+  const agencyCount = flaggedProjects.filter(w => w.primary_attribution === 'AGENCY_CONCENTRATION').length;
+  const districtCount = flaggedProjects.filter(w => w.primary_attribution === 'DISTRICT_CONCENTRATION').length;
+  const isolatedCount = flaggedProjects.filter(w => w.primary_attribution === 'ISOLATED_CASE').length;
+  
+  const agencyPercent = totalFlagged > 0 ? ((agencyCount / totalFlagged) * 100).toFixed(0) : '0';
+  const districtPercent = totalFlagged > 0 ? ((districtCount / totalFlagged) * 100).toFixed(0) : '0';
+  const isolatedPercent = totalFlagged > 0 ? ((isolatedCount / totalFlagged) * 100).toFixed(0) : '0';
+
+  const chartData = [
+    { name: 'Agency Risk', value: agencyCount, color: 'var(--danger-color)' },
+    { name: 'District Risk', value: districtCount, color: 'var(--warning-color)' },
+    { name: 'Isolated Case', value: isolatedCount, color: '#3b82f6' }
+  ].filter(d => d.value > 0);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      {/* Top dashboard section */}
+      <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '20px' }}>
+        
+        {/* Left: Metrics Cards */}
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '20px' }}>
+          <div className="card-header" style={{ padding: 0, borderBottom: 'none', marginBottom: '16px' }}>
+            <span className="card-title" style={{ fontSize: '15px' }}><Activity size={16} /> Portfolio Attribution Summary</span>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+            {/* Total Checked */}
+            <div style={{ padding: '16px', borderRadius: 'var(--border-radius-md)', border: '1px solid var(--border-color)', background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-secondary)', textTransform: 'uppercase', marginBottom: '4px' }}>Total Scope Projects</div>
+              <div style={{ fontSize: '24px', fontWeight: '800', color: 'var(--primary-color)' }}>{totalChecked}</div>
+              <div style={{ fontSize: '10.5px', color: 'var(--text-secondary)', marginTop: '4px' }}>{totalFlagged} anomalous (≥30 threshold)</div>
+            </div>
+
+            {/* Agency Concentration */}
+            <div style={{ padding: '16px', borderRadius: 'var(--border-radius-md)', border: '1px solid #fee2e2', background: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#b91c1c', textTransform: 'uppercase', marginBottom: '4px' }}>Agency Risk Concentration</div>
+              <div style={{ fontSize: '24px', fontWeight: '800', color: 'var(--danger-color)' }}>{agencyCount} <span style={{ fontSize: '13px', fontWeight: '600', color: '#b91c1c' }}>({agencyPercent}%)</span></div>
+              <div style={{ fontSize: '10.5px', color: '#7f1d1d', marginTop: '4px' }}>Root cause: unique agency elevation</div>
+            </div>
+
+            {/* District Concentration */}
+            <div style={{ padding: '16px', borderRadius: 'var(--border-radius-md)', border: '1px solid #fef3c7', background: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#b45309', textTransform: 'uppercase', marginBottom: '4px' }}>District Risk Concentration</div>
+              <div style={{ fontSize: '24px', fontWeight: '800', color: '#d97706' }}>{districtCount} <span style={{ fontSize: '13px', fontWeight: '600', color: '#b45309' }}>({districtPercent}%)</span></div>
+              <div style={{ fontSize: '10.5px', color: '#78350f', marginTop: '4px' }}>Root cause: local admin clusters</div>
+            </div>
+
+            {/* Isolated Cases */}
+            <div style={{ padding: '16px', borderRadius: 'var(--border-radius-md)', border: '1px solid #dbeafe', background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#1d4ed8', textTransform: 'uppercase', marginBottom: '4px' }}>Isolated Anomalies</div>
+              <div style={{ fontSize: '24px', fontWeight: '800', color: '#2563eb' }}>{isolatedCount} <span style={{ fontSize: '13px', fontWeight: '600', color: '#1d4ed8' }}>({isolatedPercent}%)</span></div>
+              <div style={{ fontSize: '10.5px', color: '#1e3a8a', marginTop: '4px' }}>Root cause: project-specific variables</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right: Breakdown Chart */}
+        <div className="card" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <div className="card-header" style={{ padding: 0, width: '100%', borderBottom: 'none', marginBottom: '10px' }}>
+            <span className="card-title" style={{ fontSize: '15px' }}><Layers size={16} /> Attribution Distribution</span>
+          </div>
+          
+          {totalFlagged > 0 ? (
+            <div style={{ width: '100%', height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div style={{ width: '50%', height: '100%' }}>
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={chartData}
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={45}
+                      outerRadius={70}
+                      paddingAngle={4}
+                      dataKey="value"
+                    >
+                      {chartData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Tooltip formatter={(value) => [`${value} projects`, 'Attribution']} />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+              <div style={{ width: '45%', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--danger-color)' }} />
+                  <span>Agency Concentration ({agencyCount})</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--warning-color)' }} />
+                  <span>District Nodal Risk ({districtCount})</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: '#3b82f6' }} />
+                  <span>Isolated Anomalies ({isolatedCount})</span>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '40px 0', fontSize: '13px' }}>
+              No risk anomalies detected within the current scope filters.
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Audit priority table list */}
+      <div className="card">
+        <div className="card-header" style={{ padding: '12px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span className="card-title"><Layers size={16} /> Portfolio Attribution Queue</span>
+          <select 
+            className="filter-select" 
+            value={attributionFilter} 
+            onChange={e => setAttributionFilter(e.target.value)}
+            style={{ width: '220px' }}
+          >
+            <option value="">All Attributions</option>
+            <option value="AGENCY_CONCENTRATION">🔴 Agency Concentration</option>
+            <option value="DISTRICT_CONCENTRATION">🟠 District Nodal Risk</option>
+            <option value="ISOLATED_CASE">🔵 Isolated Case</option>
+            <option value="NORMAL_CASE">🟢 Normal / No Risk</option>
+          </select>
+        </div>
+
+        <div className="card-body" style={{ padding: 0 }}>
+          {loading ? (
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px' }}><RefreshCw className="animate-spin" /> Fetching backtracking analysis...</div>
+          ) : works.length === 0 ? (
+            <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-secondary)' }}>No works match the selected root-cause filter.</div>
+          ) : (
+            <div className="table-container">
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>Project ID</th>
+                    <th>Description</th>
+                    <th>MP / Constituency</th>
+                    <th style={{ textAlign: 'right' }}>Sanctioned Amt</th>
+                    <th>Anomaly Index</th>
+                    <th>Root-Cause Attribution</th>
+                    <th>Summary</th>
+                    <th style={{ width: '120px', textAlign: 'center' }}>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {works.map(w => {
+                    const score = w.risk_scores?.overall_score || 0.0;
+                    
+                    return (
+                      <tr key={w.id}>
+                        <td style={{ fontWeight: '700', color: 'var(--primary-color)' }}>{w.id}</td>
+                        <td>
+                          <div style={{ fontWeight: '600', fontSize: '13px' }}>{w.description}</div>
+                          <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                            Cat: {w.category} | Agency: {w.implementing_agency_name || "N/A"}
+                          </div>
+                        </td>
+                        <td style={{ fontSize: '12px' }}>
+                          <div>{w.mp_name}</div>
+                          <div style={{ color: 'var(--text-secondary)' }}>{w.constituency}</div>
+                        </td>
+                        <td style={{ textAlign: 'right', fontWeight: 'bold' }}>
+                          ₹{(w.sanctioned_amount / 100000).toFixed(1)}L
+                        </td>
+                        <td>
+                          <span className={`badge ${getRiskColor(score)}`} style={{ fontWeight: 'bold', fontSize: '10.5px' }}>
+                            {score.toFixed(1)}
+                          </span>
+                        </td>
+                        <td>
+                          <span className={`badge ${
+                            w.primary_attribution === 'AGENCY_CONCENTRATION' ? 'red' : 
+                            w.primary_attribution === 'DISTRICT_CONCENTRATION' ? 'orange' : 
+                            w.primary_attribution === 'ISOLATED_CASE' ? 'blue' : 'green'
+                          }`} style={{ fontWeight: '600', fontSize: '10.5px' }}>
+                            {w.primary_attribution === 'AGENCY_CONCENTRATION' ? 'Agency Risk' : 
+                             w.primary_attribution === 'DISTRICT_CONCENTRATION' ? 'District Risk' : 
+                             w.primary_attribution === 'ISOLATED_CASE' ? 'Isolated Case' : 'Normal'}
+                          </span>
+                        </td>
+                        <td style={{ fontSize: '12px', color: 'var(--text-secondary)', maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={w.backtrack_summary || ''}>
+                          {w.backtrack_summary}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          <button 
+                            className="btn btn-secondary" 
+                            style={{ padding: '4px 10px', fontSize: '11px' }}
+                            onClick={() => handleViewDetail(w.id)}
+                          >
+                            Peer Details
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+
+        <div className="card-header" style={{ padding: '10px 20px', borderTop: '1px solid var(--border-color)', borderBottom: 'none', backgroundColor: '#ffffff', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+            Showing {page * limit + 1}-{Math.min(totalCount, (page + 1) * limit)} of {totalCount} projects
+          </span>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <button className="btn btn-secondary" style={{ padding: '4px 10px' }} disabled={page === 0} onClick={() => setPage(page - 1)}>Prev</button>
+            <button className="btn btn-secondary" style={{ padding: '4px 10px' }} disabled={(page + 1) * limit >= totalCount} onClick={() => setPage(page + 1)}>Next</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Details drawer Overlay panel */}
+      {selectedBacktrackWorkId && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          right: 0,
+          width: '450px',
+          height: '100vh',
+          backgroundColor: '#ffffff',
+          boxShadow: '-4px 0 20px rgba(0,0,0,0.15)',
+          zIndex: 1000,
+          display: 'flex',
+          flexDirection: 'column',
+          fontFamily: 'Inter, sans-serif'
+        }}>
+          {/* Drawer Header */}
+          <div style={{ padding: '20px', borderBottom: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'var(--primary-color)', color: '#ffffff' }}>
+            <span style={{ fontWeight: '700', fontSize: '15px' }}>Project Root-Cause Details</span>
+            <button 
+              onClick={() => { setSelectedBacktrackWorkId(null); setBacktrackDetail(null); }}
+              style={{ background: 'none', border: 'none', color: '#ffffff', cursor: 'pointer', fontSize: '18px', fontWeight: 'bold' }}
+            >
+              ✕
+            </button>
+          </div>
+          
+          {/* Drawer Content */}
+          <div style={{ padding: '20px', overflowY: 'auto', flex: 1 }}>
+            {loadingDetail ? (
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <RefreshCw className="animate-spin" style={{ marginBottom: '10px' }} />
+                <span>Performing controlled peer analysis...</span>
+              </div>
+            ) : backtrackDetail ? (
+              <div>
+                <div style={{ fontWeight: 'bold', fontSize: '14px', marginBottom: '8px', color: 'var(--primary-color)' }}>{backtrackDetail.work_id}</div>
+                <p style={{ fontSize: '12.5px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.5' }}>{backtrackDetail.description}</p>
+                
+                <div style={{
+                  padding: '12px 16px',
+                  backgroundColor: backtrackDetail.primary_attribution === 'AGENCY_CONCENTRATION' ? 'var(--danger-light)' : (backtrackDetail.primary_attribution === 'DISTRICT_CONCENTRATION' ? '#fffbeb' : '#f8fafc'),
+                  borderLeft: `4px solid ${
+                    backtrackDetail.primary_attribution === 'AGENCY_CONCENTRATION' ? 'var(--danger-color)' : (backtrackDetail.primary_attribution === 'DISTRICT_CONCENTRATION' ? 'var(--warning-color)' : '#64748b')
+                  }`,
+                  borderRadius: '4px',
+                  marginBottom: '20px'
+                }}>
+                  <div style={{ fontWeight: '700', fontSize: '12px', color: backtrackDetail.primary_attribution === 'AGENCY_CONCENTRATION' ? 'var(--danger-color)' : (backtrackDetail.primary_attribution === 'DISTRICT_CONCENTRATION' ? '#b45309' : '#334155'), textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>
+                    {backtrackDetail.primary_attribution === 'AGENCY_CONCENTRATION' ? 'Agency Concentration Anomaly' : (backtrackDetail.primary_attribution === 'DISTRICT_CONCENTRATION' ? 'District Concentration Anomaly' : 'Isolated Project Anomaly')}
+                  </div>
+                  <div style={{ fontSize: '12.5px', fontWeight: '500', lineHeight: '1.4' }}>{backtrackDetail.summary}</div>
+                </div>
+
+                {/* Itemized Purchased Goods & Vendor Bill Audit Card */}
+                {backtrackDetail.itemized_purchase_audit && (
+                  <div className="card" style={{ marginBottom: '16px', border: '1px solid #cbd5e1', boxShadow: '0 2px 4px rgba(0,0,0,0.04)', backgroundColor: '#ffffff' }}>
+                    <div className="card-header" style={{ padding: '10px 14px', fontSize: '13px', fontWeight: 'bold', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f1f5f9' }}>
+                      <span style={{ color: '#0f172a' }}><FileText size={14} style={{ verticalAlign: 'middle', marginRight: '4px' }} /> Purchased Goods & Itemized Bill Audit</span>
+                      <a
+                        href={`http://localhost:8000/api/documents/${backtrackDetail.itemized_purchase_audit.document_id}/file`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-primary"
+                        style={{ fontSize: '11px', padding: '4px 10px', display: 'flex', alignItems: 'center', gap: '4px', textDecoration: 'none' }}
+                      >
+                        <FileText size={12} /> View Purchase Bill PDF
+                      </a>
+                    </div>
+                    <div className="card-body" style={{ padding: '14px' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
+                        <div><strong>Contractor / Vendor:</strong> {backtrackDetail.itemized_purchase_audit.vendor_name || 'TechLine IT & Lab Equipment Solutions'}</div>
+                        <div><strong>Total Purchase Value:</strong> <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>₹{backtrackDetail.itemized_purchase_audit.total_sanctioned_amount?.toLocaleString()}</span></div>
+                      </div>
+
+                      <table style={{ width: '100%', fontSize: '11px', borderCollapse: 'collapse', marginTop: '6px' }}>
+                        <thead>
+                          <tr style={{ backgroundColor: '#f8fafc', borderBottom: '1px solid #cbd5e1', textAlign: 'left' }}>
+                            <th style={{ padding: '6px' }}>Purchased Item & Model Specifications</th>
+                            <th style={{ padding: '6px' }}>Quantity</th>
+                            <th style={{ padding: '6px' }}>Unit Cost</th>
+                            <th style={{ padding: '6px', textAlign: 'right' }}>Total Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {backtrackDetail.itemized_purchase_audit.items?.map((itm: any, i: number) => (
+                            <tr key={i} style={{ borderBottom: '1px solid #f1f5f9' }}>
+                              <td style={{ padding: '6px', fontWeight: '500' }}>{itm.name}</td>
+                              <td style={{ padding: '6px', color: 'var(--text-secondary)' }}>{itm.qty}</td>
+                              <td style={{ padding: '6px', color: 'var(--text-secondary)' }}>{itm.unit_cost}</td>
+                              <td style={{ padding: '6px', textAlign: 'right', fontWeight: 'bold' }}>{itm.total_cost}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+
+                {/* Multi-Signal Composite Risk Summary (#6) */}
+                {backtrackDetail.multi_signal_summary && (
+                  <div className="card" style={{ marginBottom: '16px', border: '1px solid var(--primary-light)', background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)', boxShadow: 'none' }}>
+                    <div className="card-header" style={{ padding: '10px 14px', fontSize: '12px', fontWeight: 'bold', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#e2e8f0' }}>
+                      <span><ShieldAlert size={14} style={{ verticalAlign: 'middle', marginRight: '4px' }} /> Multi-Signal Risk Agreement</span>
+                      <span className={`badge ${
+                        backtrackDetail.multi_signal_summary.composite_confidence === 'HIGH_CONFIDENCE_FLAG' ? 'red' :
+                        backtrackDetail.multi_signal_summary.composite_confidence === 'MODERATE_CONFIDENCE_FLAG' ? 'orange' :
+                        backtrackDetail.multi_signal_summary.composite_confidence === 'ELEVATED_SINGLE_SIGNAL' ? 'blue' : 'green'
+                      }`} style={{ fontSize: '10px', fontWeight: 'bold' }}>
+                        {backtrackDetail.multi_signal_summary.confidence_label}
+                      </span>
+                    </div>
+                    <div className="card-body" style={{ padding: '12px', fontSize: '11px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                        <div style={{ padding: '6px 8px', borderRadius: '4px', background: backtrackDetail.multi_signal_summary.signals.agency_peer_comparison.status === 'HIGH' ? '#fee2e2' : '#ffffff', border: '1px solid var(--border-color)' }}>
+                          <strong>Agency vs Peer:</strong> {backtrackDetail.multi_signal_summary.signals.agency_peer_comparison.multiplier}x ({backtrackDetail.multi_signal_summary.signals.agency_peer_comparison.status})
+                        </div>
+                        <div style={{ padding: '6px 8px', borderRadius: '4px', background: backtrackDetail.multi_signal_summary.signals.district_peer_comparison.status === 'HIGH' ? '#fef3c7' : '#ffffff', border: '1px solid var(--border-color)' }}>
+                          <strong>District vs State:</strong> {backtrackDetail.multi_signal_summary.signals.district_peer_comparison.multiplier}x ({backtrackDetail.multi_signal_summary.signals.district_peer_comparison.status})
+                        </div>
+                        <div style={{ padding: '6px 8px', borderRadius: '4px', background: backtrackDetail.multi_signal_summary.signals.national_external_baseline.status === 'FLAGGED' ? '#fee2e2' : '#ffffff', border: '1px solid var(--border-color)' }}>
+                          <strong>National Baseline:</strong> {backtrackDetail.multi_signal_summary.signals.national_external_baseline.multiplier}x ({backtrackDetail.multi_signal_summary.signals.national_external_baseline.status})
+                        </div>
+                        <div style={{ padding: '6px 8px', borderRadius: '4px', background: backtrackDetail.multi_signal_summary.signals.temporal_self_drift.status === 'FLAGGED' ? '#fef3c7' : '#ffffff', border: '1px solid var(--border-color)' }}>
+                          <strong>Self-Trend Shift:</strong> +{backtrackDetail.multi_signal_summary.signals.temporal_self_drift.shift_pct}% ({backtrackDetail.multi_signal_summary.signals.temporal_self_drift.status})
+                        </div>
+                      </div>
+                      <div style={{ padding: '6px 8px', borderRadius: '4px', background: backtrackDetail.multi_signal_summary.signals.vendor_network_concentration.status === 'FLAGGED' ? '#fee2e2' : '#ffffff', border: '1px solid var(--border-color)' }}>
+                        <strong>Vendor Network:</strong> {backtrackDetail.multi_signal_summary.signals.vendor_network_concentration.vendor_name} across {backtrackDetail.multi_signal_summary.signals.vendor_network_concentration.agencies_spanned} agencies ({backtrackDetail.multi_signal_summary.signals.vendor_network_concentration.status})
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Agency analysis details */}
+                {backtrackDetail.agency_controlled_analysis && (
+                  <div className="card" style={{ marginBottom: '16px', border: '1px solid var(--border-color)', boxShadow: 'none' }}>
+                    <div className="card-header" style={{ padding: '10px 14px', fontSize: '12.5px', fontWeight: 'bold', backgroundColor: '#f8fafc' }}>
+                      Agency Performance Context (Median & IQR Peer Engine)
+                    </div>
+                    <div className="card-body" style={{ padding: '14px' }}>
+                      <div style={{ fontSize: '12px', fontWeight: '600', marginBottom: '10px' }}>
+                        Agency: <span style={{ color: 'var(--primary-color)' }}>{backtrackDetail.agency_controlled_analysis.agency_name}</span>
+                      </div>
+                      
+                      {backtrackDetail.agency_controlled_analysis.controlled_comparison && (
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', textAlign: 'center', marginBottom: '12px' }}>
+                          <div style={{ padding: '8px', backgroundColor: '#f8fafc', borderRadius: '4px' }}>
+                            <div style={{ fontSize: '16px', fontWeight: '800', color: 'var(--danger-color)' }}>
+                              {backtrackDetail.agency_controlled_analysis.controlled_comparison.agency_anomaly_rate}%
+                            </div>
+                            <div style={{ fontSize: '9px', color: 'var(--text-secondary)' }}>Agency Rate</div>
+                          </div>
+                          <div style={{ padding: '8px', backgroundColor: '#f8fafc', borderRadius: '4px' }}>
+                            <div style={{ fontSize: '16px', fontWeight: '800', color: 'var(--primary-color)' }}>
+                              {backtrackDetail.agency_controlled_analysis.controlled_comparison.peer_baseline_rate}%
+                            </div>
+                            <div style={{ fontSize: '9px', color: 'var(--text-secondary)' }}>Peer Baseline (Median: {backtrackDetail.agency_controlled_analysis.controlled_comparison.peer_median_score || 0})</div>
+                          </div>
+                          <div style={{ padding: '8px', backgroundColor: '#f8fafc', borderRadius: '4px' }}>
+                            <div style={{ fontSize: '16px', fontWeight: '800', color: 'var(--danger-color)' }}>
+                              {backtrackDetail.agency_controlled_analysis.controlled_comparison.multiplier_ratio}x
+                            </div>
+                            <div style={{ fontSize: '9px', color: 'var(--text-secondary)' }}>Multiplier</div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      <div style={{ fontSize: '11.5px', marginBottom: '8px', lineHeight: '1.4' }}>
+                        <strong>Attribution:</strong> {backtrackDetail.agency_controlled_analysis.attribution_summary}
+                      </div>
+                      <div style={{ fontSize: '11.5px', color: 'var(--primary-color)', lineHeight: '1.4' }}>
+                        <strong>Audit Rec:</strong> {backtrackDetail.agency_controlled_analysis.recommendation}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* District analysis details */}
+                {backtrackDetail.district_controlled_analysis && (
+                  <div className="card" style={{ marginBottom: '16px', border: '1px solid var(--border-color)', boxShadow: 'none' }}>
+                    <div className="card-header" style={{ padding: '10px 14px', fontSize: '12.5px', fontWeight: 'bold', backgroundColor: '#f8fafc' }}>
+                      District Performance Context
+                    </div>
+                    <div className="card-body" style={{ padding: '14px' }}>
+                      <div style={{ fontSize: '12px', fontWeight: '600', marginBottom: '10px' }}>
+                        District: <span style={{ color: 'var(--primary-color)' }}>{backtrackDetail.district_controlled_analysis.district_name}</span>
+                      </div>
+                      
+                      {backtrackDetail.district_controlled_analysis.controlled_comparison && (
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', textAlign: 'center', marginBottom: '12px' }}>
+                          <div style={{ padding: '8px', backgroundColor: '#f8fafc', borderRadius: '4px' }}>
+                            <div style={{ fontSize: '16px', fontWeight: '800', color: 'var(--warning-color)' }}>
+                              {backtrackDetail.district_controlled_analysis.controlled_comparison.district_anomaly_rate}%
+                            </div>
+                            <div style={{ fontSize: '9px', color: 'var(--text-secondary)' }}>District Rate</div>
+                          </div>
+                          <div style={{ padding: '8px', backgroundColor: '#f8fafc', borderRadius: '4px' }}>
+                            <div style={{ fontSize: '16px', fontWeight: '800', color: 'var(--primary-color)' }}>
+                              {backtrackDetail.district_controlled_analysis.controlled_comparison.state_peer_rate}%
+                            </div>
+                            <div style={{ fontSize: '9px', color: 'var(--text-secondary)' }}>State Baseline</div>
+                          </div>
+                          <div style={{ padding: '8px', backgroundColor: '#f8fafc', borderRadius: '4px' }}>
+                            <div style={{ fontSize: '16px', fontWeight: '800', color: 'var(--warning-color)' }}>
+                              {backtrackDetail.district_controlled_analysis.controlled_comparison.multiplier_ratio}x
+                            </div>
+                            <div style={{ fontSize: '9px', color: 'var(--text-secondary)' }}>Multiplier</div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      <div style={{ fontSize: '11.5px', marginBottom: '8px', lineHeight: '1.4' }}>
+                        <strong>Attribution:</strong> {backtrackDetail.district_controlled_analysis.attribution_summary}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Residual Limitation Notice Footer Banner (#7) */}
+                <div style={{ padding: '12px', backgroundColor: '#fffbe6', border: '1px solid #ffe58f', borderRadius: '6px', fontSize: '10.5px', color: '#8c6b00', marginTop: '16px', lineHeight: '1.4' }}>
+                  <strong>ℹ️ Platform Residual Limitation Notice:</strong> Statistical anomaly detection compares variance across peer groups, national baselines, and temporal trends. Uniform, system-wide collusion that is constant across all agencies, districts, and time periods cannot be identified purely via statistical algorithms.
+                </div>
+                
+                {/* Actions */}
+                <div style={{ marginTop: '24px', display: 'flex', gap: '10px' }}>
+                  <button 
+                    className="btn btn-primary" 
+                    style={{ flex: 1, padding: '10px' }}
+                    onClick={() => {
+                      onSelectProject(backtrackDetail.work_id);
+                      setSelectedBacktrackWorkId(null);
+                      setBacktrackDetail(null);
+                    }}
+                  >
+                    Open Project 360
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '40px 0' }}>Failed to retrieve backtracking details.</div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -1206,25 +1865,97 @@ function Project360Page({ workId, onClose, onNavigateProject }: { workId: string
                   )}
 
                   <h3 style={{ fontSize: '14px', fontWeight: 'bold', marginBottom: '12px', color: 'var(--primary-color)' }}>COMPONENT RISK PROFILE INDEX</h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    {[
-                      { name: 'Financial Progress Mismatch', val: work.risk_scores?.financial_risk || 0 },
-                      { name: 'Overdue Delay Indicator', val: work.risk_scores?.delay_risk || 0 },
-                      { name: 'Comparative Cost Risk', val: work.risk_scores?.cost_risk || 0 },
-                      { name: 'Duplicate Similarity Rating', val: work.risk_scores?.duplicate_risk || 0 },
-                      { name: 'Payment Speed & Concentation', val: work.risk_scores?.payment_risk || 0 },
-                      { name: 'Document Audit Score', val: work.risk_scores?.document_risk || 0 },
-                      { name: 'Geospatial Density Check', val: work.risk_scores?.geographic_risk || 0 }
-                    ].map((idx, i) => (
-                      <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
-                        <span style={{ fontSize: '12px', flex: '1' }}>{idx.name}</span>
-                        <div style={{ width: '120px' }} className="progress-bar-container">
-                          <div className={`progress-bar-fill ${idx.val >= 70 ? 'red' : (idx.val >= 40 ? 'orange' : 'green')}`} style={{ width: `${idx.val}%` }}></div>
-                        </div>
-                        <span style={{ width: '45px', textAlign: 'right', fontWeight: 'bold', fontSize: '12px' }}>{idx.val.toFixed(0)}</span>
-                      </div>
-                    ))}
+                  
+                  {/* BarChart visualization of 8 sub-scores */}
+                  <div style={{ marginBottom: '20px' }}>
+                    <ResponsiveContainer width="100%" height={220}>
+                      <BarChart
+                        data={[
+                          { name: 'Financial', value: work.risk_scores?.financial_risk || 0 },
+                          { name: 'Delay', value: work.risk_scores?.delay_risk || 0 },
+                          { name: 'Cost', value: work.risk_scores?.cost_risk || 0 },
+                          { name: 'Duplicate', value: work.risk_scores?.duplicate_risk || 0 },
+                          { name: 'Payment', value: work.risk_scores?.payment_risk || 0 },
+                          { name: 'Compliance', value: work.risk_scores?.compliance_risk || 0 },
+                          { name: 'Document', value: work.risk_scores?.document_risk || 0 },
+                          { name: 'Geographic', value: work.risk_scores?.geographic_risk || 0 },
+                        ]}
+                        margin={{ top: 5, right: 10, left: -10, bottom: 5 }}
+                        layout="vertical"
+                      >
+                        <CartesianGrid strokeDasharray="3 3" horizontal={false} />
+                        <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 10 }} />
+                        <YAxis type="category" dataKey="name" tick={{ fontSize: 11 }} width={70} />
+                        <Tooltip formatter={(val: any) => [`${Number(val).toFixed(1)}/100`, 'Score']} />
+                        <Bar dataKey="value" radius={[0, 4, 4, 0]}>
+                          {[
+                            work.risk_scores?.financial_risk || 0,
+                            work.risk_scores?.delay_risk || 0,
+                            work.risk_scores?.cost_risk || 0,
+                            work.risk_scores?.duplicate_risk || 0,
+                            work.risk_scores?.payment_risk || 0,
+                            work.risk_scores?.compliance_risk || 0,
+                            work.risk_scores?.document_risk || 0,
+                            work.risk_scores?.geographic_risk || 0,
+                          ].map((val, i) => (
+                            <Cell key={i} fill={val === 0 ? 'transparent' : val >= 70 ? '#ef4444' : val >= 40 ? '#f59e0b' : '#10b981'} />
+                          ))}
+                        </Bar>
+                      </BarChart>
+                    </ResponsiveContainer>
                   </div>
+
+                  {/* Download Risk Report button */}
+                  <button
+                    className="btn btn-secondary"
+                    style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', marginTop: '8px' }}
+                    onClick={() => {
+                      const rs = work.risk_scores;
+                      const lines = [
+                        `MPLADS SENTINEL AI — RISK REPORT`,
+                        `Generated: ${new Date().toLocaleString()}`,
+                        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
+                        `Project ID     : ${work.id}`,
+                        `Description    : ${work.description}`,
+                        `Status         : ${work.status}`,
+                        `MP             : ${work.mp_name} (${work.constituency})`,
+                        `District       : ${work.district_code}`,
+                        `Agency         : ${work.implementing_agency_name || 'N/A'}`,
+                        ``,
+                        `FINANCIAL SUMMARY`,
+                        `Sanctioned     : ₹${(work.sanctioned_amount / 100000).toFixed(2)} Lakh`,
+                        `Expenditure    : ₹${(work.expenditure / 100000).toFixed(2)} Lakh`,
+                        `Fin. Progress  : ${work.financial_progress.toFixed(0)}%`,
+                        `Phy. Progress  : ${work.physical_progress.toFixed(0)}%`,
+                        ``,
+                        `RISK SCORES`,
+                        `Overall Risk   : ${rs?.overall_score?.toFixed(1) || 'N/A'} / 100`,
+                        `Financial Risk : ${rs?.financial_risk?.toFixed(1) || 'N/A'}`,
+                        `Delay Risk     : ${rs?.delay_risk?.toFixed(1) || 'N/A'}`,
+                        `Cost Risk      : ${rs?.cost_risk?.toFixed(1) || 'N/A'}`,
+                        `Duplicate Risk : ${rs?.duplicate_risk?.toFixed(1) || 'N/A'}`,
+                        `Payment Risk   : ${rs?.payment_risk?.toFixed(1) || 'N/A'}`,
+                        `Compliance Risk: ${rs?.compliance_risk?.toFixed(1) || 'N/A'}`,
+                        `Document Risk  : ${rs?.document_risk?.toFixed(1) || 'N/A'}`,
+                        `Geographic Risk: ${rs?.geographic_risk?.toFixed(1) || 'N/A'}`,
+                        ``,
+                        `AI RISK FACTORS`,
+                        ...(rs?.factors || ['No risk factors detected']),
+                        ``,
+                        `Root-Cause Attribution: ${work.primary_attribution || 'N/A'}`,
+                        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
+                        `MPLADS Sentinel AI | SIH PS 26102 | MoSPI DIID`,
+                      ];
+                      const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+                      const url = URL.createObjectURL(blob);
+                      const a = document.createElement('a');
+                      a.href = url; a.download = `risk_report_${work.id}.txt`;
+                      document.body.appendChild(a); a.click(); a.remove();
+                      URL.revokeObjectURL(url);
+                    }}
+                  >
+                    <Download size={14} /> Download Risk Report
+                  </button>
                 </div>
               )}
 
@@ -1483,34 +2214,51 @@ function Project360Page({ workId, onClose, onNavigateProject }: { workId: string
 
 // --- DOCUMENTS & OCR UPLOAD TAB ---
 function DocumentsTab({ onSelectProject }: any) {
+  const [documents, setDocuments] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState('');
+  const [typeFilter, setTypeFilter] = useState('');
+  const [statusFilter, setStatusFilter] = useState('');
+  
+  // Upload modal state
+  const [showUploadModal, setShowUploadModal] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [docType, setDocType] = useState('Sanction Order');
   const [workIdInput, setWorkIdInput] = useState('');
   const [uploading, setUploading] = useState(false);
-  const [recentDocs, setRecentDocs] = useState<any[]>([]);
-  const [extractedData, setExtractedData] = useState<any | null>(null);
+
+  // Inspection Drawer state
+  const [selectedDocId, setSelectedDocId] = useState<number | null>(null);
+  const [docExtractions, setDocExtractions] = useState<any | null>(null);
+  const [loadingExtractions, setLoadingExtractions] = useState(false);
 
   useEffect(() => {
-    fetchRecentDocs();
-  }, []);
+    fetchDocuments();
+  }, [typeFilter]);
 
-  const fetchRecentDocs = async () => {
+  const fetchDocuments = async () => {
+    setLoading(true);
     try {
-      const cases = await api.getOverview(); // quick list fallback
-      // Since backend doesn't have a direct documents query endpoint without work IDs,
-      // we can fetch works that have documents or handle it.
-      // For demo purposes, we will query a few works' documents or list them if we store globally.
-      // Let's call works API and get their documents.
-      const res = await api.getWorks({ limit: 10 });
-      const docs: any[] = [];
-      for (const w of res.works) {
-        const wDocs = await api.getWorkDocuments(w.id);
-        wDocs.forEach((d: any) => docs.push({ ...d, work_desc: w.description }));
-      }
-      docs.sort((a, b) => new Date(b.upload_date).getTime() - new Date(a.upload_date).getTime());
-      setRecentDocs(docs);
+      const data = await api.getAllDocuments({ document_type: typeFilter || undefined });
+      setDocuments(data);
     } catch (e) {
       console.error(e);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleInspectDoc = async (id: number) => {
+    setSelectedDocId(id);
+    setLoadingExtractions(true);
+    setDocExtractions(null);
+    try {
+      const res = await api.getDocumentExtractions(id);
+      setDocExtractions(res);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setLoadingExtractions(false);
     }
   };
 
@@ -1520,19 +2268,21 @@ function DocumentsTab({ onSelectProject }: any) {
     }
   };
 
-  const handleUpload = async (e: React.FormEvent) => {
+  const handleUploadSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!file) {
       alert("Please select a PDF document first.");
       return;
     }
     setUploading(true);
-    setExtractedData(null);
     try {
       const res = await api.uploadDocument(file, docType, workIdInput || undefined);
-      setExtractedData(res);
-      alert("Document uploaded and processed successfully.");
-      fetchRecentDocs();
+      alert(`Document '${res.file_name}' uploaded successfully! AI Consistency Score: ${res.consistency_score}%`);
+      setShowUploadModal(false);
+      setFile(null);
+      setWorkIdInput('');
+      fetchDocuments();
+      if (res.id) handleInspectDoc(res.id);
     } catch (err: any) {
       alert(err.message || "Failed to upload document");
     } finally {
@@ -1540,106 +2290,322 @@ function DocumentsTab({ onSelectProject }: any) {
     }
   };
 
+  // Filter calculations
+  const filteredDocs = documents.filter(d => {
+    const matchesSearch = !search || 
+      (d.file_name && d.file_name.toLowerCase().includes(search.toLowerCase())) ||
+      (d.work_id && d.work_id.toLowerCase().includes(search.toLowerCase()));
+    
+    const matchesStatus = !statusFilter || 
+      (statusFilter === 'VERIFIED' && d.consistency_score >= 90) ||
+      (statusFilter === 'MISMATCH' && d.consistency_score < 90);
+
+    return matchesSearch && matchesStatus;
+  });
+
+  const totalDocs = documents.length;
+  const verifiedDocs = documents.filter(d => d.consistency_score >= 90).length;
+  const mismatchDocs = documents.filter(d => d.consistency_score < 90).length;
+
   return (
-    <div className="grid-2-1">
-      <div>
-        <form className="card" onSubmit={handleUpload}>
-          <div className="card-header">
-            <span className="card-title"><PlusCircle size={16} /> Upload Project Sanction Orders & Estimates</span>
-          </div>
-          <div className="card-body">
-            <div className="form-group">
-              <label className="form-label">Document Category</label>
-              <select className="form-control" value={docType} onChange={e => setDocType(e.target.value)}>
-                <option value="Sanction Order">Sanction Order</option>
-                <option value="Administrative Approval">Administrative Approval</option>
-                <option value="Technical Estimate">Technical Estimate</option>
-                <option value="Completion Certificate">Completion Certificate</option>
-              </select>
-            </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      {/* Top Header Metrics Cards */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1.2fr', gap: '16px' }}>
+        <div className="card" style={{ padding: '16px', background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)' }}>
+          <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-secondary)', textTransform: 'uppercase', marginBottom: '4px' }}>Total Agency Uploads</div>
+          <div style={{ fontSize: '24px', fontWeight: '800', color: 'var(--primary-color)' }}>{totalDocs}</div>
+          <div style={{ fontSize: '10.5px', color: 'var(--text-secondary)', marginTop: '4px' }}>Repository PDF documents</div>
+        </div>
 
-            <div className="form-group">
-              <label className="form-label">Link Project ID (Optional - Auto extracted if empty)</label>
-              <input type="text" className="form-control" placeholder="e.g. MPLADS-2026-0005" value={workIdInput} onChange={e => setWorkIdInput(e.target.value)} />
-            </div>
+        <div className="card" style={{ padding: '16px', background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)', border: '1px solid #bbf7d0' }}>
+          <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#15803d', textTransform: 'uppercase', marginBottom: '4px' }}>100% Verified Orders</div>
+          <div style={{ fontSize: '24px', fontWeight: '800', color: '#16a34a' }}>{verifiedDocs}</div>
+          <div style={{ fontSize: '10.5px', color: '#166534', marginTop: '4px' }}>Passed DB cross-validation</div>
+        </div>
 
-            <div className="form-group">
-              <label className="form-label">Select Sanction PDF</label>
-              <input type="file" className="form-control" accept=".pdf" onChange={handleFileChange} required />
-            </div>
+        <div className="card" style={{ padding: '16px', background: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)', border: '1px solid #fecaca' }}>
+          <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#b91c1c', textTransform: 'uppercase', marginBottom: '4px' }}>Discrepancy Mismatches</div>
+          <div style={{ fontSize: '24px', fontWeight: '800', color: 'var(--danger-color)' }}>{mismatchDocs}</div>
+          <div style={{ fontSize: '10.5px', color: '#7f1d1d', marginTop: '4px' }}>Score &lt;90% (OCR Alert)</div>
+        </div>
 
-            <button type="submit" className="btn btn-primary" disabled={uploading}>
-              {uploading ? 'Processing OCR & AI Extraction...' : 'Upload & Run Audit'}
-            </button>
-          </div>
-        </form>
-
-        {extractedData && (
-          <div className="card">
-            <div className="card-header">
-              <span className="card-title"><FileSearch size={16} /> Extracted Metadata & Consistency Checks</span>
-              <span className={`badge ${extractedData.consistency_score >= 90 ? 'green' : 'orange'}`}>Consistency Score: {extractedData.consistency_score}%</span>
-            </div>
-            <div className="card-body">
-              <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '12px' }}>
-                Values extracted from PDF Order compared directly with the system database.
-              </p>
-              
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
-                <div style={{ padding: '10px', backgroundColor: 'var(--bg-color)', borderRadius: '4px' }}>
-                  <strong>Extracted Work ID:</strong>
-                  <div style={{ fontSize: '16px', fontWeight: 'bold', color: 'var(--primary-color)' }}>{extractedData.extracted_data?.work_id || 'Not Found'}</div>
-                </div>
-                <div style={{ padding: '10px', backgroundColor: 'var(--bg-color)', borderRadius: '4px' }}>
-                  <strong>Extracted Amount:</strong>
-                  <div style={{ fontSize: '16px', fontWeight: 'bold', color: 'var(--primary-color)' }}>₹{extractedData.extracted_data?.sanctioned_amount?.toLocaleString() || 'N/A'}</div>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Raw Document Content (OCR)</label>
-                <div style={{ padding: '12px', border: '1px solid var(--border-color)', backgroundColor: 'var(--bg-color)', borderRadius: 'var(--border-radius-md)', maxHeight: '150px', overflowY: 'auto', fontSize: '11px', fontFamily: 'monospace' }}>
-                  {extractedData.ocr_text}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      <div>
-        <div className="card">
-          <div className="card-header">
-            <span className="card-title"><FileText size={16} /> Recent Upload Logs</span>
-          </div>
-          <div className="card-body" style={{ padding: 0 }}>
-            {recentDocs.length === 0 ? (
-              <div style={{ color: 'var(--text-secondary)', padding: '20px', textAlign: 'center' }}>No recent document logs found.</div>
-            ) : (
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                {recentDocs.slice(0, 8).map(d => (
-                  <div key={d.id} style={{ padding: '12px', borderBottom: '1px solid var(--border-color)', fontSize: '12.5px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', marginBottom: '4px' }}>
-                      <span style={{ color: 'var(--secondary-color)', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => onSelectProject(d.work_id)}>
-                        {d.work_id}
-                      </span>
-                      <span className={`badge ${d.consistency_score >= 90 ? 'green' : 'orange'}`} style={{ fontSize: '10px' }}>
-                        {d.consistency_score?.toFixed(0)}%
-                      </span>
-                    </div>
-                    <div style={{ fontSize: '11px', color: 'var(--text-secondary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      {d.file_name}
-                    </div>
-                    <div style={{ fontSize: '10px', color: 'var(--text-secondary)', marginTop: '2px' }}>
-                      Uploaded: {new Date(d.upload_date).toLocaleDateString()}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+        <div className="card" style={{ padding: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
+          <button 
+            className="btn btn-primary" 
+            style={{ width: '100%', padding: '12px', fontSize: '13px', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+            onClick={() => setShowUploadModal(true)}
+          >
+            <PlusCircle size={18} /> Upload Agency PDF Document
+          </button>
         </div>
       </div>
+
+      {/* Main Repository Table Card */}
+      <div className="card">
+        <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <FileText size={18} style={{ color: 'var(--primary-color)' }} />
+            <span className="card-title" style={{ fontSize: '15px' }}>Agency Uploaded File Repository & OCR Audits</span>
+          </div>
+
+          {/* Filter controls */}
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+            <div style={{ position: 'relative' }}>
+              <Search size={14} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-secondary)' }} />
+              <input 
+                type="text" 
+                className="form-control" 
+                placeholder="Search file or Work ID..." 
+                value={search} 
+                onChange={e => setSearch(e.target.value)} 
+                style={{ paddingLeft: '30px', fontSize: '12px', width: '200px' }}
+              />
+            </div>
+
+            <select className="filter-select" value={typeFilter} onChange={e => setTypeFilter(e.target.value)} style={{ fontSize: '12px' }}>
+              <option value="">All Document Categories</option>
+              <option value="Sanction Order">Sanction Order</option>
+              <option value="Utilization Certificate">Utilization Certificate (UC)</option>
+              <option value="Work Order">Work Order</option>
+              <option value="Invoice">Invoice</option>
+              <option value="Inspection Report">Inspection Report</option>
+            </select>
+
+            <select className="filter-select" value={statusFilter} onChange={e => setStatusFilter(e.target.value)} style={{ fontSize: '12px' }}>
+              <option value="">All Verification Statuses</option>
+              <option value="VERIFIED">100% Verified Only</option>
+              <option value="MISMATCH">Discrepancy Alerts (&lt;90%)</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="card-body" style={{ padding: 0 }}>
+          {loading ? (
+            <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-secondary)' }}>
+              <RefreshCw className="animate-spin" style={{ marginBottom: '8px' }} />
+              <div>Loading agency document repository...</div>
+            </div>
+          ) : filteredDocs.length === 0 ? (
+            <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-secondary)' }}>
+              No uploaded files found matching the selected filter criteria.
+            </div>
+          ) : (
+            <div style={{ overflowX: 'auto' }}>
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>Doc ID</th>
+                    <th>Document File Name</th>
+                    <th>Document Category</th>
+                    <th>Associated Work ID</th>
+                    <th>Upload Timestamp</th>
+                    <th>AI Consistency Score</th>
+                    <th style={{ textAlign: 'center' }}>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredDocs.slice(0, 50).map(d => (
+                    <tr key={d.id}>
+                      <td style={{ fontWeight: 'bold', fontSize: '12px' }}>#{d.id}</td>
+                      <td>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <FileText size={16} style={{ color: 'var(--primary-color)', flexShrink: 0 }} />
+                          <span style={{ fontWeight: '600', fontSize: '12.5px' }}>{d.file_name}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span className="badge blue" style={{ fontSize: '10.5px' }}>
+                          {d.document_type}
+                        </span>
+                      </td>
+                      <td>
+                        {d.work_id ? (
+                          <span 
+                            style={{ color: 'var(--primary-color)', fontWeight: 'bold', cursor: 'pointer', textDecoration: 'underline', fontSize: '12px' }}
+                            onClick={() => onSelectProject(d.work_id)}
+                          >
+                            {d.work_id}
+                          </span>
+                        ) : (
+                          <span style={{ color: 'var(--text-secondary)', fontSize: '11px' }}>Unlinked</span>
+                        )}
+                      </td>
+                      <td style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                        {new Date(d.upload_date).toLocaleDateString()} {new Date(d.upload_date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                      </td>
+                      <td>
+                        <span className={`badge ${d.consistency_score >= 90 ? 'green' : 'red'}`} style={{ fontWeight: 'bold', fontSize: '11px' }}>
+                          {d.consistency_score >= 90 ? `✅ Verified (${d.consistency_score.toFixed(0)}%)` : `⚠️ Mismatch (${d.consistency_score.toFixed(0)}%)`}
+                        </span>
+                      </td>
+                      <td style={{ textAlign: 'center' }}>
+                        <div style={{ display: 'flex', gap: '6px', justifyContent: 'center' }}>
+                          <button 
+                            className="btn btn-secondary" 
+                            style={{ padding: '4px 8px', fontSize: '11px', display: 'flex', alignItems: 'center', gap: '4px' }}
+                            onClick={() => handleInspectDoc(d.id)}
+                          >
+                            <FileSearch size={13} /> OCR Inspection
+                          </button>
+                          <a 
+                            href={`http://localhost:8000/api/documents/${d.id}/file`} 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="btn btn-secondary" 
+                            style={{ padding: '4px 8px', fontSize: '11px', display: 'flex', alignItems: 'center', gap: '4px', textDecoration: 'none' }}
+                          >
+                            <Download size={13} /> View PDF
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* OCR & Cross-Validation Inspection Drawer */}
+      {selectedDocId && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          right: 0,
+          width: '520px',
+          height: '100vh',
+          backgroundColor: '#ffffff',
+          boxShadow: '-4px 0 20px rgba(0,0,0,0.2)',
+          zIndex: 1000,
+          display: 'flex',
+          flexDirection: 'column',
+          fontFamily: 'Inter, sans-serif'
+        }}>
+          <div style={{ padding: '16px 20px', backgroundColor: 'var(--primary-color)', color: '#ffffff', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ fontWeight: '700', fontSize: '15px' }}><FileSearch size={18} style={{ verticalAlign: 'middle', marginRight: '6px' }} /> OCR Extractions & Discrepancies</span>
+            <button onClick={() => setSelectedDocId(null)} style={{ background: 'none', border: 'none', color: '#ffffff', cursor: 'pointer', fontSize: '18px', fontWeight: 'bold' }}>✕</button>
+          </div>
+
+          <div style={{ padding: '20px', overflowY: 'auto', flex: 1 }}>
+            {loadingExtractions ? (
+              <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                <RefreshCw className="animate-spin" /> Processing document OCR analysis...
+              </div>
+            ) : docExtractions ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div style={{ padding: '12px', backgroundColor: docExtractions.consistency_score >= 90 ? '#f0fdf4' : '#fff5f5', borderLeft: `4px solid ${docExtractions.consistency_score >= 90 ? '#16a34a' : 'var(--danger-color)'}`, borderRadius: '4px' }}>
+                  <div style={{ fontWeight: '700', fontSize: '13px', color: docExtractions.consistency_score >= 90 ? '#166534' : 'var(--danger-color)' }}>
+                    AI Cross-Validation Score: {docExtractions.consistency_score.toFixed(1)}%
+                  </div>
+                  <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '4px' }}>
+                    {docExtractions.consistency_score >= 90 ? 'All extracted fields strictly match system database records.' : 'Discrepancies detected between document OCR extractions and database records.'}
+                  </div>
+                </div>
+
+                {/* Structured Extractions Table */}
+                <div className="card" style={{ border: '1px solid var(--border-color)', boxShadow: 'none' }}>
+                  <div className="card-header" style={{ padding: '10px 14px', fontSize: '12.5px', fontWeight: 'bold', backgroundColor: '#f8fafc' }}>
+                    Cross-Validation Comparison Audit
+                  </div>
+                  <div className="card-body" style={{ padding: 0 }}>
+                    {docExtractions.validations && docExtractions.validations.length > 0 ? (
+                      <table className="data-table" style={{ fontSize: '11.5px' }}>
+                        <thead>
+                          <tr>
+                            <th>Field</th>
+                            <th>DB Record</th>
+                            <th>Extracted Value</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {docExtractions.validations.map((v: any, idx: number) => (
+                            <tr key={idx}>
+                              <td style={{ fontWeight: 'bold' }}>{v.field}</td>
+                              <td>{String(v.db_val)}</td>
+                              <td>{String(v.extracted_val)}</td>
+                              <td>
+                                <span className={`badge ${v.status === 'MATCH' ? 'green' : 'red'}`} style={{ fontSize: '10px' }}>
+                                  {v.status === 'MATCH' ? '✅ Match' : '❌ Mismatch'}
+                                </span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    ) : (
+                      <div style={{ padding: '16px', fontSize: '12px', color: 'var(--text-secondary)' }}>No validation mismatches detected.</div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Structured Data JSON */}
+                <div className="card" style={{ border: '1px solid var(--border-color)', boxShadow: 'none' }}>
+                  <div className="card-header" style={{ padding: '10px 14px', fontSize: '12.5px', fontWeight: 'bold', backgroundColor: '#f8fafc' }}>
+                    Extracted Structured Entities
+                  </div>
+                  <div className="card-body" style={{ padding: '12px', backgroundColor: '#1e293b', color: '#f8fafc', borderRadius: '4px', fontFamily: 'monospace', fontSize: '11px', maxHeight: '160px', overflowY: 'auto' }}>
+                    <pre>{JSON.stringify(docExtractions.extracted_data, null, 2)}</pre>
+                  </div>
+                </div>
+
+                {/* Raw OCR Text */}
+                <div className="card" style={{ border: '1px solid var(--border-color)', boxShadow: 'none' }}>
+                  <div className="card-header" style={{ padding: '10px 14px', fontSize: '12.5px', fontWeight: 'bold', backgroundColor: '#f8fafc' }}>
+                    Raw Document Text (PDF OCR)
+                  </div>
+                  <div className="card-body" style={{ padding: '12px', backgroundColor: '#f8fafc', fontFamily: 'monospace', fontSize: '11px', maxHeight: '180px', overflowY: 'auto', whiteSpace: 'pre-wrap', border: '1px solid var(--border-color)', borderRadius: '4px' }}>
+                    {docExtractions.ocr_text || 'No raw text extracted.'}
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </div>
+        </div>
+      )}
+
+      {/* Upload Agency PDF Modal */}
+      {showUploadModal && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div className="card" style={{ width: '480px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+              <span style={{ fontWeight: 'bold', fontSize: '16px', color: 'var(--primary-color)' }}>Upload Agency PDF Document</span>
+              <button onClick={() => setShowUploadModal(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '18px' }}>✕</button>
+            </div>
+            
+            <form onSubmit={handleUploadSubmit}>
+              <div className="form-group" style={{ marginBottom: '14px' }}>
+                <label className="form-label">Document Category</label>
+                <select className="form-control" value={docType} onChange={e => setDocType(e.target.value)} required>
+                  <option value="Sanction Order">Sanction Order</option>
+                  <option value="Utilization Certificate">Utilization Certificate (UC)</option>
+                  <option value="Work Order">Work Order</option>
+                  <option value="Invoice">Invoice</option>
+                  <option value="Inspection Report">Inspection Report</option>
+                </select>
+              </div>
+
+              <div className="form-group" style={{ marginBottom: '14px' }}>
+                <label className="form-label">Associated Work ID (e.g. MPLADS-2026-0005)</label>
+                <input type="text" className="form-control" placeholder="Leave empty for auto-extraction" value={workIdInput} onChange={e => setWorkIdInput(e.target.value)} />
+              </div>
+
+              <div className="form-group" style={{ marginBottom: '20px' }}>
+                <label className="form-label">Select PDF Document File</label>
+                <input type="file" className="form-control" accept=".pdf" onChange={handleFileChange} required />
+              </div>
+
+              <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
+                <button type="button" className="btn btn-secondary" onClick={() => setShowUploadModal(false)}>Cancel</button>
+                <button type="submit" className="btn btn-primary" disabled={uploading}>
+                  {uploading ? 'Processing OCR Extraction...' : 'Upload & Run AI Audit'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -1935,7 +2901,7 @@ function ChatbotWidget({ minimized, setMinimized, input, setInput, messages, set
 
       <form className="chatbot-footer" onSubmit={handleSendMessage}>
         <input 
-          type="text" 
+        type="text" 
           className="chatbot-input" 
           placeholder="Ask about delayed works, high risk..." 
           value={input}
@@ -1946,6 +2912,369 @@ function ChatbotWidget({ minimized, setMinimized, input, setInput, messages, set
           <Send size={12} />
         </button>
       </form>
+    </div>
+  );
+}
+
+// --- SYSTEM STATUS WIDGET (sidebar footer) ---
+function SystemStatusWidget() {
+  const [stats, setStats] = useState<any>(null);
+
+  useEffect(() => {
+    api.getSystemStats().then(setStats).catch(() => {});
+  }, []);
+
+  if (!stats) return null;
+
+  const mlColor = stats.ml_status === 'Operational' ? '#10b981' : (stats.ml_status === 'Partial' ? '#f59e0b' : '#ef4444');
+
+  return (
+    <div className="system-status-widget">
+      <div className="system-status-header">
+        <Server size={12} />
+        <span>System Status</span>
+        <span className="system-status-dot" style={{ backgroundColor: mlColor }}></span>
+      </div>
+      <div className="system-status-rows">
+        <div className="system-status-row">
+          <span>ML Engine</span>
+          <span style={{ color: mlColor, fontWeight: '700' }}>{stats.ml_status}</span>
+        </div>
+        <div className="system-status-row">
+          <span>Coverage</span>
+          <span>{stats.ml_coverage_pct}%</span>
+        </div>
+        <div className="system-status-row">
+          <span>Active Alerts</span>
+          <span style={{ color: stats.critical_alerts > 0 ? '#ef4444' : 'inherit' }}>{stats.active_alerts}</span>
+        </div>
+        <div className="system-status-row">
+          <span>DB</span>
+          <span style={{ color: '#10b981' }}>{stats.db_status}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// --- AGENCY INTELLIGENCE TAB ---
+function AgencyIntelligenceTab({ onSelectProject }: any) {
+  const [agencies, setAgencies] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [sortKey, setSortKey] = useState<string>('risk_score');
+  const [filter, setFilter] = useState('');
+
+  useEffect(() => {
+    api.getAgencyPerformance()
+      .then(data => { setAgencies(data); setLoading(false); })
+      .catch(() => setLoading(false));
+  }, []);
+
+  const COLORS = ['#ef4444', '#f59e0b', '#0284c7', '#10b981', '#6366f1', '#ec4899', '#14b8a6'];
+
+  if (loading) {
+    return <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '300px' }}><RefreshCw className="animate-spin" /> Loading agency data...</div>;
+  }
+
+  const sorted = [...agencies]
+    .filter(a => a.name.toLowerCase().includes(filter.toLowerCase()))
+    .sort((a, b) => b[sortKey] - a[sortKey]);
+
+  const topAgencies = sorted.slice(0, 7);
+
+  const riskBuckets = [
+    { label: 'Critical (≥80)', count: agencies.filter(a => a.risk_score >= 80).length, color: '#ef4444' },
+    { label: 'High (60-80)', count: agencies.filter(a => a.risk_score >= 60 && a.risk_score < 80).length, color: '#f59e0b' },
+    { label: 'Medium (40-60)', count: agencies.filter(a => a.risk_score >= 40 && a.risk_score < 60).length, color: '#0284c7' },
+    { label: 'Low (<40)', count: agencies.filter(a => a.risk_score < 40).length, color: '#10b981' },
+  ];
+
+  return (
+    <div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+        <h2 style={{ fontSize: '16px', fontWeight: '800', color: 'var(--primary-color)' }}>Agency Intelligence Dashboard</h2>
+        <span className="badge blue">{agencies.length} Agencies Tracked</span>
+      </div>
+
+      {/* Summary stat cards */}
+      <div className="stats-grid" style={{ marginBottom: '24px' }}>
+        <div className="stat-card">
+          <span className="stat-card-title">Total Agencies</span>
+          <span className="stat-card-value">{agencies.length}</span>
+          <span className="stat-card-subtitle">Implementing agencies in DB</span>
+          <div className="stat-card-accent-bar blue"></div>
+        </div>
+        <div className="stat-card">
+          <span className="stat-card-title">Critical Risk Agencies</span>
+          <span className="stat-card-value" style={{ color: 'var(--danger-color)' }}>{riskBuckets[0].count}</span>
+          <span className="stat-card-subtitle">Risk score ≥ 80</span>
+          <div className="stat-card-accent-bar red"></div>
+        </div>
+        <div className="stat-card">
+          <span className="stat-card-title">Avg Completion Rate</span>
+          <span className="stat-card-value">{agencies.length > 0 ? (agencies.reduce((s, a) => s + a.completion_rate, 0) / agencies.length).toFixed(1) : 0}%</span>
+          <span className="stat-card-subtitle">Across all agencies</span>
+          <div className="stat-card-accent-bar green"></div>
+        </div>
+        <div className="stat-card">
+          <span className="stat-card-title">Avg Delay (Days)</span>
+          <span className="stat-card-value" style={{ color: 'var(--warning-color)' }}>
+            {agencies.length > 0 ? (agencies.reduce((s, a) => s + a.average_delay_days, 0) / agencies.length).toFixed(0) : 0}
+          </span>
+          <span className="stat-card-subtitle">Average across agencies</span>
+          <div className="stat-card-accent-bar orange"></div>
+        </div>
+      </div>
+
+      <div className="grid-2-1">
+        {/* Chart: Top agencies by risk score */}
+        <div className="card">
+          <div className="card-header">
+            <span className="card-title"><Building2 size={16} /> Top Agencies by Risk Score</span>
+          </div>
+          <div className="card-body">
+            <ResponsiveContainer width="100%" height={280}>
+              <BarChart data={topAgencies} margin={{ top: 5, right: 15, left: -10, bottom: 60 }}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="name" tick={{ fontSize: 9 }} angle={-30} textAnchor="end" />
+                <YAxis tick={{ fontSize: 10 }} domain={[0, 100]} />
+                <Tooltip
+                  formatter={(val: any, name: string) => [Number(val).toFixed(1), name === 'risk_score' ? 'Risk Score' : 'Completion Rate']}
+                />
+                <Legend verticalAlign="top" height={30} />
+                <Bar dataKey="risk_score" name="risk_score" radius={[4,4,0,0]}>
+                  {topAgencies.map((a, i) => (
+                    <Cell key={i} fill={a.risk_score >= 80 ? '#ef4444' : a.risk_score >= 60 ? '#f59e0b' : '#0284c7'} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        {/* Right side: risk bucket pie + list */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div className="card">
+            <div className="card-header">
+              <span className="card-title">Risk Distribution</span>
+            </div>
+            <div className="card-body">
+              <ResponsiveContainer width="100%" height={180}>
+                <PieChart>
+                  <Pie data={riskBuckets} dataKey="count" nameKey="label" cx="50%" cy="50%" innerRadius={45} outerRadius={70} paddingAngle={3}>
+                    {riskBuckets.map((b, i) => <Cell key={i} fill={b.color} />)}
+                  </Pie>
+                  <Tooltip formatter={(val: any, name: string) => [val, name]} />
+                </PieChart>
+              </ResponsiveContainer>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center', fontSize: '11px' }}>
+                {riskBuckets.map((b, i) => (
+                  <span key={i} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: b.color, display: 'inline-block' }}></span>
+                    {b.label}: <strong>{b.count}</strong>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Agency Table */}
+      <div className="card" style={{ marginTop: '24px' }}>
+        <div className="card-header">
+          <span className="card-title">Agency Performance Table</span>
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Filter by name..."
+              value={filter}
+              onChange={e => setFilter(e.target.value)}
+              style={{ width: '180px', fontSize: '12px' }}
+            />
+            <select className="filter-select" value={sortKey} onChange={e => setSortKey(e.target.value)}>
+              <option value="risk_score">Sort: Risk Score ↓</option>
+              <option value="average_delay_days">Sort: Avg Delay ↓</option>
+              <option value="average_cost_deviation">Sort: Cost Deviation ↓</option>
+              <option value="completion_rate">Sort: Completion Rate ↓</option>
+            </select>
+          </div>
+        </div>
+        <div className="card-body" style={{ padding: 0 }}>
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Agency Name</th>
+                <th>Projects</th>
+                <th>Risk Score</th>
+                <th>Completion Rate</th>
+                <th>Avg Delay (days)</th>
+                <th>Cost Deviation</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sorted.map((a, i) => (
+                <tr key={a.id}>
+                  <td style={{ fontWeight: '600', color: 'var(--primary-color)' }}>{a.name}</td>
+                  <td>{a.project_count}</td>
+                  <td>
+                    <span className={`badge ${a.risk_score >= 80 ? 'red' : a.risk_score >= 60 ? 'orange' : 'green'}`}>
+                      {a.risk_score.toFixed(1)}
+                    </span>
+                  </td>
+                  <td>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <div className="progress-bar-container" style={{ width: '60px' }}>
+                        <div className={`progress-bar-fill ${a.completion_rate >= 80 ? 'green' : a.completion_rate >= 50 ? 'orange' : 'red'}`} style={{ width: `${Math.min(100, a.completion_rate)}%` }}></div>
+                      </div>
+                      <span style={{ fontSize: '11px' }}>{a.completion_rate.toFixed(0)}%</span>
+                    </div>
+                  </td>
+                  <td style={{ color: a.average_delay_days > 30 ? 'var(--danger-color)' : 'inherit' }}>
+                    {a.average_delay_days.toFixed(0)} days
+                  </td>
+                  <td style={{ color: Math.abs(a.average_cost_deviation) > 20 ? 'var(--danger-color)' : 'inherit' }}>
+                    {a.average_cost_deviation > 0 ? '+' : ''}{a.average_cost_deviation.toFixed(1)}%
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// --- AI ASSISTANT TAB (full-page promoted chatbot) ---
+function AIAssistantTab({ input, setInput, messages, setMessages, onSelectProject }: any) {
+  const [sending, setSending] = useState(false);
+  const chatEndRef = useRef<HTMLDivElement>(null);
+
+  const SUGGESTED = [
+    'Which projects have the highest risk score today?',
+    'Show me delayed works in Chennai district',
+    'Which agency has the most anomalies?',
+    'List critical alerts for Tamil Nadu',
+    'What is the average risk score by category?',
+    'Find duplicate works in New Delhi',
+  ];
+
+  useEffect(() => {
+    if (chatEndRef.current) chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  const handleSend = async (queryText: string) => {
+    if (!queryText.trim() || sending) return;
+    setSending(true);
+    setMessages((prev: any[]) => [...prev, { sender: 'user', text: queryText }]);
+    setInput('');
+    try {
+      const res = await api.queryAI(queryText);
+      const answer = res.answer || res.response || 'I could not find specific data for that query. Try rephrasing.';
+      const sources = res.sources || res.results || [];
+      setMessages((prev: any[]) => [...prev, { sender: 'bot', text: answer, sources }]);
+    } catch {
+      setMessages((prev: any[]) => [...prev, { sender: 'bot', text: 'System error: could not process request. Please check your query or try again.' }]);
+    } finally {
+      setSending(false);
+    }
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 160px)', gap: '16px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div>
+          <h2 style={{ fontSize: '16px', fontWeight: '800', color: 'var(--primary-color)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Bot size={20} /> Sentinel AI Assistant
+          </h2>
+          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '4px' }}>
+            Ask natural language questions about MPLADS projects, risk scores, agencies, and anomalies.
+          </p>
+        </div>
+        <button className="btn btn-secondary" style={{ fontSize: '12px' }} onClick={() => setMessages([{ sender: 'bot', text: 'Hello! I am Sentinel AI. How can I assist you with MPLADS project auditing today?' }])}>
+          Clear History
+        </button>
+      </div>
+
+      {/* Suggested queries */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+        {SUGGESTED.map((q, i) => (
+          <button
+            key={i}
+            className="btn btn-secondary"
+            style={{ fontSize: '11px', padding: '5px 10px', borderRadius: '20px' }}
+            onClick={() => handleSend(q)}
+            disabled={sending}
+          >
+            {q}
+          </button>
+        ))}
+      </div>
+
+      {/* Chat messages */}
+      <div className="card" style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+        <div className="card-body" style={{ flex: 1, overflowY: 'auto', padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          {messages.map((m: any, i: number) => (
+            <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: m.sender === 'user' ? 'flex-end' : 'flex-start', gap: '4px' }}>
+              <div style={{
+                maxWidth: '75%',
+                padding: '10px 14px',
+                borderRadius: m.sender === 'user' ? '16px 16px 4px 16px' : '4px 16px 16px 16px',
+                backgroundColor: m.sender === 'user' ? 'var(--primary-color)' : 'var(--card-bg)',
+                color: m.sender === 'user' ? '#ffffff' : 'var(--text-primary)',
+                fontSize: '13px',
+                lineHeight: '1.5',
+                border: m.sender === 'bot' ? '1px solid var(--border-color)' : 'none',
+                boxShadow: '0 1px 4px rgba(0,0,0,0.08)'
+              }}>
+                {m.sender === 'bot' && <Bot size={14} style={{ marginRight: '6px', opacity: 0.7, verticalAlign: 'middle' }} />}
+                {m.text}
+              </div>
+              {m.sources && m.sources.length > 0 && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', maxWidth: '75%' }}>
+                  {m.sources.slice(0, 5).map((s: any, si: number) => (
+                    <button
+                      key={si}
+                      className="btn btn-secondary"
+                      style={{ fontSize: '10px', padding: '3px 8px', borderRadius: '12px' }}
+                      onClick={() => onSelectProject(s.work_id || s.id)}
+                    >
+                      {s.work_id || s.id}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+          {sending && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', fontSize: '12px' }}>
+              <RefreshCw size={12} className="animate-spin" /> Sentinel AI is thinking...
+            </div>
+          )}
+          <div ref={chatEndRef} />
+        </div>
+
+        {/* Input area */}
+        <form
+          style={{ padding: '12px 16px', borderTop: '1px solid var(--border-color)', display: 'flex', gap: '8px', alignItems: 'center' }}
+          onSubmit={e => { e.preventDefault(); handleSend(input); }}
+        >
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Ask Sentinel AI anything about MPLADS data..."
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            disabled={sending}
+            style={{ flex: 1, fontSize: '13px' }}
+          />
+          <button type="submit" className="btn btn-primary" disabled={sending} style={{ padding: '10px 20px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Send size={14} /> Send
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

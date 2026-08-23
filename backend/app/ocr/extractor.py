@@ -104,38 +104,46 @@ def parse_extracted_entities(text: str, db: Session) -> dict:
     if work_id_match:
         entities["work_id"] = work_id_match.group(0).upper()
 
-    # Extract Sanctioned Amount
-    # Searches for values like "Rs. 25,00,000", "Amount: 2500000", "₹ 25Lakh"
-    amount_match = re.search(r'(?:Rs\.?|Rupees|₹)\s*([\d,]+(?:\.\d{2})?)', text, re.IGNORECASE)
-    if amount_match:
-        amt_str = amount_match.group(1).replace(",", "")
+    # 2. Extract Sanctioned Amount
+    total_amt_match = re.search(r'TOTAL\s+SANCTIONED[^\n\r]*?Rs\.?\s*([\d,]+(?:\.\d{2})?)', text, re.IGNORECASE)
+    if total_amt_match:
         try:
-            entities["sanctioned_amount"] = float(amt_str)
+            entities["sanctioned_amount"] = float(total_amt_match.group(1).replace(",", ""))
         except ValueError:
             pass
 
-    # Extract Sanction Date
-    # Searches for formats like 2026-03-12, 12/03/2026, 12-03-2026
-    date_match = re.search(r'(?:Date|Dated):\s*(\d{4}-\d{2}-\d{2}|\d{2}/\d{2}/\d{4}|\d{2}-\d{2}-\d{4})', text, re.IGNORECASE)
+    if not entities["sanctioned_amount"]:
+        amount_match = re.search(r'(?:Rs\.?|Rupees|₹)\s*([\d,]+(?:\.\d{2})?)', text, re.IGNORECASE)
+        if amount_match:
+            amt_str = amount_match.group(1).replace(",", "")
+            try:
+                entities["sanctioned_amount"] = float(amt_str)
+            except ValueError:
+                pass
+
+    # 3. Extract Sanction Date
+    date_match = re.search(r'(?:Date|Dated|Issue Date):\s*(\d{4}-\d{2}-\d{2}|\d{2}/\d{2}/\d{4}|\d{2}-\d{2}-\d{4})', text, re.IGNORECASE)
     if date_match:
         entities["sanction_date"] = date_match.group(1)
 
-    # Extract Implementing Agency
-    # Match against names of agencies in the database
-    agencies = db.query(Agency).all()
-    for agency in agencies:
-        if agency.name.lower() in text.lower():
-            entities["agency"] = agency.name
-            break
-            
-    # Also simple regex fallback for agency
+    # 4. Extract Implementing Agency
+    agency_match = re.search(r'(?:Executing Agency|Implementing Agency):\s*([^\n\r]+)', text, re.IGNORECASE)
+    if agency_match:
+        extracted_agency_str = agency_match.group(1).strip()
+        # Clean trailing parenthesis if captured
+        if "(" in extracted_agency_str and ")" not in extracted_agency_str:
+            extracted_agency_str = extracted_agency_str.split("(")[0].strip()
+        entities["agency"] = extracted_agency_str
+    
     if not entities["agency"]:
-        agency_match = re.search(r'Implementing Agency:\s*([^\n\r]+)', text, re.IGNORECASE)
-        if agency_match:
-            entities["agency"] = agency_match.group(1).strip()
+        agencies = db.query(Agency).all()
+        for agency in agencies:
+            if agency.name.lower() in text.lower():
+                entities["agency"] = agency.name
+                break
 
-    # Extract Project Name
-    project_match = re.search(r'(?:Work Name|Project Name|Subject):\s*([^\n\r.]+)', text, re.IGNORECASE)
+    # 5. Extract Project Name
+    project_match = re.search(r'(?:Work Name|Project Name|Scope of Work|Subject):\s*([^\n\r.]+)', text, re.IGNORECASE)
     if project_match:
         entities["project_name"] = project_match.group(1).strip()
 

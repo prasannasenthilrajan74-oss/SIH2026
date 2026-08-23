@@ -179,32 +179,35 @@ def seed_db(db: Session):
 
     # 4. Seed Agencies across districts
     agencies_templates = [
-        "Public Works Department (PWD)",
+        "School Education Infrastructure Division",
         "District Rural Development Agency (DRDA)",
+        "Public Works Department (PWD)",
         "Central Public Works Department (CPWD)",
         "Municipal Infrastructure Corporation",
         "State Water Supply & Sanitation Board",
-        "National Buildings Construction Corporation (NBCC)"
+        "District Health & Family Welfare Society",
+        "Renewable Energy Development Agency (REDA)"
     ]
 
     db_agencies = []
     all_dists_in_db = db.query(District).all()
     for d in all_dists_in_db[:20]: # Distribute agencies across top districts
-        agency_name = f"{d.name} {random.choice(agencies_templates)}"
-        agency = db.query(Agency).filter(Agency.name == agency_name).first()
-        if not agency:
-            agency = Agency(
-                name=agency_name,
-                district_code=d.code,
-                completion_rate=random.uniform(0.75, 0.95),
-                average_delay_days=random.uniform(30, 120),
-                average_cost_deviation=random.uniform(-0.05, 0.15),
-                risk_score=random.uniform(15, 45)
-            )
-            db.add(agency)
-            db_agencies.append(agency)
-        else:
-            db_agencies.append(agency)
+        for tmpl in agencies_templates:
+            agency_name = f"{d.name} {tmpl}"
+            agency = db.query(Agency).filter(Agency.name == agency_name).first()
+            if not agency:
+                agency = Agency(
+                    name=agency_name,
+                    district_code=d.code,
+                    completion_rate=random.uniform(0.75, 0.95),
+                    average_delay_days=random.uniform(30, 120),
+                    average_cost_deviation=random.uniform(-0.05, 0.15),
+                    risk_score=random.uniform(15, 45)
+                )
+                db.add(agency)
+                db_agencies.append(agency)
+            else:
+                db_agencies.append(agency)
     db.commit()
     db_agencies = db.query(Agency).all()
 
@@ -261,325 +264,222 @@ def seed_db(db: Session):
         db.add(mp_alloc_setting)
     db.commit()
 
-    # 7. Seed 1000 Works (with real MP attributes & deliberate anomalies)
+    # 7. Seed Works, Payments, and Agencies dynamically from Dataset folder
     existing_works_count = db.query(Work).count()
     if existing_works_count >= 1000:
-        print("Database already seeded with works.")
+        print(f"Database already seeded with {existing_works_count} works.")
         return
 
-    print(f"Seeding 1,000+ works using official dataset of {len(real_mps)} Members of Parliament...")
-    categories = [
-        "Drinking Water", "Education", "Health & Family Welfare", 
-        "Roads, Pathways and Bridges", "Sanitation & Public Health", 
-        "Sports Facilities", "Electricity & Non-Conventional Energy"
-    ]
-    work_templates = {
-        "Drinking Water": [
-            "Installation of Hand Pump in {village}",
-            "Construction of Water Tank and Pipeline at {village}",
-            "R.O. Drinking Water Plant installation in {block} Block"
-        ],
-        "Education": [
-            "Construction of Additional Classrooms at Govt School, {village}",
-            "Supply of computers and laboratory equipments to High School, {block}",
-            "Renovation of School library in {village}"
-        ],
-        "Health & Family Welfare": [
-            "Construction of Primary Health Centre Subcentre, {village}",
-            "Providing medical equipments for PHC in {block}",
-            "Construction of maternity ward at Govt Hospital, {block}"
-        ],
-        "Roads, Pathways and Bridges": [
-            "Concreting of Village Link Road in {village}",
-            "Construction of culvert bridge on {village} main pathway",
-            "Metal Tarring of road from {village} to {block}"
-        ],
-        "Sanitation & Public Health": [
-            "Construction of Community Sanitary Complex in {village}",
-            "Construction of stormwater drains in {village} street",
-            "Public toilet installation near {block} bus stand"
-        ],
-        "Sports Facilities": [
-            "Development of playground and fencing at {village}",
-            "Construction of indoor gymnasium at sports club, {block}",
-            "Supply of sports gear and youth club infrastructure in {village}"
-        ],
-        "Electricity & Non-Conventional Energy": [
-            "Installation of Solar Street Lights in {village}",
-            "Providing Solar Power Backups for Govt Buildings, {block}",
-            "Extension of electricity line in Dalit Habitation, {village}"
-        ]
-    }
-
-    today = datetime.date.today()
-    works_to_add = []
-    payments_to_add = []
-
-    for i in range(1, 1011):
-        work_id = f"MPLADS-{2026:04d}-{i:04d}"
-        category = random.choice(categories)
+    import pandas as pd
+    dataset_dir = os.path.join(os.getcwd(), 'Dataset')
+    
+    proj_path = os.path.join(dataset_dir, 'projects_corrected.csv')
+    if not os.path.exists(proj_path):
+        proj_path = os.path.join(dataset_dir, 'projects.csv')
         
-        # Pick real MP
-        real_mp = random.choice(real_mps)
-        mp_name = real_mp['name']
-        constituency = real_mp['constituency']
-        state_code = real_mp['state_code']
-
-        # Find matching district for state
-        state_dists = db.query(District).filter(District.state_code == state_code).all()
-        if state_dists:
-            district_obj = random.choice(state_dists)
-            d_code = district_obj.code
-        else:
-            d_code = "CH"
-
-        block = f"Block-{random.randint(1, 5)}"
-        village = f"Village-{random.randint(1, 20)}"
+    fund_path = os.path.join(dataset_dir, 'fund_transactions_corrected.csv')
+    if not os.path.exists(fund_path):
+        fund_path = os.path.join(dataset_dir, 'fund_transactions.csv')
         
-        desc_tmpl = random.choice(work_templates[category])
-        description = desc_tmpl.format(village=village, block=block)
-
-        # GPS Coordinates centered around state
-        base_lat, base_lon = STATE_GPS.get(state_code, (13.08, 80.27))
-        lat = base_lat + random.uniform(-0.4, 0.4)
-        lon = base_lon + random.uniform(-0.4, 0.4)
-
-        # Amounts
-        estimated_cost = random.uniform(500000, 4500000) # 5L to 45L
-        sanctioned_amount = estimated_cost * random.uniform(0.95, 1.05)
-
-        # Dates
-        days_ago = random.randint(30, 700)
-        rec_date = today - datetime.timedelta(days=days_ago)
-        sanc_date = rec_date + datetime.timedelta(days=random.randint(15, 60))
+    ent_path = os.path.join(dataset_dir, 'entities_corrected.csv')
+    if not os.path.exists(ent_path):
+        ent_path = os.path.join(dataset_dir, 'entities.csv')
         
-        expected_duration = random.randint(180, 360)
-        exp_completion_date = sanc_date + datetime.timedelta(days=expected_duration)
+    geo_path = os.path.join(dataset_dir, 'geo_district.csv')
+    
+    if os.path.exists(proj_path):
+        print(f"Ingesting dynamic dataset files from '{dataset_dir}'...")
+        df_projects = pd.read_csv(proj_path)
+        df_fund = pd.read_csv(fund_path) if os.path.exists(fund_path) else pd.DataFrame()
+        df_entities = pd.read_csv(ent_path) if os.path.exists(ent_path) else pd.DataFrame()
+        df_geo = pd.read_csv(geo_path) if os.path.exists(geo_path) else None
 
-        status_pool = ["Sanctioned", "Ongoing", "Completed"]
-        status = random.choices(status_pool, weights=[15, 55, 30], k=1)[0]
-        
-        actual_comp_date = None
-        if status == "Completed":
-            actual_comp_date = exp_completion_date + datetime.timedelta(days=random.randint(-30, 180))
-            if actual_comp_date > today:
-                actual_comp_date = today - datetime.timedelta(days=random.randint(1, 15))
-            physical_progress = 100.0
-            financial_progress = 100.0
-            expenditure = sanctioned_amount
-        elif status == "Ongoing":
-            physical_progress = random.uniform(10.0, 95.0)
-            financial_progress = physical_progress * random.uniform(0.9, 1.1)
-            financial_progress = min(100.0, max(0.0, financial_progress))
-            expenditure = sanctioned_amount * (financial_progress / 100.0)
-        else: # Sanctioned
-            physical_progress = 0.0
-            financial_progress = 0.0
-            expenditure = 0.0
+        def parse_date(d):
+            if pd.isna(d) or not d or str(d).strip().lower() in ['nan', 'none', 'null', '']:
+                return None
+            try:
+                return datetime.datetime.strptime(str(d).strip(), "%Y-%m-%d").date()
+            except:
+                return None
 
-        agency = random.choice(db_agencies) if db_agencies else None
-        agency_id = agency.id if agency else None
-
-        # Inject anomalies into approximately 15% of records
-        is_anomaly = False
-        anomaly_type = None
-
-        if i % 7 == 0:
-            is_anomaly = True
-            r_val = random.randint(1, 7)
-            if r_val == 1:
-                status = "Ongoing"
-                financial_progress = random.uniform(85.0, 95.0)
-                physical_progress = random.uniform(20.0, 45.0)
-                expenditure = sanctioned_amount * (financial_progress / 100.0)
-                anomaly_type = "mismatch"
-            elif r_val == 2:
-                status = "Completed"
-                expenditure = sanctioned_amount * random.uniform(1.15, 1.45)
-                physical_progress = 100.0
-                financial_progress = 100.0
-                anomaly_type = "cost_overrun"
-            elif r_val == 3:
-                status = "Ongoing"
-                sanc_date = today - datetime.timedelta(days=500)
-                exp_completion_date = sanc_date + datetime.timedelta(days=180)
-                physical_progress = random.uniform(15.0, 40.0)
-                financial_progress = physical_progress * random.uniform(0.9, 1.1)
-                expenditure = sanctioned_amount * (financial_progress / 100.0)
-                anomaly_type = "delay"
-            elif r_val == 4:
-                status = "Ongoing"
-                sanc_date = today - datetime.timedelta(days=250)
-                exp_completion_date = sanc_date + datetime.timedelta(days=365)
-                financial_progress = random.uniform(0.0, 5.0)
-                physical_progress = 0.0
-                expenditure = sanctioned_amount * (financial_progress / 100.0)
-                anomaly_type = "low_utilization"
-            elif r_val == 5:
-                lat = None
-                lon = None
-                anomaly_type = "missing_info"
-            elif r_val == 6:
-                estimated_cost = random.uniform(8000000, 15000000)
-                sanctioned_amount = estimated_cost
-                if status == "Completed":
-                    expenditure = sanctioned_amount
-                elif status == "Ongoing":
-                    expenditure = sanctioned_amount * (financial_progress / 100.0)
-                anomaly_type = "cost_anomaly"
-            elif r_val == 7:
-                anomaly_type = "doc_mismatch"
-
-        work = Work(
-            id=work_id,
-            description=description,
-            category=category,
-            work_type="Infrastructure",
-            mp_name=mp_name,
-            constituency=constituency,
-            state_code=state_code,
-            district_code=d_code,
-            block=block,
-            village=village,
-            latitude=lat,
-            longitude=lon,
-            recommendation_date=rec_date,
-            sanction_date=sanc_date,
-            expected_completion_date=exp_completion_date,
-            actual_completion_date=actual_comp_date,
-            status=status,
-            implementing_agency_id=agency_id,
-            estimated_cost=estimated_cost,
-            sanctioned_amount=sanctioned_amount,
-            expenditure=expenditure,
-            physical_progress=physical_progress,
-            financial_progress=financial_progress
-        )
-        works_to_add.append(work)
-
-        # Generate Payments for works
-        if expenditure > 0:
-            num_payments = random.randint(1, 4)
-            if anomaly_type == "mismatch" or (is_anomaly and random.random() < 0.3):
-                p_date = sanc_date + datetime.timedelta(days=random.randint(10, 30))
-                for p_idx in range(3):
-                    payment = Payment(
-                        work_id=work_id,
-                        payment_date=p_date + datetime.timedelta(days=random.randint(0, 4)),
-                        amount=(expenditure / 3) * random.uniform(0.95, 1.05),
-                        payment_type="Milestone",
-                        transaction_ref=f"TXN-{work_id}-{p_idx}-{random.randint(1000, 9999)}"
-                    )
-                    payments_to_add.append(payment)
-            else:
-                remaining_exp = expenditure
-                for p_idx in range(num_payments):
-                    p_amt = remaining_exp / (num_payments - p_idx)
-                    p_amt = p_amt * random.uniform(0.9, 1.1)
-                    if p_amt > remaining_exp or p_idx == num_payments - 1:
-                        p_amt = remaining_exp
+        # Seed States & Districts from Geo Districts
+        state_map = {}
+        dist_map = {}
+        if df_geo is not None:
+            for _, r in df_geo.iterrows():
+                st_name = str(r['state_ut']).strip()
+                st_code = STATE_CODES.get(st_name, st_name[:2].upper())
+                d_name = str(r['district']).strip()
+                d_code = f"{st_code}_{d_name.replace(' ', '_').upper()[:10]}"
+                
+                if st_code not in state_map:
+                    st_obj = db.query(State).filter((State.code == st_code) | (State.name == st_name)).first()
+                    if not st_obj:
+                        st_obj = State(code=st_code, name=st_name)
+                        db.add(st_obj)
+                        db.commit()
+                    state_map[st_code] = st_obj
+                    st_code = st_obj.code
                     
-                    p_date = sanc_date + datetime.timedelta(days=int((expected_duration / num_payments) * (p_idx + 1) * random.uniform(0.8, 1.1)))
-                    if p_date > today:
-                        p_date = today - datetime.timedelta(days=random.randint(1, 10))
+                if d_code not in dist_map:
+                    dist_obj = db.query(District).filter(District.code == d_code).first()
+                    if not dist_obj:
+                        dist_obj = District(code=d_code, name=d_name, state_code=st_code)
+                        db.add(dist_obj)
+                        db.commit()
+                    dist_map[d_code] = dist_obj
 
-                    payment = Payment(
-                        work_id=work_id,
-                        payment_date=p_date,
-                        amount=p_amt,
-                        payment_type="Advance" if p_idx == 0 else ("Final" if p_idx == num_payments - 1 else "Milestone"),
-                        transaction_ref=f"TXN-{work_id}-{p_idx}-{random.randint(1000, 9999)}"
-                    )
-                    payments_to_add.append(payment)
-                    remaining_exp -= p_amt
-                    if remaining_exp <= 0:
-                        break
+        # Seed Agencies from Entities
+        agencies_to_add = []
+        for idx, r in df_entities.iterrows():
+            raw_ent_id = str(r['entity_id']).strip() if not pd.isna(r['entity_id']) else ""
+            try:
+                ent_id = int(raw_ent_id.split('_')[-1])
+            except:
+                ent_id = idx + 1
+            ent_name = str(r['entity_name']).strip()
+            st_name = str(r.get('state_ut', '')).strip()
+            st_code = STATE_CODES.get(st_name, st_name[:2].upper()) if st_name else 'DEF'
+            d_name = str(r.get('district', '')).strip()
+            d_code = f"{st_code}_{d_name.replace(' ', '_').upper()[:10]}" if d_name else None
+            
+            agency = db.query(Agency).filter(Agency.id == ent_id).first()
+            if not agency:
+                agency = Agency(
+                    id=ent_id,
+                    name=ent_name,
+                    district_code=d_code,
+                    completion_rate=0.85,
+                    average_delay_days=45.0,
+                    average_cost_deviation=0.05,
+                    risk_score=25.0
+                )
+                agencies_to_add.append(agency)
+        if agencies_to_add:
+            db.add_all(agencies_to_add)
+            db.commit()
 
-        # Generate Document Metadata
-        if sanc_date is not None:
-            pdf_amount = sanctioned_amount
-            consistency_score = 100.0
-            doc_agency_name = agency.name if agency else "PWD"
-            doc_data = {
-                "work_id": work_id,
-                "project_name": description,
-                "sanctioned_amount": sanctioned_amount,
-                "sanction_date": sanc_date.strftime("%Y-%m-%d"),
-                "agency": doc_agency_name
-            }
-            if anomaly_type == "doc_mismatch":
-                pdf_amount = sanctioned_amount * random.choice([1.2, 0.8, 1.5])
-                consistency_score = 72.0
-                doc_data["sanctioned_amount"] = pdf_amount
-                doc_data["sanction_date"] = (sanc_date - datetime.timedelta(days=30)).strftime("%Y-%m-%d")
+        # Seed Works
+        exp_by_proj = df_fund[df_fund['transaction_type'].isin(['EXPENDITURE', 'PAYMENT'])].groupby('project_id')['amount_inr'].sum().to_dict() if not df_fund.empty else {}
 
-            doc = Document(
-                work_id=work_id,
-                document_type="Sanction Order",
-                file_name=f"SanctionOrder_{work_id}.pdf",
-                file_path=f"documents/{work_id}_sanction.pdf",
-                ocr_text=f"Government of India. Sanction Order for Work ID: {work_id}. "
-                         f"Project Name: {description}. Sanctioned Amount: Rs.{pdf_amount:,.2f}. "
-                         f"Sanction Date: {doc_data['sanction_date']}. Implementing Agency: {doc_agency_name}.",
-                extracted_data=doc_data,
-                consistency_score=consistency_score
+        works_to_add = []
+        existing_work_ids = set(w[0] for w in db.query(Work.id).all())
+
+        for _, r in df_projects.iterrows():
+            p_id = str(r['project_id']).strip()
+            if p_id in existing_work_ids:
+                continue
+                
+            desc = str(r['work_description']).strip() if not pd.isna(r['work_description']) else "MPLADS Infrastructure Project"
+            cat = str(r['work_category']).strip() if not pd.isna(r['work_category']) else "General Infrastructure"
+            mp_id = str(r['mp_id']).strip() if not pd.isna(r['mp_id']) else "MP_001"
+            const = str(r['constituency']).strip() if not pd.isna(r['constituency']) else "Constituency"
+            st_name = str(r['state_ut']).strip() if not pd.isna(r['state_ut']) else "Delhi"
+            st_code = STATE_CODES.get(st_name, st_name[:2].upper())
+            d_name = str(r['district']).strip() if not pd.isna(r['district']) else "District"
+            d_code = f"{st_code}_{d_name.replace(' ', '_').upper()[:10]}"
+            
+            if st_code not in state_map:
+                st_obj = db.query(State).filter((State.code == st_code) | (State.name == st_name)).first()
+                if not st_obj:
+                    st_obj = State(code=st_code, name=st_name)
+                    db.add(st_obj)
+                    db.commit()
+                state_map[st_code] = st_obj
+                st_code = st_obj.code
+                
+            if d_code not in dist_map:
+                d_obj = db.query(District).filter(District.code == d_code).first()
+                if not d_obj:
+                    d_obj = District(code=d_code, name=d_name, state_code=st_code)
+                    db.add(d_obj)
+                    db.commit()
+                dist_map[d_code] = d_obj
+                
+            sanc_cost = float(r['sanctioned_cost_inr']) if not pd.isna(r['sanctioned_cost_inr']) else 1000000.0
+            est_cost = float(r['estimated_cost_inr']) if not pd.isna(r['estimated_cost_inr']) else sanc_cost
+            
+            status_val = str(r['status']).strip().title() if not pd.isna(r['status']) else "Ongoing"
+            if status_val == "Completed": status = "Completed"
+            elif status_val == "Ongoing": status = "Ongoing"
+            elif status_val == "Sanctioned": status = "Sanctioned"
+            else: status = "Ongoing"
+            
+            phys_prog = float(r['physical_completion_percentage']) if not pd.isna(r['physical_completion_percentage']) else 0.0
+            
+            exp_val = float(exp_by_proj.get(p_id, 0.0))
+            if exp_val == 0.0 and status == "Completed":
+                exp_val = sanc_cost
+            elif exp_val == 0.0 and status == "Ongoing":
+                exp_val = sanc_cost * (phys_prog / 100.0)
+                
+            fin_prog = (exp_val / sanc_cost * 100.0) if sanc_cost > 0 else phys_prog
+            fin_prog = min(100.0, max(0.0, fin_prog))
+            
+            raw_agency_id = str(r['implementing_agency_id']).strip() if not pd.isna(r['implementing_agency_id']) else ""
+            try:
+                agency_id = int(raw_agency_id.split('_')[-1])
+            except:
+                agency_id = None
+
+            work = Work(
+                id=p_id,
+                description=desc,
+                category=cat,
+                work_type="Infrastructure",
+                mp_name=f"Hon'ble MP ({mp_id})",
+                constituency=const,
+                state_code=st_code,
+                district_code=d_code,
+                block=str(r.get('block_or_urban', 'Block')).strip(),
+                village=str(r.get('village_or_locality', 'Village')).strip(),
+                latitude=float(r['latitude']) if not pd.isna(r['latitude']) else None,
+                longitude=float(r['longitude']) if not pd.isna(r['longitude']) else None,
+                recommendation_date=parse_date(r.get('start_date')),
+                sanction_date=parse_date(r.get('sanction_date')),
+                expected_completion_date=parse_date(r.get('expected_completion_date')),
+                actual_completion_date=parse_date(r.get('actual_completion_date')),
+                status=status,
+                implementing_agency_id=agency_id,
+                estimated_cost=est_cost,
+                sanctioned_amount=sanc_cost,
+                expenditure=exp_val,
+                physical_progress=phys_prog,
+                financial_progress=fin_prog
             )
-            db.add(doc)
+            works_to_add.append(work)
 
-    db.add_all(works_to_add)
-    db.commit()
+        batch_size = 1000
+        for i in range(0, len(works_to_add), batch_size):
+            db.add_all(works_to_add[i:i+batch_size])
+            db.commit()
 
-    db.add_all(payments_to_add)
-    db.commit()
+        # Seed Payments
+        if not df_fund.empty:
+            payments_to_add = []
+            existing_txn_refs = set(p[0] for p in db.query(Payment.transaction_ref).filter(Payment.transaction_ref.isnot(None)).all())
+            
+            for _, r in df_fund.iterrows():
+                txn_id = str(r['transaction_id']).strip()
+                if txn_id in existing_txn_refs:
+                    continue
+                    
+                p_id = str(r['project_id']).strip()
+                amt = float(r['amount_inr']) if not pd.isna(r['amount_inr']) else 0.0
+                p_date = parse_date(r.get('transaction_date')) or datetime.date.today()
+                p_type = str(r.get('transaction_type', 'Milestone')).strip().title()
+                
+                payment = Payment(
+                    work_id=p_id,
+                    payment_date=p_date,
+                    amount=amt,
+                    payment_type=p_type,
+                    transaction_ref=txn_id
+                )
+                payments_to_add.append(payment)
 
-    # Inject Duplicate works explicitly
-    duplicate_indices = [25, 120, 245, 450, 680]
-    for d_idx in duplicate_indices:
-        base_work = works_to_add[d_idx]
-        dup_work_id = f"MPLADS-2026-DUP{d_idx}"
-        
-        dup_description = base_work.description.replace("Installation of", "Construction and setting up of")
-        dup_description = dup_description.replace("Construction of", "Setting up and construction of")
-        
-        lat = base_work.latitude + 0.008 if base_work.latitude else 13.08
-        lon = base_work.longitude + 0.008 if base_work.longitude else 80.27
+            for i in range(0, len(payments_to_add), batch_size):
+                db.add_all(payments_to_add[i:i+batch_size])
+                db.commit()
 
-        dup_work = Work(
-            id=dup_work_id,
-            description=dup_description,
-            category=base_work.category,
-            work_type=base_work.work_type,
-            mp_name=base_work.mp_name,
-            constituency=base_work.constituency,
-            state_code=base_work.state_code,
-            district_code=base_work.district_code,
-            block=base_work.block,
-            village=base_work.village,
-            latitude=lat,
-            longitude=lon,
-            recommendation_date=base_work.recommendation_date + datetime.timedelta(days=random.randint(-5, 5)),
-            sanction_date=base_work.sanction_date + datetime.timedelta(days=random.randint(-5, 5)),
-            expected_completion_date=base_work.expected_completion_date,
-            status=base_work.status,
-            implementing_agency_id=base_work.implementing_agency_id,
-            estimated_cost=base_work.estimated_cost * random.uniform(0.98, 1.02),
-            sanctioned_amount=base_work.sanctioned_amount * random.uniform(0.98, 1.02),
-            expenditure=base_work.expenditure * random.uniform(0.98, 1.02),
-            physical_progress=base_work.physical_progress,
-            financial_progress=base_work.financial_progress
-        )
-        db.add(dup_work)
-        db.commit()
-
-        alert = Alert(
-            work_id=dup_work_id,
-            alert_type="DUP_WORK",
-            severity="CRITICAL",
-            score=94.0,
-            reason=f"Suspiciously high similarity (94%) with work {base_work.id} in close proximity ({1.2:.1f} km). Same category, MP and district.",
-            evidence={"duplicate_work_id": base_work.id, "distance_km": 1.2, "description_similarity": 0.94}
-        )
-        db.add(alert)
-        db.commit()
-
-    print(f"Synthesized 1,000+ works using {len(real_mps)} official MP dataset entries successfully populated in the DB.")
+        print(f"Dynamically populated DB with {len(works_to_add)} projects and {len(payments_to_add)} transactions from Dataset folder.")
