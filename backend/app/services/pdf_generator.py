@@ -130,13 +130,13 @@ def get_itemized_purchase_items(category: str, description: str, total_amount: f
         ]
 
 def generate_pdf_for_document(db: Session, doc: Document) -> str:
-    """Generates an authentic PDF document file using ReportLab if it does not exist on disk."""
-    if doc.file_path and os.path.exists(doc.file_path):
-        return doc.file_path
-
+    """Generates an authentic, domain-matched PDF document file using ReportLab."""
     os.makedirs("documents", exist_ok=True)
     filename = f"{doc.document_type.replace(' ', '_')}_{doc.work_id or doc.id}.pdf"
     file_path = os.path.join("documents", filename).replace("\\", "/")
+
+    if os.path.exists(file_path):
+        return file_path
 
     work = db.query(Work).filter(Work.id == doc.work_id).first() if doc.work_id else None
 
